@@ -1,8 +1,9 @@
 ---
 title: Blog title 2
 date: 2025-09-10T19:38:00.000+02:00
-thumbnail: /public/img/uploads/pierre-white-background.png
+thumbnail: /img/uploads/pierre-white-background.png
 ---
+
 ## Loremipsum dolor sit amet, consectetur adipiscing elit.
 
 Sed sed malesuada quam. Donec vel nisl sapien. Quisque euismod velit nec ipsum posuere, in sollicitudin est congue. In laoreet sagittis condimentum. Nulla nec felis sed velit suscipit vulputate sed eu orci. Suspendisse ullamcorper ex at viverra elementum. Donec luctus aliquet gravida. Quisque quis tempus diam, vitae venenatis lorem. Vivamus sollicitudin, nibh porta commodo commodo, magna tellus volutpat eros, sit amet varius ex nibh nec est. Mauris vel fringilla est. Curabitur scelerisque velit vitae convallis fermentum. Curabitur nec quam urna. Ut aliquet massa accumsan velit condimentum mattis.
