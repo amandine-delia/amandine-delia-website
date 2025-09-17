@@ -1,7 +1,7 @@
 ---
-title: Blog title 2
+title: Blog title 3
 date: 2025-09-10T19:38:00.000+02:00
-thumbnail: /img/uploads/pierre-white-background.png
+thumbnail: /img/uploads/pierre.png
 ---
 
 ## Loremipsum dolor sit amet, consectetur adipiscing elit.
