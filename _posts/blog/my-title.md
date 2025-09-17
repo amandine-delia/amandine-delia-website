@@ -1,5 +1,5 @@
 ---
-title: Blog title
+title: Blog title 2
 date: 2025-09-10T19:38:00.000+02:00
 thumbnail: /public/img/uploads/pierre-white-background.png
 ---
