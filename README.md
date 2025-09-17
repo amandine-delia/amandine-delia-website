@@ -9,11 +9,11 @@ The app Auth and login is handled by GitHub. In the Developer settings of the re
 
 ## Structure
 
-- Homepage
-- Acupuncture
+- Homepage 📄
+- Acupuncture 📄
 - Les Soins
-  - La Médecine Chinoise
-  - Acupuncture
+  - La Médecine Chinoise 📄
+  - Acupuncture 📄
   - Moxibustion
   - Massage Tui Na
   - Pharmacopé
@@ -23,5 +23,5 @@ The app Auth and login is handled by GitHub. In the Developer settings of the re
   - À propos
   - Tarifs et modalités de paiement
   - FAQ
-- Prendre Rendez-vous
+- Prendre Rendez-vous 📄
 - Mentions légales
