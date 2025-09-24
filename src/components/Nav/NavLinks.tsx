@@ -2,7 +2,6 @@ import { DialogOptions } from '@ariakit/react'
 import { ChevronDownIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import { useState } from 'react'
-import './nav.css'
 
 export type MenuLink = { label: string; href: string }
 type NavLinkProps = MenuLink & { store?: DialogOptions['store']; onClick?: VoidFunction }

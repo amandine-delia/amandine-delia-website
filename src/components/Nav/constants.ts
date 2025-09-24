@@ -1,7 +1,6 @@
 import { MenuLink } from './NavLinks'
 
 export const SOINS: MenuLink[] = [
-  { label: 'La Médecine Chinoise', href: '/medecine-chinoise' },
   { label: 'Acupuncture', href: '/acupuncture' },
   { label: 'Moxibustion', href: '/soins/moxibustion' },
   { label: 'Massage Tui Na', href: '/soins/massage-tui-na' },
