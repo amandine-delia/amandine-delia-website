@@ -33,4 +33,18 @@
     bottom: 0;
     cursor: pointer;
   }
+
+  .nested-menu {
+    overflow: hidden;
+    max-height: 0px;
+    opacity: 0;
+    transition:
+      max-height var(--duration-slow) var(--timing-primary),
+      opacity var(--duration-slow) var(--timing-primary);
+
+    &[data-enter='true'] {
+      opacity: 1;
+      max-height: 200px; /* Reduced to match more realistic content height */
+    }
+  }
 }

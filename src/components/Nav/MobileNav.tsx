@@ -2,7 +2,9 @@
 import { Dialog, DialogOptions, useDialogStore } from '@ariakit/react'
 import { Bars2Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
+import { CONSULTER, SOINS } from './constants'
 import './nav.css'
+import { NavLink, NestedNavLinks } from './NavLinks'
 
 export const MobileNav = () => {
   const dialog = useDialogStore()
@@ -13,16 +15,100 @@ export const MobileNav = () => {
 
       <Drawer store={dialog}>
         <nav>
-          <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
+          <ul className="flex flex-col gap-1 mt-8 text-lg">
+            <NavLink store={dialog} href="/" label="Accueil" />
+            <NavLink store={dialog} href="/acupuncture" label="Acupuncture" />
+            <NestedNavLinks title="Les Soins" store={dialog} links={SOINS} />
+            <NestedNavLinks title="Consulter" store={dialog} links={CONSULTER} />
+            <NavLink store={dialog} href="/rendez-vous" label="Prendre Rendez-vous" />
           </ul>
         </nav>
       </Drawer>
     </div>
   )
 }
+
+// type MenuLink = { label: string; href: string }
+// type NavLinksProps = MenuLink & { store?: DialogOptions['store'] }
+
+// const NavLinks = ({ children, store, href }: NavLinksProps) => {
+//   return (
+//     <li>
+//       <Link href={href} onClick={store?.hide} className="cursor-pointer w-full inline-block">
+//         {children}
+//       </Link>
+//     </li>
+//   )
+// }
+
+// type NestedNavLinksProps = {
+//   title: string
+//   store?: DialogOptions['store']
+//   links?: MenuLink[]
+// }
+
+// const NestedNavLinks = ({ title, store }: NestedNavLinksProps) => {
+//   const [isOpen, setIsOpen] = useState(false)
+
+//   return (
+//     <li>
+//       <span
+//         className="flex items-center gap-x-1.5 font-semibold"
+//         onClick={() => setIsOpen(!isOpen)}
+//       >
+//         <span>{title}</span>
+//         <ChevronDownIcon className="size-5 text-gray-800" />
+//       </span>
+//       <ul className="nested-menu" data-enter={isOpen}>
+//         <li>
+//           <Link
+//             href="/nested/one"
+//             onClick={store?.hide}
+//             className="cursor-pointer w-full inline-block"
+//           >
+//             One
+//           </Link>
+//         </li>
+//         <li>
+//           <Link
+//             href="/nested/two"
+//             onClick={store?.hide}
+//             className="cursor-pointer w-full inline-block"
+//           >
+//             Two
+//           </Link>
+//         </li>
+//         <li>
+//           <Link
+//             href="/nested/three"
+//             onClick={store?.hide}
+//             className="cursor-pointer w-full inline-block"
+//           >
+//             Three
+//           </Link>
+//         </li>
+//         <li>
+//           <Link
+//             href="/nested/four"
+//             onClick={store?.hide}
+//             className="cursor-pointer w-full inline-block"
+//           >
+//             Four
+//           </Link>
+//         </li>
+//         <li>
+//           <Link
+//             href="/nested/five"
+//             onClick={store?.hide}
+//             className="cursor-pointer w-full inline-block"
+//           >
+//             Five
+//           </Link>
+//         </li>
+//       </ul>
+//     </li>
+//   )
+// }
 
 const Drawer = ({
   children,
