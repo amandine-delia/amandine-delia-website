@@ -1,16 +1,17 @@
+import { PATHS } from '@/constants/path'
 import { MenuLink } from './NavLinks'
 
 export const SOINS: MenuLink[] = [
-  { label: 'Acupuncture', href: '/acupuncture' },
-  { label: 'Moxibustion', href: '/soins/moxibustion' },
-  { label: 'Massage Tui Na', href: '/soins/massage-tui-na' },
-  { label: 'Pharmacopée', href: '/soins/pharmacopee' },
-  { label: 'Ventouse', href: '/soins/ventouses' },
+  { label: 'Acupuncture', href: PATHS.ACUPUNCTURE },
+  { label: 'Moxibustion', href: PATHS.MOXIBUSTION },
+  { label: 'Massage Tui Na', href: PATHS.MASSAGE_TUI_NA },
+  { label: 'Pharmacopée', href: PATHS.PHARMACOPEE },
+  { label: 'Ventouse', href: PATHS.VENTOUSES },
 ]
 
 export const CONSULTER: MenuLink[] = [
-  { label: 'Premier Rendez-vous', href: '/consulter/premier-rendez-vous' },
-  { label: 'À propos', href: '/consulter/a-propos' },
-  { label: 'Tarifs et modalités de paiement', href: '/consulter/tarifs' },
-  { label: 'FAQ', href: '/consulter/faq' },
+  { label: 'Premier Rendez-vous', href: PATHS.PREMIER_RENDEZ_VOUS },
+  { label: 'À propos', href: PATHS.A_PROPOS },
+  { label: 'Tarifs et modalités de paiement', href: PATHS.TARIFS },
+  { label: 'FAQ', href: PATHS.FAQ },
 ]

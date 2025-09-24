@@ -35,5 +35,5 @@
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "cSpell.words": ["SOINS"]
+  "cSpell.words": ["chinoise", "medecine", "propos", "rendez", "SOINS", "vous"]
 }

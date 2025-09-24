@@ -22,8 +22,11 @@ a:focus-visible {
   --color-ds-rose-900: oklab(65.59899999999999% 0.04704 0.02773);
 
   /* BLUE */
+  --color-ds-blue-100: oklab(94.8% -0.00655 -0.0063);
   --color-ds-blue-200: oklab(89.415% -0.01311 -0.0126);
   --color-ds-blue-500: oklab(66.25999999999999% -0.02961 -0.02566);
+  --color-ds-blue-700: oklab(52.8% -0.03845 -0.03329);
+  --color-ds-blue-900: oklab(35.2% -0.05118 -0.04428);
 
   /* ====== ANIMATION ====== */
   --duration-fast: 100ms;

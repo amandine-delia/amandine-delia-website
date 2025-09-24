@@ -1,4 +1,5 @@
 'use client'
+import { PATHS } from '@/constants/path'
 import { useDialogStore } from '@ariakit/react'
 import { Bars2Icon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
@@ -35,7 +36,7 @@ const Header = ({ handleToggle }: { handleToggle: VoidFunction }) => {
     <div className="p-2 grid grid-cols-[auto_1fr] items-center">
       <Bars2Icon className="size-6 text-gray-800 z-10" role="button" onClick={handleToggle} />
 
-      <Link href="/" className="no-underline relative left-[-24px]">
+      <Link href={PATHS.HOME} className="no-underline relative left-[-24px]">
         <h1 className="text-2xl font-bold text-center">Amandine D&apos;Elia</h1>
       </Link>
     </div>
