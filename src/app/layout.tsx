@@ -21,7 +21,7 @@ export default function Layout({ children }: PropsWithChildren) {
     <html lang="fr">
       <body className={`${quickSand.className} antialiased`}>
         <Nav />
-        <main className="h-full">{children}</main>
+        <main className="min-h-full overflow-auto">{children}</main>
         <Footer />
       </body>
     </html>
