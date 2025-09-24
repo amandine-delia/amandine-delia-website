@@ -1,4 +1,4 @@
-import { DialogOptions } from '@ariakit/react'
+import { DialogOptions, Menu, MenuButton, MenuItem, useMenuStore } from '@ariakit/react'
 import { ChevronDownIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import { useState } from 'react'
@@ -55,6 +55,40 @@ export const NestedNavLinks = ({ title, store, links }: NestedNavLinksProps) => 
           />
         ))}
       </ul>
+    </li>
+  )
+}
+
+type DesktopNestedNavLinksProps = {
+  title: string
+  links: MenuLink[]
+}
+
+export const DesktopNestedNavLinks = ({ title, links }: DesktopNestedNavLinksProps) => {
+  const menu = useMenuStore({ placement: 'bottom' })
+
+  return (
+    <li>
+      <MenuButton store={menu} className="cursor-pointer">
+        {title}
+      </MenuButton>
+      <Menu
+        store={menu}
+        gutter={8}
+        className="flex flex-col gap-y-2 p-4 rounded-sm bg-white border shadow-md border-gray-200"
+      >
+        {links?.map(link => (
+          <MenuItem key={link.href} className="hover:bg-ds-rose-100 rounded-sm">
+            <Link
+              onClick={() => menu.hide()}
+              href={link.href}
+              className="p-1 cursor-pointer w-full inline-block"
+            >
+              {link.label}
+            </Link>
+          </MenuItem>
+        ))}
+      </Menu>
     </li>
   )
 }

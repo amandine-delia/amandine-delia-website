@@ -15,6 +15,7 @@ a:focus-visible {
 @theme {
   /* ===== COLORS ===== */
   /* ROSE */
+  --color-ds-rose-100: oklab(97.282% 0.00756 0.00511);
   --color-ds-rose-200: oklab(94.563% 0.01513 0.01021);
   --color-ds-rose-500: oklab(91.067% 0.02845 0.01739);
   --color-ds-rose-700: oklab(84.822% 0.02696 0.02838);

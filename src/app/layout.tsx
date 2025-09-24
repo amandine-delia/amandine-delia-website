@@ -2,7 +2,7 @@ import { Nav } from '@/components/Nav'
 import type { Metadata } from 'next'
 import { Quicksand } from 'next/font/google'
 import { PropsWithChildren } from 'react'
-import './globals.css'
+import './theme.css'
 
 const quickSand = Quicksand({
   subsets: ['latin'],
