@@ -1,3 +1,4 @@
+import { Footer } from '@/components/Footer'
 import { Nav } from '@/components/Nav'
 import type { Metadata } from 'next'
 import { Quicksand } from 'next/font/google'
@@ -20,7 +21,8 @@ export default function Layout({ children }: PropsWithChildren) {
     <html lang="fr">
       <body className={`${quickSand.className} antialiased`}>
         <Nav />
-        <main>{children}</main>
+        <main className="h-full">{children}</main>
+        <Footer />
       </body>
     </html>
   )
