@@ -2,6 +2,7 @@
 
 - [Auth](#auth)
 - [Structure](#structure)
+- [Fetch Data](#fetch-data)
 
 ## Auth
 
@@ -25,3 +26,31 @@ The app Auth and login is handled by GitHub. In the Developer settings of the re
   - FAQ
 - Prendre Rendez-vous 📄
 - Mentions légales
+
+## Fetch data
+
+```ts
+import fs from 'fs'
+import matter from 'gray-matter'
+import path from 'path'
+
+interface BlogPost {
+  title: string
+  date: string
+  thumbnail: string
+  content: string
+}
+
+async function getBlogPost(): Promise<BlogPost> {
+  const filePath = path.join(process.cwd(), 'public', 'content/posts/blog/my-title.md')
+  const fileContent = fs.readFileSync(filePath, 'utf8')
+  const { data, content } = matter(fileContent)
+
+  return {
+    title: data.title,
+    date: data.date,
+    thumbnail: data.thumbnail,
+    content,
+  }
+}
+```
