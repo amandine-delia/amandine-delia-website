@@ -5,20 +5,11 @@ import Link from 'next/link'
 import './nav.css'
 
 export const MobileNav = () => {
-  //   const [isOpen, setIsOpen] = useState(false)
   const dialog = useDialogStore()
-
-  const handleToggle = () => {
-    console.log('-------------------------------------')
-    console.log('dialog', dialog)
-    console.log('-------------------------------------')
-
-    dialog.toggle()
-  }
 
   return (
     <div className="lg:hidden">
-      <Header handleToggle={handleToggle} />
+      <Header handleToggle={dialog.toggle} />
 
       <Drawer store={dialog}>
         <nav>
@@ -42,13 +33,11 @@ const Drawer = ({
 }) => {
   return (
     <Dialog
-      //   backdrop={withBackdrop ? <S.Backdrop hideOnInteractOutside={hideOnInteractOutside} /> : false}
-      //   hideOnInteractOutside={hideOnInteractOutside}
-      //   modal={withBackdrop}
-      //   ref={ref}
+      backdrop={<div className="nav-backdrop" />}
+      hideOnInteractOutside
+      modal
       render={<div className="nav-drawer" />}
       store={store}
-      //   {...(rest as DialogProps<'div'>)}
     >
       <div className="p-4 h-full">
         <div className="flex justify-end">
