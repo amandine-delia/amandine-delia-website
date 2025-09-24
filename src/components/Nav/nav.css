@@ -1,0 +1,25 @@
+@layer components {
+  .nav-drawer {
+    position: fixed;
+    top: 0px !important;
+    left: 0px !important;
+    bottom: 0px !important;
+    transform: translateX(-100%);
+    width: 100vw;
+    background-color: var(--color-ds-rose-200);
+    z-index: 100;
+    isolation: isolate;
+    outline: none;
+
+    overflow: auto;
+    opacity: 0;
+    transition:
+      var(--duration-slow) var(--timing-primary),
+      transform var(--duration-slow) var(--timing-primary);
+
+    &[data-enter] {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+}
