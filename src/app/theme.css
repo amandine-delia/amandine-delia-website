@@ -21,6 +21,9 @@ a:focus-visible {
   --color-ds-rose-700: oklab(84.822% 0.02696 0.02838);
   --color-ds-rose-900: oklab(65.59899999999999% 0.04704 0.02773);
 
+  /* TEXT ROSE */
+  --color-ds-text-rose-100: color-mix(in srgb, var(--color-ds-rose-900) 90%, black 10%);
+
   /* BLUE */
   --color-ds-blue-100: oklab(94.8% -0.00655 -0.0063);
   --color-ds-blue-200: oklab(89.415% -0.01311 -0.0126);
