@@ -4,6 +4,7 @@ import { H2, H3 } from '@/components/Text'
 import { PATHS } from '@/constants/path'
 import Image from 'next/image'
 import Link from 'next/link'
+import amandine from '../../public/img/amandine_delia.jpg'
 import chinaPainting from '../../public/img/china-painting.jpg'
 import placeholderImg from '../../public/img/placeholder-img.jpg'
 
@@ -77,8 +78,32 @@ export default async function Home() {
         </Container>
       </div>
 
-      <div className="bg-ds-rose-500 py-16">A propos (About Section)</div>
-      <div className="py-16">Tous les soins (All Treatments Section)</div>
+      <div className="bg-ds-rose-500 py-16 px-4">
+        <Container className="flex flex-col gap-y-3">
+          <div className="flex flex-col mt-2 overflow-hidden md:max-w-[440px] md:rounded-md">
+            <Image
+              alt="Mountains"
+              // Importing an image will
+              // automatically set the width and height
+              src={amandine}
+              sizes="100vw"
+              // Make the image display full width
+              // and preserve its aspect ratio
+              style={{
+                width: '100%',
+                height: 'auto',
+              }}
+            />
+          </div>
+          <H2>Amandine D&apos;Elia</H2>
+          <p className="inline-block w-fit">
+            Acupuncture, phytothérapie, diététique chinoise, tuina (massage thérapeutique) et
+            conseils en hygiène de vie.
+          </p>
+        </Container>
+      </div>
+
+      <div className="py-16 px-4">Tous les soins (All Treatments Section)</div>
       <div className="bg-ds-blue-200 py-16">Consultation (Consultation Section)</div>
     </>
   )
