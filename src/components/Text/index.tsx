@@ -10,7 +10,13 @@ const COLORS = {
   black: 'text-black',
 }
 
-export const H2 = ({ children, className, color = 'rose', customColor, ...props }: TextProps) => {
+export const H2 = ({
+  children,
+  className = '',
+  color = 'rose',
+  customColor,
+  ...props
+}: TextProps) => {
   const textColor = customColor ? customColor : COLORS[color]
 
   return (
@@ -20,7 +26,13 @@ export const H2 = ({ children, className, color = 'rose', customColor, ...props 
   )
 }
 
-export const H3 = ({ children, className, color = 'rose', customColor, ...props }: TextProps) => {
+export const H3 = ({
+  children,
+  className = '',
+  color = 'rose',
+  customColor,
+  ...props
+}: TextProps) => {
   const textColor = customColor ? customColor : COLORS[color]
 
   return (

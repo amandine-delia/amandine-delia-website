@@ -43,7 +43,7 @@ export default async function Home() {
         </Container>
       </section>
 
-      <section id="medecine-traditionnelle-chinoise" className="py-16 px-4">
+      <section id="medecine-traditionnelle-chinoise" className="py-24 px-4">
         <Container className="grid grid-cols-1 md:grid-cols-2 gap-3">
           <H2 className="col-span-full">La Médecine Traditionnelle Chinoise</H2>
 
@@ -80,7 +80,7 @@ export default async function Home() {
         </Container>
       </section>
 
-      <section id="a-propos" className="bg-ds-rose-500 py-16 px-4">
+      <section id="a-propos" className="bg-ds-rose-500 py-24 px-4">
         <Container className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-1 gap-3">
           <div className="row-span-2 flex flex-col mt-2 overflow-hidden md:max-w-[440px] md:rounded-md">
             <Image
@@ -117,16 +117,48 @@ export default async function Home() {
         </Container>
       </section>
 
-      <section id="tous-les-soins" className="py-16 px-4">
+      <section id="tous-les-soins" className="py-24 px-4">
         <Container>
-          <div className="md:text-center">
+          <div className="text-center">
             <H2>Tous les soins</H2>
             <p>Découvrez l&apos;ensemble des soins proposés.</p>
           </div>
           <SoinCards />
         </Container>
       </section>
-      <section className="bg-ds-blue-200 py-16">Consultation (Consultation Section)</section>
+
+      <section className="bg-ds-blue-200 py-24 px-4 text-center">
+        <Container>
+          <H2 customColor="text-black" className=" w-full">
+            La Consultation
+          </H2>
+          <Link href={PATHS.PREMIER_RENDEZ_VOUS}>
+            <H3 className="underline mt-6">Comment se déroule la première&nbsp;séance&nbsp;?</H3>
+            <p className="mt-1.5">
+              Une première séance en Médecine Traditionnelle Chinoise est avant tout un temps
+              d’écoute et de découverte.
+            </p>
+          </Link>
+
+          <Link href={PATHS.TARIFS}>
+            <H3 className="underline mt-8">Tarifs et modalités de paiement</H3>
+            <p className="mt-1.5">N’hésitez pas à nous consulter notre grille tarifaire.</p>
+          </Link>
+
+          <Link href={PATHS.FAQ}>
+            <H3 className="underline mt-8">FAQ</H3>
+            <p className="mt-1.5">
+              Vous n&apos;avez pas trouvé ce que vous cherchiez ? Consultez notre FAQ.
+            </p>
+          </Link>
+
+          <div className="mt-20">
+            <Link href={PATHS.RENDEZ_VOUS}>
+              <Button>Prendre rendez-vous</Button>
+            </Link>
+          </div>
+        </Container>
+      </section>
     </>
   )
 }

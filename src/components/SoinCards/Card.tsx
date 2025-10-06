@@ -14,7 +14,7 @@ export const SoinCard = ({
 }: SoinCardProps & { index: number }) => {
   return (
     <Link href={path}>
-      <div className="relative w-[275px] shrink-0 rounded-md border border-neutral-200 shadow-neutral-200/30 shadow-xl">
+      <div className="relative w-[275px] shrink-0 rounded-md border border-neutral-200 shadow-md">
         <div className="flex flex-col md:max-w-[440px] rounded-t-md overflow-hidden">
           <Image
             alt={title}
