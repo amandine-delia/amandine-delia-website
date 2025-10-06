@@ -1,5 +1,6 @@
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
+import { SoinCards } from '@/components/SoinCards'
 import { H2, H3 } from '@/components/Text'
 import { PATHS } from '@/constants/path'
 import Image from 'next/image'
@@ -12,11 +13,11 @@ export default async function Home() {
   return (
     <>
       {/* HERO SECTION */}
-      <div className="pt-3 md:p-3  bg-ds-rose-100">
+      <section id="hero" className="pt-3 md:p-3  bg-ds-rose-100">
         <Container className="flex flex-col md:flex-row">
           <div className="flex flex-col md:max-w-[440px] md:rounded-md overflow-hidden">
             <Image
-              alt="Mountains"
+              alt="header"
               // Importing an image will
               // automatically set the width and height
               src={placeholderImg}
@@ -27,27 +28,28 @@ export default async function Home() {
                 width: '100%',
                 height: 'auto',
               }}
+              priority={true}
             />
           </div>
           <div className="flex-1 py-16 px-4">
             <H3>Un accompagnement bienveillant pour retrouver équilibre et vitalité.</H3>
 
-            <div className="mt-8">
+            <div id="prendre-rendez-vous" className="mt-8">
               <Link href={PATHS.RENDEZ_VOUS}>
                 <Button>Prendre rendez-vous</Button>
               </Link>
             </div>
           </div>
         </Container>
-      </div>
+      </section>
 
-      <div className="py-16 px-4">
+      <section id="medecine-traditionnelle-chinoise" className="py-16 px-4">
         <Container className="grid grid-cols-1 md:grid-cols-2 gap-3">
           <H2 className="col-span-full">La Médecine Traditionnelle Chinoise</H2>
 
           <div className="flex flex-col mt-2 overflow-hidden md:max-w-[440px] md:rounded-md">
             <Image
-              alt="Mountains"
+              alt="medecine traditionnelle chinoise"
               // Importing an image will
               // automatically set the width and height
               src={chinaPainting}
@@ -69,20 +71,20 @@ export default async function Home() {
               chacun vers plus d’harmonie.
             </p>
 
-            <div className="mt-8">
+            <div id="medecine-traditionnelle-chinoise-savoir-plus" className="mt-8">
               <Link href={PATHS.MEDECINE_CHINOISE}>
                 <Button>En savoir plus</Button>
               </Link>
             </div>
           </div>
         </Container>
-      </div>
+      </section>
 
-      <div className="bg-ds-rose-500 py-16 px-4">
-        <Container className="flex flex-col gap-y-3">
-          <div className="flex flex-col mt-2 overflow-hidden md:max-w-[440px] md:rounded-md">
+      <section id="a-propos" className="bg-ds-rose-500 py-16 px-4">
+        <Container className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-1 gap-3">
+          <div className="row-span-2 flex flex-col mt-2 overflow-hidden md:max-w-[440px] md:rounded-md">
             <Image
-              alt="Mountains"
+              alt="amandine d'elia"
               // Importing an image will
               // automatically set the width and height
               src={amandine}
@@ -95,16 +97,36 @@ export default async function Home() {
               }}
             />
           </div>
-          <H2>Amandine D&apos;Elia</H2>
-          <p className="inline-block w-fit">
-            Acupuncture, phytothérapie, diététique chinoise, tuina (massage thérapeutique) et
-            conseils en hygiène de vie.
-          </p>
-        </Container>
-      </div>
+          <div className="flex flex-col md:pt-[20%]">
+            <H2>Amandine D&apos;Elia</H2>
+            <p className="inline-block w-fit mt-3">
+              Acupuncture, phytothérapie, diététique chinoise, tuina (massage thérapeutique) et
+              conseils en hygiène de vie.
+            </p>
 
-      <div className="py-16 px-4">Tous les soins (All Treatments Section)</div>
-      <div className="bg-ds-blue-200 py-16">Consultation (Consultation Section)</div>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Link href={PATHS.RENDEZ_VOUS}>
+                <Button id="prendre-rendez-vous">Prendre rendez-vous</Button>
+              </Link>
+
+              <Link href={PATHS.A_PROPOS}>
+                <Button id="amandine-delia-savoir-plus">En savoir plus</Button>
+              </Link>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      <section id="tous-les-soins" className="py-16 px-4">
+        <Container>
+          <div className="md:text-center">
+            <H2>Tous les soins</H2>
+            <p>Découvrez l&apos;ensemble des soins proposés.</p>
+          </div>
+          <SoinCards />
+        </Container>
+      </section>
+      <section className="bg-ds-blue-200 py-16">Consultation (Consultation Section)</section>
     </>
   )
 }
