@@ -13,7 +13,7 @@ export default async function Home() {
   return (
     <>
       {/* HERO SECTION */}
-      <section id="hero" className="pt-3 md:p-3  bg-ds-rose-100">
+      <section id="hero" className="pt-5 md:p-3  bg-ds-rose-100">
         <Container className="flex flex-col md:flex-row">
           <div className="flex flex-col md:max-w-[440px] md:rounded-md overflow-hidden">
             <Image
@@ -32,9 +32,11 @@ export default async function Home() {
             />
           </div>
           <div className="flex-1 py-16 px-4">
-            <H3>Un accompagnement bienveillant pour retrouver équilibre et vitalité.</H3>
+            <H3 className="text-center">
+              Un accompagnement bienveillant pour retrouver équilibre et vitalité.
+            </H3>
 
-            <div id="prendre-rendez-vous" className="mt-8">
+            <div id="prendre-rendez-vous" className="mt-8 flex justify-center">
               <Link href={PATHS.RENDEZ_VOUS}>
                 <Button>Prendre rendez-vous</Button>
               </Link>
@@ -43,44 +45,7 @@ export default async function Home() {
         </Container>
       </section>
 
-      <section id="medecine-traditionnelle-chinoise" className="py-24 px-4">
-        <Container className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          <H2 className="col-span-full">La Médecine Traditionnelle Chinoise</H2>
-
-          <div className="flex flex-col mt-2 overflow-hidden md:max-w-[440px] md:rounded-md">
-            <Image
-              alt="medecine traditionnelle chinoise"
-              // Importing an image will
-              // automatically set the width and height
-              src={chinaPainting}
-              sizes="100vw"
-              // Make the image display full width
-              // and preserve its aspect ratio
-              style={{
-                width: '100%',
-                height: 'auto',
-              }}
-            />
-          </div>
-
-          <div>
-            <p className="inline-block w-fit mt-3">
-              La Médecine Traditionnelle Chinoise est une pratique millénaire qui considère l’être
-              humain dans sa globalité. Elle ne se limite pas à un symptôme : elle cherche à
-              comprendre l’équilibre entre le corps, l’esprit et les émotions, afin d’accompagner
-              chacun vers plus d’harmonie.
-            </p>
-
-            <div id="medecine-traditionnelle-chinoise-savoir-plus" className="mt-8">
-              <Link href={PATHS.MEDECINE_CHINOISE}>
-                <Button>En savoir plus</Button>
-              </Link>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      <section id="a-propos" className="bg-ds-rose-500 py-24 px-4">
+      <section id="a-propos" className="py-24 px-4">
         <Container className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-1 gap-3">
           <div className="row-span-2 flex flex-col mt-2 overflow-hidden md:max-w-[440px] md:rounded-md">
             <Image
@@ -111,6 +76,43 @@ export default async function Home() {
 
               <Link href={PATHS.A_PROPOS}>
                 <Button id="amandine-delia-savoir-plus">En savoir plus</Button>
+              </Link>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      <section id="medecine-traditionnelle-chinoise" className="bg-ds-rose-100 py-24 px-4">
+        <Container className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <H2 className="col-span-full">La Médecine Traditionnelle Chinoise</H2>
+
+          <div className="flex flex-col mt-2 overflow-hidden md:max-w-[440px] md:rounded-md">
+            <Image
+              alt="medecine traditionnelle chinoise"
+              // Importing an image will
+              // automatically set the width and height
+              src={chinaPainting}
+              sizes="100vw"
+              // Make the image display full width
+              // and preserve its aspect ratio
+              style={{
+                width: '100%',
+                height: 'auto',
+              }}
+            />
+          </div>
+
+          <div>
+            <p className="inline-block w-fit mt-3">
+              La Médecine Traditionnelle Chinoise est une pratique millénaire qui considère l’être
+              humain dans sa globalité. Elle ne se limite pas à un symptôme : elle cherche à
+              comprendre l’équilibre entre le corps, l’esprit et les émotions, afin d’accompagner
+              chacun vers plus d’harmonie.
+            </p>
+
+            <div id="medecine-traditionnelle-chinoise-savoir-plus" className="mt-8">
+              <Link href={PATHS.MEDECINE_CHINOISE}>
+                <Button>En savoir plus</Button>
               </Link>
             </div>
           </div>
