@@ -1,6 +1,6 @@
 import { Breadcrumb } from '@/components/Breadcrumb'
 import { Container } from '@/components/Container'
-import { H1, P } from '@/components/Text'
+import { H1, P, Ul } from '@/components/Text'
 import type { Metadata } from 'next'
 
 import Image from 'next/image'
@@ -56,13 +56,13 @@ export default function AcupuncturePage() {
           très fines aiguilles stériles et à usage unique. Cette stimulation permet de :
         </P>
 
-        <ul className="text-lg list-disc pl-6 space-y-1 mb-8">
+        <Ul className="text-lg list-disc pl-6 space-y-1 mb-8">
           <li>libérer l’énergie bloquée,</li>
           <li>harmoniser le Yin et le Yang,</li>
           <li>soutenir les fonctions naturelles du corps,</li>
           <li>soulager douleurs et tensions,</li>
           <li>renforcer la vitalité et prévenir les déséquilibres.</li>
-        </ul>
+        </Ul>
 
         <P>
           C’est une méthode douce, respectueuse et adaptée à chacun. L’objectif n’est pas seulement

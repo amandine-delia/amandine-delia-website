@@ -14,7 +14,10 @@ const COLORS = {
 
 export const H1 = ({ children, className = '', customColor = 'black', ...props }: TextProps) => {
   return (
-    <h1 className={`text-3xl font-bold inline-block w-fit ${customColor} ${className}`} {...props}>
+    <h1
+      className={`text-3xl lg:text-4xl font-bold inline-block w-fit ${customColor} ${className}`}
+      {...props}
+    >
       {children}
     </h1>
   )
@@ -70,5 +73,17 @@ export const Strong = ({
     <strong className={`font-bold ${customColor} ${className}`} {...props}>
       {children}
     </strong>
+  )
+}
+
+export const Ul = ({
+  children,
+  className = '',
+  ...props
+}: React.HTMLAttributes<HTMLUListElement>) => {
+  return (
+    <ul className={`text-lg list-disc pl-6 space-y-1 mb-8 ${className}`} {...props}>
+      {children}
+    </ul>
   )
 }
