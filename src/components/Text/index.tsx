@@ -66,7 +66,7 @@ export const P = ({ children, className = '', customColor = 'black', ...props }:
 export const Strong = ({
   children,
   className = '',
-  customColor = 'text-ds-blue-700',
+  customColor = 'black',
   ...props
 }: TextProps) => {
   return (
