@@ -42,6 +42,6 @@ const TEMOINIGNAGES = [
   {
     name: 'Lola P.',
     testimony:
-      'Cela faisait plus de 40 ans que je dormais, extrêmement mal, avec de multiples réveils nocturnes. La prise de somnifères devenant problématique, j’ai fait appel à elle.  Dès la première séance, j’ai retrouvé le sommeil.',
+      'Une professionnelle à l’écoute, douce, patiente, efficace et très claire dans ses explications. Elle m’avait été recommandée chaudement et, maintenant c’est à mon tour de le faire. Cela faisait plus de 40 ans que je dormais, extrêmement mal, avec de multiples réveils nocturnes. La prise de somnifères devenant problématique, j’ai fait appel à elle.  Dès la première séance, j’ai retrouvé le sommeil.',
   },
 ]
