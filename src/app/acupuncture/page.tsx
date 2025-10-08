@@ -19,9 +19,7 @@ export default function AcupuncturePage() {
     <Container className="px-4 pt-8 pb-24">
       <Breadcrumb step3="Acupuncture" />
 
-      <H1 customColor="black" className="mb-8">
-        Acupuncture
-      </H1>
+      <H1 className="mb-8">Acupuncture</H1>
 
       <div className="flex flex-col md:rounded-md overflow-hidden mb-8">
         <Image

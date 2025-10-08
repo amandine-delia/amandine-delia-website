@@ -11,7 +11,7 @@ export const Temoignages = () => {
               <span className="absolute -top-2 -left-2 text-4xl md:text-5xl text-ds-blue-700 font-serif opacity-50">
                 &ldquo;
               </span>
-              <blockquote className="text-sm md:text-base text-gray-700 leading-relaxed mb-4 pl-4 pr-2 pt-2 italic">
+              <blockquote className="text-md md:text-base text-gray-700 leading-relaxed mb-4 pl-4 pr-2 pt-2 italic">
                 {testimonial.testimony}
               </blockquote>
               <span className="absolute -bottom-4 -right-2 text-4xl md:text-5xl text-ds-blue-700 font-serif opacity-50">

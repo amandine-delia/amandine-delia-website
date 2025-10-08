@@ -12,17 +12,9 @@ const COLORS = {
   black: 'text-black',
 }
 
-export const H1 = ({
-  children,
-  className = '',
-  color = 'rose',
-  customColor,
-  ...props
-}: TextProps) => {
-  const textColor = customColor ? customColor : COLORS[color]
-
+export const H1 = ({ children, className = '', customColor = 'black', ...props }: TextProps) => {
   return (
-    <h1 className={`text-4xl font-bold inline-block w-fit ${textColor} ${className}`} {...props}>
+    <h1 className={`text-4xl font-bold inline-block w-fit ${customColor} ${className}`} {...props}>
       {children}
     </h1>
   )
@@ -38,7 +30,7 @@ export const H2 = ({
   const textColor = customColor ? customColor : COLORS[color]
 
   return (
-    <h2 className={`text-2xl font-bold inline-block w-fit ${textColor} ${className}`} {...props}>
+    <h2 className={`text-3xl font-bold inline-block w-fit ${textColor} ${className}`} {...props}>
       {children}
     </h2>
   )
@@ -54,17 +46,15 @@ export const H3 = ({
   const textColor = customColor ? customColor : COLORS[color]
 
   return (
-    <h3 className={`text-xl font-bold inline-block w-fit ${textColor} ${className}`} {...props}>
+    <h3 className={`text-3xl font-bold inline-block w-fit ${textColor} ${className}`} {...props}>
       {children}
     </h3>
   )
 }
 
 export const P = ({ children, className = '', customColor = 'black', ...props }: TextProps) => {
-  const textColor = customColor
-
   return (
-    <p className={`text-lg inline-block w-fit ${textColor} ${className}`} {...props}>
+    <p className={`text-lg inline-block w-fit ${customColor} ${className}`} {...props}>
       {children}
     </p>
   )
