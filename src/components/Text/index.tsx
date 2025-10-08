@@ -7,6 +7,8 @@ interface TextProps extends React.HTMLAttributes<HTMLHeadingElement> {
 const COLORS = {
   rose: 'text-ds-rose-900',
   lightRose: 'text-ds-rose-700',
+  blue: 'text-ds-blue-900',
+  lightBlue: 'text-ds-blue-500',
   black: 'text-black',
 }
 

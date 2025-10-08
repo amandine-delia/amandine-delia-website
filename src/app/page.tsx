@@ -46,7 +46,7 @@ export default async function Home() {
         </Container>
       </section>
 
-      <section id="a-propos" className="py-24 px-4">
+      <section id="a-propos" className="py-24 md:pl-4">
         <Container className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-1 gap-3">
           <div className="row-span-2 flex flex-col mt-2 overflow-hidden md:max-w-[440px] md:rounded-md">
             <Image
@@ -63,8 +63,8 @@ export default async function Home() {
               }}
             />
           </div>
-          <div className="flex flex-col md:pt-[20%]">
-            <H2>Amandine D&apos;Elia</H2>
+          <div className="flex flex-col md:pt-[20%] px-4">
+            <H2 color="lightBlue">Amandine D&apos;Elia</H2>
             <p className="inline-block w-fit mt-3">
               Acupuncture, phytothérapie, diététique chinoise, tuina (massage thérapeutique) et
               conseils en hygiène de vie.
@@ -72,17 +72,17 @@ export default async function Home() {
 
             <div className="mt-6">
               <Link href={PATHS.A_PROPOS}>
-                <Button id="amandine-delia-savoir-plus">En savoir plus</Button>
+                <Button variant="blue" id="amandine-delia-savoir-plus">
+                  En savoir plus
+                </Button>
               </Link>
             </div>
           </div>
         </Container>
       </section>
 
-      <section id="medecine-traditionnelle-chinoise" className="bg-ds-rose-100 py-24 px-4">
-        <Container className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          <H2 className="col-span-full">La Médecine Traditionnelle Chinoise</H2>
-
+      <section id="medecine-traditionnelle-chinoise" className="bg-ds-rose-100 py-24 md:pl-4">
+        <Container className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-1 gap-3">
           <div className="flex flex-col mt-2 overflow-hidden md:max-w-[440px] md:rounded-md">
             <Image
               alt="medecine traditionnelle chinoise"
@@ -99,7 +99,9 @@ export default async function Home() {
             />
           </div>
 
-          <div>
+          <div className="flex flex-col px-4">
+            <H2 className="col-span-full">La Médecine Traditionnelle Chinoise</H2>
+
             <p className="inline-block w-fit mt-3">
               La Médecine Traditionnelle Chinoise est une pratique millénaire qui considère l’être
               humain dans sa globalité. Elle ne se limite pas à un symptôme : elle cherche à
@@ -129,9 +131,9 @@ export default async function Home() {
       <section id="temoignages" className="bg-ds-blue-200 py-24 px-4">
         <Container>
           <div className="text-center">
-            <H2 color="blue">Témoignages de nos patients</H2>
+            <H2 color="blue">Témoignages de nos patient·e·s</H2>
             <p className="text-sm md:text-base text-center mb-8 text-gray-600 max-w-2xl mx-auto">
-              Découvrez les avis de nos patients.
+              Découvrez les avis de nos patient·e·s.
             </p>
           </div>
           <Temoignages />
@@ -141,10 +143,12 @@ export default async function Home() {
       <section id="consultation" className="py-24 px-4 text-center">
         <Container>
           <H2 customColor="text-black" className=" w-full">
-            La Consultation
+            En Savoir plus sur la Consultation
           </H2>
           <Link href={PATHS.PREMIER_RENDEZ_VOUS}>
-            <H3 className="underline mt-6">Comment se déroule la première&nbsp;séance&nbsp;?</H3>
+            <H3 color="lightBlue" className="underline underline-offset-4 mt-6">
+              Comment se déroule la première&nbsp;séance&nbsp;?
+            </H3>
             <p className="mt-1.5">
               Une première séance en Médecine Traditionnelle Chinoise est avant tout un temps
               d’écoute et de découverte.
@@ -152,12 +156,16 @@ export default async function Home() {
           </Link>
 
           <Link href={PATHS.TARIFS}>
-            <H3 className="underline mt-8">Tarifs et modalités de paiement</H3>
+            <H3 color="lightBlue" className="underline underline-offset-4 mt-8">
+              Tarifs et modalités de paiement
+            </H3>
             <p className="mt-1.5">N’hésitez pas à nous consulter notre grille tarifaire.</p>
           </Link>
 
           <Link href={PATHS.FAQ}>
-            <H3 className="underline mt-8">FAQ</H3>
+            <H3 color="lightBlue" className="underline underline-offset-4 mt-8">
+              FAQ
+            </H3>
             <p className="mt-1.5">
               Vous n&apos;avez pas trouvé ce que vous cherchiez&nbsp;? Consultez notre FAQ.
             </p>
@@ -165,7 +173,7 @@ export default async function Home() {
 
           <div className="mt-20">
             <Link href={PATHS.RENDEZ_VOUS}>
-              <Button>Prendre rendez-vous</Button>
+              <Button variant="blue">Prendre rendez-vous</Button>
             </Link>
           </div>
         </Container>
