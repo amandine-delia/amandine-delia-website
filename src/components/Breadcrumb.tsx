@@ -10,7 +10,7 @@ export const Breadcrumb = ({ step3 }: { step3: string }) => (
       </li>
       <li className="before:content-['>'] before:mx-2">
         <Link href="/soins" className="hover:text-gray-900">
-          Les Soins
+          Tous les Soins
         </Link>
       </li>
       <li className="before:content-['>'] before:mx-2 text-gray-800">{step3}</li>

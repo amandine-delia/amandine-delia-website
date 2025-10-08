@@ -21,7 +21,7 @@ export const MobileNav = () => {
             <NavLink store={dialog} href="/" label="Accueil" />
             <NavLink store={dialog} href="/acupuncture" label="Acupuncture" />
             <NavLink store={dialog} href="/medecine-chinoise" label="La Médecine Chinoise" />
-            <NestedNavLinks title="Les Soins" store={dialog} links={SOINS} />
+            <NestedNavLinks title="Tous les Soins" store={dialog} links={SOINS} />
             <NestedNavLinks title="Consulter" store={dialog} links={CONSULTER} />
             <NavLink store={dialog} href="/rendez-vous" label="Prendre Rendez-vous" />
           </ul>

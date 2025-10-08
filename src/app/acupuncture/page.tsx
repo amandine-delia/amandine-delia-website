@@ -23,7 +23,7 @@ export default function AcupuncturePage() {
 
       <div className="flex flex-col md:rounded-md overflow-hidden mb-8">
         <Image
-          alt="header"
+          alt="acupuncture"
           // Importing an image will
           // automatically set the width and height
           src={acupuncture}

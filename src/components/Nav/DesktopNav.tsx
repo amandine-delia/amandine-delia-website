@@ -28,7 +28,7 @@ const Header = () => {
           <NavLink href={PATHS.HOME} label="Accueil" />
           <NavLink href={PATHS.ACUPUNCTURE} label="Acupuncture" />
           <NavLink href={PATHS.MEDECINE_CHINOISE} label="La Médecine Chinoise" />
-          <DesktopNestedNavLinks title="Les Soins" links={SOINS} />
+          <DesktopNestedNavLinks title="Tous les Soins" links={SOINS} />
           <DesktopNestedNavLinks title="Consulter" links={CONSULTER} />
           <NavLink href={PATHS.RENDEZ_VOUS} label="Prendre Rendez-vous" />
         </ul>
