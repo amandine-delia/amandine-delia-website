@@ -1,5 +1,10 @@
+import { Breadcrumb } from '@/components/Breadcrumb'
+import { Container } from '@/components/Container'
+import { H1, P } from '@/components/Text'
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import Image from 'next/image'
+
+import pharmacopee from '../../../../public/img/pages/pharmacopee.jpg'
 
 export const metadata: Metadata = {
   title: "Pharmacopée Chinoise - Soins en Médecine Traditionnelle Chinoise | Amandine D'Elia",
@@ -11,104 +16,53 @@ export const metadata: Metadata = {
 
 export default function PharmacopeePage() {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <nav className="text-sm breadcrumbs mb-6">
-        <ul className="flex space-x-2 text-gray-600">
-          <li>
-            <Link href="/" className="hover:text-blue-600">
-              Accueil
-            </Link>
-          </li>
-          <li className="before:content-['>'] before:mx-2">
-            <Link href="/soins" className="hover:text-blue-600">
-              Les Soins
-            </Link>
-          </li>
-          <li className="before:content-['>'] before:mx-2 text-gray-800">Pharmacopée</li>
-        </ul>
-      </nav>
+    <Container className="px-4 pt-8 pb-24">
+      <Breadcrumb step3="Pharmacopée" />
 
-      <h1 className="text-4xl font-bold mb-8">Pharmacopée Chinoise</h1>
+      <H1 className="mb-8">Pharmacopée Chinoise</H1>
 
-      <div className="prose lg:prose-xl max-w-none">
-        <p className="text-lg mb-8">
-          La pharmacopée chinoise constitue l&apos;un des piliers de la médecine traditionnelle
-          chinoise, utilisant les propriétés thérapeutiques des plantes, minéraux et substances
-          animales.
-        </p>
-
-        <div className="bg-blue-50 p-6 rounded-lg mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Principe de la pharmacopée</h2>
-          <p>
-            Chaque substance possède des propriétés énergétiques spécifiques (nature, saveur,
-            tropisme) qui permettent de rééquilibrer l&apos;organisme selon les principes de la
-            médecine chinoise.
-          </p>
-        </div>
-
-        <h2 className="text-2xl font-semibold mb-4">Formes de préparation</h2>
-
-        <div className="grid md:grid-cols-2 gap-6 mb-8">
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-lg font-semibold mb-3">Décoctions</h3>
-            <p>
-              Préparations liquides obtenues par décoction de plantes. Forme traditionnelle la plus
-              courante et efficace.
-            </p>
-          </div>
-
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-lg font-semibold mb-3">Poudres</h3>
-            <p>
-              Plantes broyées finement, plus pratiques à utiliser et se conservant mieux que les
-              décoctions.
-            </p>
-          </div>
-
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-lg font-semibold mb-3">Gélules</h3>
-            <p>
-              Forme moderne facilitant la prise et le dosage, particulièrement adaptée au mode de
-              vie occidental.
-            </p>
-          </div>
-
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-lg font-semibold mb-3">Extraits concentrés</h3>
-            <p>
-              Concentrés liquides standardisés offrant une action puissante et une facilité
-              d&apos;usage.
-            </p>
-          </div>
-        </div>
-
-        <h2 className="text-2xl font-semibold mb-4">Principales catégories</h2>
-
-        <ul className="list-disc pl-6 space-y-2 mb-8">
-          <li>
-            <strong>Tonifiants :</strong> Ginseng, Astragale, Angélique chinoise pour renforcer
-            l&apos;énergie
-          </li>
-          <li>
-            <strong>Dispersants :</strong> Menthe, Chrysanthème pour évacuer les facteurs pathogènes
-          </li>
-          <li>
-            <strong>Régulateurs :</strong> Pivoine, Réglisse pour harmoniser les fonctions
-          </li>
-          <li>
-            <strong>Transformateurs :</strong> Pinellia, Citrus pour traiter les mucosités
-          </li>
-        </ul>
-
-        <div className="bg-yellow-50 p-6 rounded-lg">
-          <h3 className="text-xl font-semibold mb-3">Important</h3>
-          <p>
-            La prescription de pharmacopée nécessite un diagnostic précis en médecine chinoise. Les
-            formules sont personnalisées selon le terrain de chaque patient et évoluent au cours du
-            traitement.
-          </p>
-        </div>
+      <div className="flex flex-col md:rounded-md overflow-hidden mb-8">
+        <Image
+          alt="Pharmacopée Chinoise"
+          // Importing an image will
+          // automatically set the width and height
+          src={pharmacopee}
+          sizes="100vw"
+          // Make the image display full width
+          // and preserve its aspect ratio
+          style={{
+            width: '100%',
+            height: 'auto',
+          }}
+          priority={true}
+        />
       </div>
-    </div>
+
+      <div>
+        <P className=" mb-8">
+          La pharmacopée chinoise est l’un des piliers de la Médecine Traditionnelle Chinoise. Elle
+          repose sur l’utilisation de plantes, minéraux et parfois produits naturels, combinés en
+          formules personnalisées.
+        </P>
+
+        <P className=" mb-8">
+          Chaque plante possède une énergie (froid, tiède, neutre, chaud), une saveur (amer, doux,
+          piquant, acide, salé) et une affinité avec certains organes. Selon le bilan énergétique
+          établi lors de la consultation, le praticien associe plusieurs ingrédients afin de
+          rétablir l’équilibre du corps.
+        </P>
+
+        <P className=" mb-8">
+          L’objectif de la pharmacopée n’est pas seulement de traiter un symptôme, mais de corriger
+          le terrain énergétique : nourrir ce qui est en vide, disperser ce qui est en excès,
+          harmoniser le Qi et le Sang, renforcer les organes.
+        </P>
+
+        <P>
+          Utilisée depuis des millénaires, cette approche reste aujourd’hui un outil puissant pour
+          soutenir la vitalité, prévenir les déséquilibres et accompagner le retour à l’harmonie.
+        </P>
+      </div>
+    </Container>
   )
 }
