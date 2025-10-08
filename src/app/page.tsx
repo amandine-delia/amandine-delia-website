@@ -1,108 +1,183 @@
-import fs from 'fs'
-import matter from 'gray-matter'
+import { Button } from '@/components/Button'
+import { Container } from '@/components/Container'
+import { SoinCards } from '@/components/SoinCards'
+import { Temoignages } from '@/components/Temoignages'
+import { H2, H3 } from '@/components/Text'
+import { PATHS } from '@/constants/path'
 import Image from 'next/image'
-import path from 'path'
-
-interface BlogPost {
-  title: string
-  date: string
-  thumbnail: string
-  content: string
-}
-
-async function getBlogPost(): Promise<BlogPost> {
-  const filePath = path.join(process.cwd(), 'public', 'content/posts/blog/my-title.md')
-  const fileContent = fs.readFileSync(filePath, 'utf8')
-  const { data, content } = matter(fileContent)
-
-  return {
-    title: data.title,
-    date: data.date,
-    thumbnail: data.thumbnail,
-    content,
-  }
-}
+import Link from 'next/link'
+import amandine from '../../public/img/amandine_delia.jpg'
+import chinaPainting from '../../public/img/china-painting.jpg'
+import placeholderImg from '../../public/img/placeholder-img.jpg'
 
 export default async function Home() {
-  const blogPost = await getBlogPost()
-
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          // className="dark:invert"
-          src={blogPost.thumbnail}
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className=" list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{' '}
-            <code className="bg-black/[.05] dark:bg-white/[.06]   px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <>
+      {/* HERO SECTION */}
+      <section id="hero" className="pt-5 md:p-3  bg-ds-rose-100">
+        <Container className="flex flex-col md:flex-row">
+          <div className="flex flex-col md:max-w-[440px] md:rounded-md overflow-hidden">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              alt="header"
+              // Importing an image will
+              // automatically set the width and height
+              src={placeholderImg}
+              sizes="100vw"
+              // Make the image display full width
+              // and preserve its aspect ratio
+              style={{
+                width: '100%',
+                height: 'auto',
+              }}
+              priority={true}
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image aria-hidden src="/file.svg" alt="File icon" width={16} height={16} />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image aria-hidden src="/window.svg" alt="Window icon" width={16} height={16} />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image aria-hidden src="/globe.svg" alt="Globe icon" width={16} height={16} />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          </div>
+          <div className="flex-1 py-16 px-4">
+            <H3 className="text-center">
+              Un accompagnement bienveillant pour retrouver équilibre et vitalité.
+            </H3>
+
+            <div id="prendre-rendez-vous" className="mt-8 flex justify-center">
+              <Link href={PATHS.RENDEZ_VOUS}>
+                <Button>Prendre rendez-vous</Button>
+              </Link>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      <section id="a-propos" className="py-24 md:pl-4">
+        <Container className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-1 gap-3">
+          <div className="row-span-2 flex flex-col mt-2 overflow-hidden md:max-w-[440px] md:rounded-md">
+            <Image
+              alt="amandine d'elia"
+              // Importing an image will
+              // automatically set the width and height
+              src={amandine}
+              sizes="100vw"
+              // Make the image display full width
+              // and preserve its aspect ratio
+              style={{
+                width: '100%',
+                height: 'auto',
+              }}
+            />
+          </div>
+          <div className="flex flex-col md:pt-[20%] px-4">
+            <H2 color="lightBlue">Amandine D&apos;Elia</H2>
+            <p className="inline-block w-fit mt-3">
+              Acupuncture, phytothérapie, diététique chinoise, tuina (massage thérapeutique) et
+              conseils en hygiène de vie.
+            </p>
+
+            <div className="mt-6">
+              <Link href={PATHS.A_PROPOS}>
+                <Button variant="blue" id="amandine-delia-savoir-plus">
+                  En savoir plus
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      <section id="medecine-traditionnelle-chinoise" className="bg-ds-rose-100 py-24 md:pl-4">
+        <Container className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-1 gap-3">
+          <div className="flex flex-col mt-2 overflow-hidden md:max-w-[440px] md:rounded-md">
+            <Image
+              alt="medecine traditionnelle chinoise"
+              // Importing an image will
+              // automatically set the width and height
+              src={chinaPainting}
+              sizes="100vw"
+              // Make the image display full width
+              // and preserve its aspect ratio
+              style={{
+                width: '100%',
+                height: 'auto',
+              }}
+            />
+          </div>
+
+          <div className="flex flex-col px-4">
+            <H2 className="col-span-full">La Médecine Traditionnelle Chinoise</H2>
+
+            <p className="inline-block w-fit mt-3">
+              La Médecine Traditionnelle Chinoise est une pratique millénaire qui considère l’être
+              humain dans sa globalité. Elle ne se limite pas à un symptôme : elle cherche à
+              comprendre l’équilibre entre le corps, l’esprit et les émotions, afin d’accompagner
+              chacun vers plus d’harmonie.
+            </p>
+
+            <div id="medecine-traditionnelle-chinoise-savoir-plus" className="mt-8">
+              <Link href={PATHS.MEDECINE_CHINOISE}>
+                <Button>En savoir plus</Button>
+              </Link>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      <section id="tous-les-soins" className="py-24 px-4">
+        <Container>
+          <div className="text-center">
+            <H2>Tous les soins</H2>
+            <p>Découvrez l&apos;ensemble des soins proposés.</p>
+          </div>
+          <SoinCards />
+        </Container>
+      </section>
+
+      <section id="temoignages" className="bg-ds-blue-200 py-24 px-4">
+        <Container>
+          <div className="text-center">
+            <H2 color="blue">Témoignages de nos patient·e·s</H2>
+            <p className="text-sm md:text-base text-center mb-8 text-gray-600 max-w-2xl mx-auto">
+              Découvrez les avis de nos patient·e·s.
+            </p>
+          </div>
+          <Temoignages />
+        </Container>
+      </section>
+
+      <section id="consultation" className="py-24 px-4 text-center">
+        <Container>
+          <H2 customColor="text-black" className=" w-full">
+            En Savoir plus sur la Consultation
+          </H2>
+          <Link href={PATHS.PREMIER_RENDEZ_VOUS}>
+            <H3 color="lightBlue" className="underline underline-offset-4 mt-6">
+              Comment se déroule la première&nbsp;séance&nbsp;?
+            </H3>
+            <p className="mt-1.5">
+              Une première séance en Médecine Traditionnelle Chinoise est avant tout un temps
+              d’écoute et de découverte.
+            </p>
+          </Link>
+
+          <Link href={PATHS.TARIFS}>
+            <H3 color="lightBlue" className="underline underline-offset-4 mt-8">
+              Tarifs et modalités de paiement
+            </H3>
+            <p className="mt-1.5">N’hésitez pas à nous consulter notre grille tarifaire.</p>
+          </Link>
+
+          <Link href={PATHS.FAQ}>
+            <H3 color="lightBlue" className="underline underline-offset-4 mt-8">
+              FAQ
+            </H3>
+            <p className="mt-1.5">
+              Vous n&apos;avez pas trouvé ce que vous cherchiez&nbsp;? Consultez notre FAQ.
+            </p>
+          </Link>
+
+          <div className="mt-20">
+            <Link href={PATHS.RENDEZ_VOUS}>
+              <Button variant="blue">Prendre rendez-vous</Button>
+            </Link>
+          </div>
+        </Container>
+      </section>
+    </>
   )
 }

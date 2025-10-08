@@ -1,0 +1,50 @@
+@layer components {
+  .nav-drawer {
+    position: fixed;
+    top: 0px !important;
+    left: 0px !important;
+    bottom: 0px !important;
+    transform: translateX(-100%);
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--color-ds-rose-200);
+    z-index: 999;
+    isolation: isolate;
+    outline: none;
+
+    overflow: auto;
+    opacity: 0;
+    transition:
+      var(--duration-slow) var(--timing-primary),
+      transform var(--duration-slow) var(--timing-primary);
+
+    &[data-enter] {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+
+  .nav-backdrop {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    cursor: pointer;
+  }
+
+  .nested-menu {
+    overflow: hidden;
+    max-height: 0px;
+    opacity: 0;
+    transition:
+      max-height var(--duration-slow) var(--timing-primary),
+      opacity var(--duration-slow) var(--timing-primary);
+
+    &[data-enter='true'] {
+      opacity: 1;
+      max-height: 200px; /* Reduced to match more realistic content height */
+    }
+  }
+}
