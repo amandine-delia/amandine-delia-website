@@ -1,6 +1,7 @@
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { SoinCards } from '@/components/SoinCards'
+import { Temoignages } from '@/components/Temoignages'
 import { H2, H3 } from '@/components/Text'
 import { PATHS } from '@/constants/path'
 import Image from 'next/image'
@@ -69,11 +70,7 @@ export default async function Home() {
               conseils en hygiène de vie.
             </p>
 
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Link href={PATHS.RENDEZ_VOUS}>
-                <Button id="prendre-rendez-vous">Prendre rendez-vous</Button>
-              </Link>
-
+            <div className="mt-6">
               <Link href={PATHS.A_PROPOS}>
                 <Button id="amandine-delia-savoir-plus">En savoir plus</Button>
               </Link>
@@ -129,7 +126,19 @@ export default async function Home() {
         </Container>
       </section>
 
-      <section className="bg-ds-blue-200 py-24 px-4 text-center">
+      <section id="temoignages" className="bg-ds-blue-200 py-24 px-4">
+        <Container>
+          <div className="text-center">
+            <H2 color="blue">Témoignages de nos patients</H2>
+            <p className="text-sm md:text-base text-center mb-8 text-gray-600 max-w-2xl mx-auto">
+              Découvrez les avis de nos patients.
+            </p>
+          </div>
+          <Temoignages />
+        </Container>
+      </section>
+
+      <section id="consultation" className="py-24 px-4 text-center">
         <Container>
           <H2 customColor="text-black" className=" w-full">
             La Consultation
@@ -150,7 +159,7 @@ export default async function Home() {
           <Link href={PATHS.FAQ}>
             <H3 className="underline mt-8">FAQ</H3>
             <p className="mt-1.5">
-              Vous n&apos;avez pas trouvé ce que vous cherchiez ? Consultez notre FAQ.
+              Vous n&apos;avez pas trouvé ce que vous cherchiez&nbsp;? Consultez notre FAQ.
             </p>
           </Link>
 
