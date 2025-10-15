@@ -87,3 +87,15 @@ export const Ul = ({
     </ul>
   )
 }
+
+export const Ol = ({
+  children,
+  className = '',
+  ...props
+}: React.HTMLAttributes<HTMLOListElement>) => {
+  return (
+    <ol className={`text-lg list-decimal pl-6 space-y-1 mb-8 ${className}`} {...props}>
+      {children}
+    </ol>
+  )
+}
