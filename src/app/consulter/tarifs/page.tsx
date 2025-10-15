@@ -8,7 +8,7 @@ export default function TarifsPage() {
 
       <div className="flex flex-col gap-y-8">
         <div>
-          <H2 className="mb-3" customColor="text-black text-lg">
+          <H2 className="mb-3  text-lg" customColor="text-black">
             Consultations individuelles
           </H2>
           <Ul>
@@ -27,7 +27,7 @@ export default function TarifsPage() {
         </div>
 
         <div>
-          <H2 className="mb-3" customColor="text-black text-lg">
+          <H2 className="mb-3  text-lg" customColor="text-black">
             Moyens de paiement acceptés
           </H2>
           <Ul>
@@ -39,7 +39,7 @@ export default function TarifsPage() {
         </div>
 
         <div>
-          <H2 className="mb-3" customColor="text-black text-lg">
+          <H2 className="mb-3  text-lg" customColor="text-black">
             Facture pour remboursement mutuelle
           </H2>
           <div className="flex flex-col gap-y-3">
