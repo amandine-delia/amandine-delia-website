@@ -1,10 +1,10 @@
 import { Container } from '@/components/Container'
-import { H1, Ol, P, Strong, Ul } from '@/components/Text'
+import { Ol, P, PageTitle, Strong, Ul } from '@/components/Text'
 
 export default function PremierRendezVousPage() {
   return (
     <Container className="px-4 pt-8 pb-24">
-      <H1 className="mb-8">Première séance de Médecine Traditionnelle Chinoise</H1>
+      <PageTitle>Première séance de Médecine Traditionnelle Chinoise</PageTitle>
 
       <div className="flex flex-col gap-y-8">
         <P>

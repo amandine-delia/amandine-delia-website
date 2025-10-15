@@ -1,5 +1,5 @@
 import { Container } from '@/components/Container'
-import { H1, P } from '@/components/Text'
+import { P, PageTitle } from '@/components/Text'
 import { PATHS } from '@/constants/path'
 import type { Metadata } from 'next'
 import Link from 'next/link'
@@ -15,10 +15,10 @@ export const metadata: Metadata = {
 export default function ConsulterPage() {
   return (
     <Container className="px-4 pt-8 pb-24">
-      <H1 className="mb-8">Consulter</H1>
+      <PageTitle>Consulter</PageTitle>
 
       <div className="prose lg:prose-xl max-w-none">
-        <P className="text-lg mb-8">
+        <P className="text-lg mb-8 text-center w-full">
           Découvrez toutes les informations pratiques pour votre consultation en médecine
           traditionnelle chinoise.
         </P>

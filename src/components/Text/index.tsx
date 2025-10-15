@@ -23,6 +23,10 @@ export const H1 = ({ children, className = '', customColor = 'black', ...props }
   )
 }
 
+export const PageTitle = ({ className, ...props }: TextProps) => (
+  <H1 className={`mb-4 inline-block w-full text-center ${className}`} {...props} />
+)
+
 export const H2 = ({
   children,
   className = '',

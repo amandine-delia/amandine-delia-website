@@ -1,11 +1,11 @@
 import { Container } from '@/components/Container'
-import { H1, H2, H3, P } from '@/components/Text'
+import { H2, H3, P, PageTitle } from '@/components/Text'
 import Image from 'next/image'
 
 export default function AProposPage() {
   return (
     <Container className="px-4 pt-8 pb-24">
-      <H1 className="mb-4 inline-block w-full text-center">À Propos de moi</H1>
+      <PageTitle>À Propos de moi</PageTitle>
 
       <div className="relative h-screen">
         <Image

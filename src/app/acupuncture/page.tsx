@@ -1,6 +1,6 @@
 import { Breadcrumb } from '@/components/Breadcrumb'
 import { Container } from '@/components/Container'
-import { H1, P, Ul } from '@/components/Text'
+import { P, PageTitle, Ul } from '@/components/Text'
 import type { Metadata } from 'next'
 
 import Image from 'next/image'
@@ -19,7 +19,7 @@ export default function AcupuncturePage() {
     <Container className="px-4 pt-8 pb-24">
       <Breadcrumb step3="Acupuncture" />
 
-      <H1 className="mb-8">Acupuncture</H1>
+      <PageTitle>Acupuncture</PageTitle>
 
       <div className="flex flex-col md:rounded-md overflow-hidden mb-8">
         <Image
@@ -38,7 +38,7 @@ export default function AcupuncturePage() {
         />
       </div>
 
-      <div>
+      <div className="mt-4 md:mt-8">
         <P className=" mb-8">
           L’acupuncture est l’une des pratiques les plus connues de la Médecine Traditionnelle
           Chinoise. Elle repose sur l’idée que l’énergie vitale, appelée Qi, circule dans le corps à

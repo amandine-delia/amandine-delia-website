@@ -1,10 +1,10 @@
 import { Container } from '@/components/Container'
-import { H1, H2, P, Strong, Ul } from '@/components/Text'
+import { H2, P, PageTitle, Strong, Ul } from '@/components/Text'
 
 export default function TarifsPage() {
   return (
     <Container className="px-4 pt-8 pb-24">
-      <H1 className="mb-8">Tarifs et modalités de paiement</H1>
+      <PageTitle>Tarifs et modalités de paiement</PageTitle>
 
       <div className="flex flex-col gap-y-8">
         <div>

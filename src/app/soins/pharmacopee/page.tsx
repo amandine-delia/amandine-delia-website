@@ -1,6 +1,6 @@
 import { Breadcrumb } from '@/components/Breadcrumb'
 import { Container } from '@/components/Container'
-import { H1, P } from '@/components/Text'
+import { P, PageTitle } from '@/components/Text'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 
@@ -19,7 +19,7 @@ export default function PharmacopeePage() {
     <Container className="px-4 pt-8 pb-24">
       <Breadcrumb step3="Pharmacopée" />
 
-      <H1 className="mb-8">Pharmacopée Chinoise</H1>
+      <PageTitle>Pharmacopée Chinoise</PageTitle>
 
       <div className="flex flex-col md:rounded-md overflow-hidden mb-8">
         <Image

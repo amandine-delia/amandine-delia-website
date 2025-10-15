@@ -61,6 +61,7 @@ export default async function Home() {
                 width: '100%',
                 height: 'auto',
               }}
+              priority={true}
             />
           </div>
           <div className="flex flex-col md:pt-[20%] px-4">

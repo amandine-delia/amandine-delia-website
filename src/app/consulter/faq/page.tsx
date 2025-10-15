@@ -1,7 +1,7 @@
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Markdown } from '@/components/Markdown'
-import { H1, H2, P, Strong } from '@/components/Text'
+import { H2, P, PageTitle, Strong } from '@/components/Text'
 import { PATHS } from '@/constants/path'
 import Link from 'next/link'
 
@@ -35,7 +35,7 @@ const faqs: { question: string; answer: string }[] = [
 export default function FaqPage() {
   return (
     <Container className="px-4 pt-8 pb-24">
-      <H1 className="mb-8">Foire aux Questions</H1>
+      <PageTitle>Foire aux Questions</PageTitle>
 
       <div className="flex flex-col gap-y-8">
         <P>

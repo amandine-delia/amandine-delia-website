@@ -75,7 +75,7 @@ export const DesktopNestedNavLinks = ({ title, links }: DesktopNestedNavLinksPro
       <Menu
         store={menu}
         gutter={8}
-        className="flex flex-col gap-y-2 p-4 rounded-sm bg-white border shadow-md border-gray-200"
+        className="flex flex-col gap-y-2 p-4 rounded-sm bg-white border shadow-md border-gray-200 z-10"
       >
         {links?.map(link => (
           <MenuItem key={link.href} className="hover:bg-ds-rose-100 rounded-sm">

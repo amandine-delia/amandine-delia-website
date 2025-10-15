@@ -1,5 +1,5 @@
 import { Container } from '@/components/Container'
-import { H1, P, Strong } from '@/components/Text'
+import { P, PageTitle, Strong } from '@/components/Text'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import mtc from '../../../public/img/pages/mtc.jpg'
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function MedecineChinoisePage() {
   return (
     <Container className="px-4 pt-8 pb-24">
-      <H1 className="mb-8">La Médecine Traditionnelle Chinoise</H1>
+      <PageTitle>La Médecine Traditionnelle Chinoise</PageTitle>
 
       <div className="flex flex-col md:rounded-md overflow-hidden mb-8">
         <Image
