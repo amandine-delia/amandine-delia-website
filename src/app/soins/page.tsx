@@ -1,5 +1,5 @@
 import { Container } from '@/components/Container'
-import { H1, H2, P } from '@/components/Text'
+import { H2, P, PageTitle } from '@/components/Text'
 import { PATHS } from '@/constants/path'
 import type { Metadata } from 'next'
 import Link from 'next/link'
@@ -15,9 +15,9 @@ export const metadata: Metadata = {
 export default function SoinsPage() {
   return (
     <Container className="px-4 pt-8 pb-24">
-      <H1 className="mb-8">Les Soins en Médecine Traditionnelle Chinoise</H1>
+      <PageTitle>Les Soins en Médecine Traditionnelle Chinoise</PageTitle>
 
-      <P className="mb-8">
+      <P className="mb-8 w-full text-center">
         La médecine traditionnelle chinoise offre une approche holistique de la santé, utilisant des
         techniques millénaires pour rétablir l&apos;équilibre énergétique du corps.
       </P>

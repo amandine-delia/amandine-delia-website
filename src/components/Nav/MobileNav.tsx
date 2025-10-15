@@ -12,7 +12,7 @@ export const MobileNav = () => {
   const dialog = useDialogStore()
 
   return (
-    <div className="lg:hidden">
+    <header className="lg:hidden">
       <Header handleToggle={dialog.toggle} />
 
       <MobileDrawer store={dialog}>
@@ -27,17 +27,19 @@ export const MobileNav = () => {
           </ul>
         </nav>
       </MobileDrawer>
-    </div>
+    </header>
   )
 }
 
 const Header = ({ handleToggle }: { handleToggle: VoidFunction }) => {
   return (
     <div className="p-2 grid grid-cols-[auto_1fr] items-center">
-      <Bars2Icon className="size-6 text-gray-800 z-10" role="button" onClick={handleToggle} />
+      <div onClick={handleToggle} className="p-2 cursor-pointer">
+        <Bars2Icon className="size-6 text-gray-800 z-10" role="button" />
+      </div>
 
-      <Link href={PATHS.HOME} className="no-underline relative left-[-24px]">
-        <h1 className="text-2xl font-bold text-center">Amandine D&apos;Elia</h1>
+      <Link href={PATHS.HOME} className="no-underline text-center">
+        <span className="text-2xl font-bold relative left-[-27px]">Amandine D&apos;Elia</span>
       </Link>
     </div>
   )

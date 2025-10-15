@@ -23,6 +23,10 @@ export const H1 = ({ children, className = '', customColor = 'black', ...props }
   )
 }
 
+export const PageTitle = ({ className, ...props }: TextProps) => (
+  <H1 className={`mb-4 inline-block w-full text-center ${className}`} {...props} />
+)
+
 export const H2 = ({
   children,
   className = '',
@@ -85,5 +89,17 @@ export const Ul = ({
     <ul className={`text-lg list-disc pl-6 space-y-1 mb-8 ${className}`} {...props}>
       {children}
     </ul>
+  )
+}
+
+export const Ol = ({
+  children,
+  className = '',
+  ...props
+}: React.HTMLAttributes<HTMLOListElement>) => {
+  return (
+    <ol className={`text-lg list-decimal pl-6 space-y-1 mb-8 ${className}`} {...props}>
+      {children}
+    </ol>
   )
 }

@@ -1,6 +1,6 @@
 import { Breadcrumb } from '@/components/Breadcrumb'
 import { Container } from '@/components/Container'
-import { H1, P, Strong, Ul } from '@/components/Text'
+import { P, PageTitle, Strong, Ul } from '@/components/Text'
 import type { Metadata } from 'next'
 
 import Image from 'next/image'
@@ -19,7 +19,7 @@ export default function MassageTuiNaPage() {
     <Container className="px-4 pt-8 pb-24">
       <Breadcrumb step3="Massage Tui Na" />
 
-      <H1 className="mb-8">Massage Tui Na</H1>
+      <PageTitle>Massage Tui Na</PageTitle>
 
       <div className="flex flex-col md:rounded-md overflow-hidden mb-8">
         <Image

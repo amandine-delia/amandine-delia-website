@@ -61,6 +61,7 @@ export default async function Home() {
                 width: '100%',
                 height: 'auto',
               }}
+              priority={true}
             />
           </div>
           <div className="flex flex-col md:pt-[20%] px-4">
@@ -130,7 +131,7 @@ export default async function Home() {
 
       <section id="temoignages" className="bg-ds-blue-200 py-24 px-4">
         <Container>
-          <div className="text-center">
+          <div className="text-center flex flex-col items-center">
             <H2 color="blue">Témoignages de nos patient·e·s</H2>
             <P className="text-center mb-8 text-gray-600 max-w-2xl mx-auto">
               Découvrez les avis de nos patient·e·s.

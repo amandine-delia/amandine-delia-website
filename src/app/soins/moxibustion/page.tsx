@@ -1,6 +1,6 @@
 import { Breadcrumb } from '@/components/Breadcrumb'
 import { Container } from '@/components/Container'
-import { H1, P, Ul } from '@/components/Text'
+import { P, PageTitle, Ul } from '@/components/Text'
 import type { Metadata } from 'next'
 
 import Image from 'next/image'
@@ -18,7 +18,7 @@ export default function MoxibustionPage() {
     <Container className="px-4 pt-8 pb-24">
       <Breadcrumb step3="Moxibustion" />
 
-      <H1 className="mb-8">Moxibustion</H1>
+      <PageTitle>Moxibustion</PageTitle>
 
       <div className="flex flex-col md:rounded-md overflow-hidden mb-8">
         <Image

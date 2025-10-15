@@ -15,11 +15,11 @@ export const DesktopNav: React.FC = () => {
 
 const Header = () => {
   return (
-    <div className="p-4 flex flex-col justify-center gap-y-1">
+    <header className="p-4 flex flex-col justify-center gap-y-1">
       <div className="flex items-center justify-center gap-x-2">
         <Image src="/img/pierre.png" alt="logo" width={30} height={30} />
         <Link href={PATHS.HOME} className="no-underline">
-          <h1 className="text-2xl font-bold text-center">Amandine D&apos;Elia</h1>
+          <span className="text-2xl font-bold text-center">Amandine D&apos;Elia</span>
         </Link>
       </div>
 
@@ -33,6 +33,6 @@ const Header = () => {
           <NavLink href={PATHS.RENDEZ_VOUS} label="Prendre Rendez-vous" />
         </ul>
       </nav>
-    </div>
+    </header>
   )
 }
