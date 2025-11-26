@@ -57,3 +57,8 @@ collections:
           - { label: 'Titre', name: 'title', widget: 'string' }
           - { label: 'Sous Titre', name: 'subtitle', widget: 'string' }
           - { label: 'Contenu de la page', name: 'body', widget: 'markdown', buttons: ['bold', 'italic', 'link', 'heading-one', 'heading-two', 'heading-three', 'quote', 'bulleted-list', 'numbered-list'], modes: ['rich_text'] }
+      - label: 'Tarifs Page'
+        name: 'tarifs'
+        file: 'public/data/pages/tarifs.json'
+        fields:
+          - { label: 'Contenu de la page', name: 'body', widget: 'markdown', buttons: ['bold', 'italic', 'link', 'heading-one', 'heading-two', 'heading-three', 'quote', 'bulleted-list', 'numbered-list'], modes: ['rich_text'] }
