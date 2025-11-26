@@ -25,3 +25,45 @@ collections:
         file: 'public/data/pages/acupuncture.json'
         fields:
           - { label: 'Contenu de la page', name: 'body', widget: 'markdown', buttons: ['bold', 'italic', 'link', 'heading-one', 'heading-two', 'heading-three', 'quote', 'bulleted-list', 'numbered-list'], modes: ['rich_text'] }
+      - label: 'Moxibustion Page'
+        name: 'moxibustion'
+        file: 'public/data/pages/moxibustion.json'
+        fields:
+          - { label: 'Contenu de la page', name: 'body', widget: 'markdown', buttons: ['bold', 'italic', 'link', 'heading-one', 'heading-two', 'heading-three', 'quote', 'bulleted-list', 'numbered-list'], modes: ['rich_text'] }
+      - label: 'Tui Na Page'
+        name: 'tuina'
+        file: 'public/data/pages/tuina.json'
+        fields:
+          - { label: 'Contenu de la page', name: 'body', widget: 'markdown', buttons: ['bold', 'italic', 'link', 'heading-one', 'heading-two', 'heading-three', 'quote', 'bulleted-list', 'numbered-list'], modes: ['rich_text'] }
+      - label: 'Pharmacopée Page'
+        name: 'pharma'
+        file: 'public/data/pages/pharma.json'
+        fields:
+          - { label: 'Contenu de la page', name: 'body', widget: 'markdown', buttons: ['bold', 'italic', 'link', 'heading-one', 'heading-two', 'heading-three', 'quote', 'bulleted-list', 'numbered-list'], modes: ['rich_text'] }
+      - label: 'Ventouses Page'
+        name: 'ventouses'
+        file: 'public/data/pages/ventouses.json'
+        fields:
+          - { label: 'Contenu de la page', name: 'body', widget: 'markdown', buttons: ['bold', 'italic', 'link', 'heading-one', 'heading-two', 'heading-three', 'quote', 'bulleted-list', 'numbered-list'], modes: ['rich_text'] }
+      - label: 'Première séance Page'
+        name: 'first-session'
+        file: 'public/data/pages/first-session.json'
+        fields:
+          - { label: 'Contenu de la page', name: 'body', widget: 'markdown', buttons: ['bold', 'italic', 'link', 'heading-one', 'heading-two', 'heading-three', 'quote', 'bulleted-list', 'numbered-list'], modes: ['rich_text'] }
+      - label: 'À propos Page'
+        name: 'about'
+        file: 'public/data/pages/about.json'
+        fields:
+          - { label: 'Titre', name: 'title', widget: 'string' }
+          - { label: 'Sous Titre', name: 'subtitle', widget: 'string' }
+          - { label: 'Contenu de la page', name: 'body', widget: 'markdown', buttons: ['bold', 'italic', 'link', 'heading-one', 'heading-two', 'heading-three', 'quote', 'bulleted-list', 'numbered-list'], modes: ['rich_text'] }
+      - label: 'Tarifs Page'
+        name: 'tarifs'
+        file: 'public/data/pages/tarifs.json'
+        fields:
+          - { label: 'Contenu de la page', name: 'body', widget: 'markdown', buttons: ['bold', 'italic', 'link', 'heading-one', 'heading-two', 'heading-three', 'quote', 'bulleted-list', 'numbered-list'], modes: ['rich_text'] }
+      - label: 'La Médecine Traditionnelle Chinoise Page'
+        name: 'med-chinoise'
+        file: 'public/data/pages/med-chinoise.json'
+        fields:
+          - { label: 'Contenu de la page', name: 'body', widget: 'markdown', buttons: ['bold', 'italic', 'link', 'heading-one', 'heading-two', 'heading-three', 'quote', 'bulleted-list', 'numbered-list'], modes: ['rich_text'] }

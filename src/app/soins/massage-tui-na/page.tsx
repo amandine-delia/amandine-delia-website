@@ -1,8 +1,11 @@
 import { Breadcrumb } from '@/components/Breadcrumb'
 import { Container } from '@/components/Container'
-import { P, PageTitle, Strong, Ul } from '@/components/Text'
+import { PageTitle } from '@/components/Text'
 import type { Metadata } from 'next'
 
+import { ErrorMessage } from '@/components/ErrorMessage'
+import { Markdown } from '@/components/Markdown'
+import { getPageData, parseJsonData } from '@/utils/fetchData'
 import Image from 'next/image'
 import massageTuiNa from '../../../../public/img/pages/massage-tui-na.jpg'
 
@@ -15,6 +18,9 @@ export const metadata: Metadata = {
 }
 
 export default function MassageTuiNaPage() {
+  const pageData = getPageData('data/pages/tuina.json')
+  const { data, isError } = parseJsonData<{ body: string }>(pageData)
+
   return (
     <Container className="px-4 pt-8 pb-24">
       <Breadcrumb step3="Massage Tui Na" />
@@ -38,28 +44,8 @@ export default function MassageTuiNaPage() {
         />
       </div>
 
-      <div>
-        <P className=" mb-8">
-          Le Tui Na est l’une des grandes techniques de la médecine traditionnelle chinoise. C’est
-          un massage énergétique qui utilise des pressions, des étirements et des mobilisations pour
-          stimuler la circulation du Qi (énergie vitale) et harmoniser les fonctions du corps.
-        </P>
-
-        <P className=" mb-8">
-          Pratiqué seul ou en complément d’une séance d’acupuncture, le Tui Na aide à :
-        </P>
-
-        <Ul className="mb-8">
-          <li>détendre les muscles et soulager les tensions,</li>
-          <li>améliorer la circulation et la mobilité,</li>
-          <li>apaiser le stress et favoriser un sommeil réparateur,</li>
-          <li>renforcer les effets des points d’acupuncture pour un travail en profondeur.</li>
-        </Ul>
-
-        <P>
-          C’est une approche <Strong>à la fois tonique et enveloppante</Strong>, qui s’adapte aux
-          besoins de chacun·e et offre une sensation de vitalité et d’équilibre.
-        </P>
+      <div className="mt-4 md:mt-8">
+        {data && !isError ? <Markdown>{data?.body}</Markdown> : <ErrorMessage />}
       </div>
     </Container>
   )
