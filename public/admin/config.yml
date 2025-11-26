@@ -40,3 +40,8 @@ collections:
         file: 'public/data/pages/pharma.json'
         fields:
           - { label: 'Contenu de la page', name: 'body', widget: 'markdown', buttons: ['bold', 'italic', 'link', 'heading-one', 'heading-two', 'heading-three', 'quote', 'bulleted-list', 'numbered-list'], modes: ['rich_text'] }
+      - label: 'Ventouses Page'
+        name: 'ventouses'
+        file: 'public/data/pages/ventouses.json'
+        fields:
+          - { label: 'Contenu de la page', name: 'body', widget: 'markdown', buttons: ['bold', 'italic', 'link', 'heading-one', 'heading-two', 'heading-three', 'quote', 'bulleted-list', 'numbered-list'], modes: ['rich_text'] }

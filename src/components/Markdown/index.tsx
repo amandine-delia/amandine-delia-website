@@ -22,7 +22,9 @@ const MARKDOWN_SECURITY_OVERRIDES = {
 }
 
 const STYLE_OVERRIDE: MarkdownToJSX.Options['overrides'] = {
-  p: ({ className = '', ...props }) => <P className={`${className} mb-8 text-lg`} {...props} />,
+  p: ({ className = '', ...props }) => (
+    <P className={`${className} mb-8 text-lg [li>&]:mb-0`} {...props} />
+  ),
   h1: ({ className = '', ...props }) => (
     <H2 customColor="text-black" className={`${className} mb-8 text-lg`} {...props} />
   ),
