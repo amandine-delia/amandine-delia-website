@@ -1,5 +1,4 @@
 
-
 # True config for production
 backend:
   name: github
@@ -30,5 +29,10 @@ collections:
       - label: 'Moxibustion Page'
         name: 'moxibustion'
         file: 'public/data/pages/moxibustion.json'
+        fields:
+          - { label: 'Contenu de la page', name: 'body', widget: 'markdown', buttons: ['bold', 'italic', 'link', 'heading-one', 'heading-two', 'heading-three', 'quote', 'bulleted-list', 'numbered-list'], modes: ['rich_text'] }
+      - label: 'Tui Na Page'
+        name: 'tuina'
+        file: 'public/data/pages/tuina.json'
         fields:
           - { label: 'Contenu de la page', name: 'body', widget: 'markdown', buttons: ['bold', 'italic', 'link', 'heading-one', 'heading-two', 'heading-three', 'quote', 'bulleted-list', 'numbered-list'], modes: ['rich_text'] }
