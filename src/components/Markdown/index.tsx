@@ -22,18 +22,18 @@ const MARKDOWN_SECURITY_OVERRIDES = {
 }
 
 const STYLE_OVERRIDE: MarkdownToJSX.Options['overrides'] = {
-  p: props => <P {...props} />,
+  p: ({ className = '', ...props }) => <P className={`${className} mb-8 text-lg`} {...props} />,
   h1: ({ className = '', ...props }) => (
-    <H2 customColor="text-black" className={`${className} mb-3 text-lg`} {...props} />
+    <H2 customColor="text-black" className={`${className} mb-8 text-lg`} {...props} />
   ),
   h2: ({ className = '', ...props }) => (
-    <H2 customColor="text-black" className={`${className} mb-3 text-lg`} {...props} />
+    <H2 customColor="text-black" className={`${className} mb-8 text-lg`} {...props} />
   ),
   h3: ({ className = '', ...props }) => (
-    <H3 customColor="text-black" className={`${className} mb-3 text-lg`} {...props} />
+    <H3 customColor="text-black" className={`${className} mb-8 text-lg`} {...props} />
   ),
-  ul: ({ className = '', ...props }) => <Ul className={`${className} mb-3`} {...props} />,
-  ol: ({ className = '', ...props }) => <Ol className={`${className} mb-3`} {...props} />,
+  ul: ({ className = '', ...props }) => <Ul className={`${className} mb-8`} {...props} />,
+  ol: ({ className = '', ...props }) => <Ol className={`${className} mb-8`} {...props} />,
   strong: props => <Strong {...props} />,
   b: props => <Strong {...props} />,
 }
