@@ -3,6 +3,7 @@
 - [Auth](#auth)
 - [Structure](#structure)
 - [Fetch Data](#fetch-data)
+- [Development](#development)
 
 ## Auth
 
@@ -54,3 +55,18 @@ async function getBlogPost(): Promise<BlogPost> {
   }
 }
 ```
+
+## Development
+
+```bash
+yarn dev
+```
+
+If you need to access the `/admin` page locally:
+
+- Add `local_backend: true` at the top of your `public/admin/config.yml`
+- Run the express server `npx decap-server`
+- Run the local project `yarn dev`
+- Access the page `http://localhost:3000/admin/index.html`
+
+See more here [in the doc](https://decapcms.org/docs/working-with-a-local-git-repository/).
