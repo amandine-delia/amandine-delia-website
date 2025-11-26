@@ -2,9 +2,14 @@ import fs from 'fs'
 import path from 'path'
 
 export const getPageData = (dataPath: string) => {
-  const filePath = path.join(process.cwd(), 'public', dataPath)
-  const fileContent = fs.readFileSync(filePath, 'utf8')
-  return fileContent
+  try {
+    const filePath = path.join(process.cwd(), 'public', dataPath)
+    const fileContent = fs.readFileSync(filePath, 'utf8')
+    return fileContent
+  } catch (error) {
+    console.error('Error reading page data:', error)
+    return undefined
+  }
 }
 
 type ParsedDataResult<TData> =
@@ -17,11 +22,12 @@ type ParsedDataResult<TData> =
       isError: true
     }
 
-export const parseJsonData = <TData>(jsonString: string): ParsedDataResult<TData> => {
+export const parseJsonData = <TData>(jsonString: string | undefined): ParsedDataResult<TData> => {
   let data: TData | null = null
   let isError = false
 
   try {
+    if (!jsonString) throw new Error('Page data is undefined')
     data = JSON.parse(jsonString)
     isError = false
   } catch (error) {
