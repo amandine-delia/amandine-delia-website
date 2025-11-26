@@ -1,9 +1,12 @@
 import { Breadcrumb } from '@/components/Breadcrumb'
 import { Container } from '@/components/Container'
-import { P, PageTitle } from '@/components/Text'
+import { PageTitle } from '@/components/Text'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 
+import { ErrorMessage } from '@/components/ErrorMessage'
+import { Markdown } from '@/components/Markdown'
+import { getPageData, parseJsonData } from '@/utils/fetchData'
 import pharmacopee from '../../../../public/img/pages/pharmacopee.jpg'
 
 export const metadata: Metadata = {
@@ -15,6 +18,9 @@ export const metadata: Metadata = {
 }
 
 export default function PharmacopeePage() {
+  const pageData = getPageData('data/pages/pharma.json')
+  const { data, isError } = parseJsonData<{ body: string }>(pageData)
+
   return (
     <Container className="px-4 pt-8 pb-24">
       <Breadcrumb step3="Pharmacopée" />
@@ -38,30 +44,8 @@ export default function PharmacopeePage() {
         />
       </div>
 
-      <div>
-        <P className=" mb-8">
-          La pharmacopée chinoise est l’un des piliers de la Médecine Traditionnelle Chinoise. Elle
-          repose sur l’utilisation de plantes, minéraux et parfois produits naturels, combinés en
-          formules personnalisées.
-        </P>
-
-        <P className=" mb-8">
-          Chaque plante possède une énergie (froid, tiède, neutre, chaud), une saveur (amer, doux,
-          piquant, acide, salé) et une affinité avec certains organes. Selon le bilan énergétique
-          établi lors de la consultation, le praticien associe plusieurs ingrédients afin de
-          rétablir l’équilibre du corps.
-        </P>
-
-        <P className=" mb-8">
-          L’objectif de la pharmacopée n’est pas seulement de traiter un symptôme, mais de corriger
-          le terrain énergétique : nourrir ce qui est en vide, disperser ce qui est en excès,
-          harmoniser le Qi et le Sang, renforcer les organes.
-        </P>
-
-        <P>
-          Utilisée depuis des millénaires, cette approche reste aujourd’hui un outil puissant pour
-          soutenir la vitalité, prévenir les déséquilibres et accompagner le retour à l’harmonie.
-        </P>
+      <div className="mt-4 md:mt-8">
+        {data && !isError ? <Markdown>{data?.body}</Markdown> : <ErrorMessage />}
       </div>
     </Container>
   )
