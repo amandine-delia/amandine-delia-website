@@ -62,3 +62,8 @@ collections:
         file: 'public/data/pages/tarifs.json'
         fields:
           - { label: 'Contenu de la page', name: 'body', widget: 'markdown', buttons: ['bold', 'italic', 'link', 'heading-one', 'heading-two', 'heading-three', 'quote', 'bulleted-list', 'numbered-list'], modes: ['rich_text'] }
+      - label: 'La Médecine Traditionnelle Chinoise Page'
+        name: 'med-chinoise'
+        file: 'public/data/pages/med-chinoise.json'
+        fields:
+          - { label: 'Contenu de la page', name: 'body', widget: 'markdown', buttons: ['bold', 'italic', 'link', 'heading-one', 'heading-two', 'heading-three', 'quote', 'bulleted-list', 'numbered-list'], modes: ['rich_text'] }
