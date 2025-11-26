@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 export const Breadcrumb = ({ step3 }: { step3: string }) => (
-  <nav id="breadcrumb" className="text-sm breadcrumbs mb-6">
+  <nav id="breadcrumb" className="text-sm breadcrumbs mb-6 md:hidden">
     <ul className="flex space-x-2 text-gray-600">
       <li>
         <Link href="/" className="hover:text-gray-900">
