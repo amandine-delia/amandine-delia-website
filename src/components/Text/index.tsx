@@ -59,9 +59,17 @@ export const H3 = ({
   )
 }
 
-export const P = ({ children, className = '', customColor = 'black', ...props }: TextProps) => {
+export const P = ({
+  children,
+  className = '',
+  color = 'black',
+  customColor,
+  ...props
+}: TextProps) => {
+  const textColor = customColor ? customColor : COLORS[color]
+
   return (
-    <p className={`text-lg inline-block w-fit ${customColor} ${className}`} {...props}>
+    <p className={`text-lg inline-block w-fit ${textColor} ${className}`} {...props}>
       {children}
     </p>
   )
@@ -101,5 +109,29 @@ export const Ol = ({
     <ol className={`text-lg list-decimal pl-6 space-y-1 mb-8 ${className}`} {...props}>
       {children}
     </ol>
+  )
+}
+
+type AProps = TextProps & {
+  hasUnderline?: boolean
+}
+
+export const A = ({
+  children,
+  className = '',
+  color = 'rose',
+  customColor,
+  hasUnderline = true,
+  ...props
+}: AProps & React.AnchorHTMLAttributes<HTMLAnchorElement>) => {
+  const textColor = customColor ? customColor : COLORS[color]
+
+  return (
+    <a
+      className={`${hasUnderline ? 'underline decoration-ds-rose-900' : ''} hover:opacity-80 transition-opacity font-semibold ${textColor} ${className}`}
+      {...props}
+    >
+      {children}
+    </a>
   )
 }
