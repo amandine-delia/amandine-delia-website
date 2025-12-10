@@ -67,3 +67,21 @@ collections:
         file: 'public/data/pages/med-chinoise.json'
         fields:
           - { label: 'Contenu de la page', name: 'body', widget: 'markdown', buttons: ['bold', 'italic', 'link', 'heading-one', 'heading-two', 'heading-three', 'quote', 'bulleted-list', 'numbered-list'], modes: ['rich_text'] }
+  - label: 'Adresses des Cabinets'
+    name: 'address'
+    folder: 'public/data/pages/office/address'
+    create: true
+    extension: 'json'
+    fields:
+      - { label: 'Nom du lieu', name: 'name', widget: 'string' }
+      - { label: 'Adresse', name: 'address', widget: 'string' }
+      - { label: 'Google Map', name: 'iframe', widget: 'string', hint: 'Dans Google Maps, vas sur ton cabinet, click **"Partager"** et après **"Copier le code HTML"** ou **"Intégrer Google Map"**' }
+  - label: 'Coordonnées de contact'
+    name: 'contact-info'
+    files:
+      - label: 'Coordonnées'
+        name: 'contact'
+        file: 'public/data/pages/office/contact/contact.json'
+        fields:
+          - { label: 'Théléphone', name: 'phone', widget: 'string', required: false, hint: '**SANS ESPACES**' }
+          - { label: 'Email', name: 'email', widget: 'string', required: false }
