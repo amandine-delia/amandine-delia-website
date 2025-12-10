@@ -67,6 +67,20 @@ collections:
         file: 'public/data/pages/med-chinoise.json'
         fields:
           - { label: 'Contenu de la page', name: 'body', widget: 'markdown', buttons: ['bold', 'italic', 'link', 'heading-one', 'heading-two', 'heading-three', 'quote', 'bulleted-list', 'numbered-list'], modes: ['rich_text'] }
+      - label: 'FAQ Page'
+        name: 'faq'
+        file: 'public/data/pages/faq.json'
+        fields:
+          - { label: 'Titre de la page', name: 'pageTitle', default: 'Foire aux Questions', widget: 'string' }
+          - { label: 'Introduction', name: 'introduction', widget: 'string' }
+          - { label: 'Questions & Réponses', name: 'qa', widget: 'list', allow_add: true, fields: [
+              { label: 'Question', name: 'question', widget: 'string' },
+              { label: 'Réponse', name: 'answer', widget: 'markdown', buttons: ['bold', 'italic', 'link', 'heading-one', 'heading-two', 'heading-three', 'quote', 'bulleted-list', 'numbered-list'], modes: ['rich_text'] }
+            ] }
+          - { label: 'Bloc en pied de page', name: 'footer', widget: 'object', collapsed: true, fields: [
+              { label: 'Titre', name: 'title', widget: 'string' },
+              { label: 'Contenu', name: 'content', widget: 'string' }
+            ] }
   - label: 'Adresses des Cabinets'
     name: 'address'
     folder: 'public/data/pages/office/address'
