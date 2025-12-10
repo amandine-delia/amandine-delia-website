@@ -1,14 +1,9 @@
+import type { Address, Contact } from '@/api/contact'
+import { ContactInfo } from '@/components/ContactInfo'
 import { Container } from '@/components/Container'
-import { A, H2, P, PageTitle } from '@/components/Text'
-import { getIframeSrc } from '@/utils/address'
+import { H2, P, PageTitle } from '@/components/Text'
+import { encodeContact, getIframeSrc } from '@/utils/address'
 import { getFilesInFolder, getPageData, parseJsonData, parseJsonFiles } from '@/utils/fetchData'
-
-type Address = { name: string; address: string; iframe: string }
-
-type Contact = {
-  phone?: string
-  email?: string
-}
 
 const CONTACT_MAX_WIDTH = 'max-w-[500px]'
 
@@ -35,23 +30,10 @@ export default function RendezvousPage() {
               <P className="font-semibold">Amandine D&apos;Elia</P>
             </div>
 
-            {contact.phone && (
-              <div className="flex items-center gap-2 mt-2">
-                <P className="font-medium">Téléphone:</P>
-                <A customColor="black" hasUnderline={false} href={`tel:${contact.phone}`}>
-                  {contact.phone}
-                </A>
-              </div>
-            )}
-
-            {contact.email && (
-              <div className="flex items-center gap-2 mt-2">
-                <P className="font-medium">Email:</P>
-                <A customColor="black" hasUnderline={false} href={`mailto:${contact.email}`}>
-                  {contact.email}
-                </A>
-              </div>
-            )}
+            <ContactInfo
+              phone={encodeContact(contact?.phone)}
+              email={encodeContact(contact?.email)}
+            />
           </div>
         )}
 
