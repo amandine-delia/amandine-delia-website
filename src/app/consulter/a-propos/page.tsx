@@ -1,3 +1,4 @@
+import { AProposData } from '@/api/aPropos'
 import { Container } from '@/components/Container'
 import { ErrorMessage } from '@/components/ErrorMessage'
 import { Markdown } from '@/components/Markdown'
@@ -5,15 +6,9 @@ import { H2, PageTitle } from '@/components/Text'
 import { getPageData, parseJsonData } from '@/utils/fetchData'
 import Image from 'next/image'
 
-type DataType = {
-  body: string
-  title: string
-  subtitle: string
-}
-
 export default function AProposPage() {
   const pageData = getPageData('data/pages/about.json')
-  const { data, isError } = parseJsonData<DataType>(pageData)
+  const { data, isError } = parseJsonData<AProposData>(pageData)
 
   return (
     <Container className="px-4 pt-8 pb-24">
