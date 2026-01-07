@@ -89,7 +89,6 @@ collections:
     fields:
       - { label: 'Nom du lieu', name: 'name', widget: 'string' }
       - { label: 'Adresse', name: 'address', widget: 'string' }
-      - { label: 'Google Map', name: 'iframe', widget: 'string', hint: 'Dans Google Maps, vas sur ton cabinet, click **"Partager"** et après **"Copier le code HTML"** ou **"Intégrer Google Map"**' }
   - label: 'Coordonnées de contact'
     name: 'contact-info'
     files:

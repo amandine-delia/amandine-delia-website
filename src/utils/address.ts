@@ -1,8 +1,3 @@
-export const getIframeSrc = (iframeStr: string): string => {
-  const srcMatch = (iframeStr || '').match(/src=["']([^"']+)["']/)
-  return srcMatch ? srcMatch[1] : ''
-}
-
 // Base64 encoding for contact info protection
 export function encodeContact(str: string | undefined): string | undefined {
   if (!str) return undefined

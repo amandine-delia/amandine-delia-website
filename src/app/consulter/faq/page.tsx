@@ -29,10 +29,12 @@ export default function FaqPage() {
           {qa.map(({ question, answer }, index) => (
             <details key={index} className="group" itemScope itemType="https://schema.org/Question">
               <summary className="cursor-pointer list-none">
-                <H2 className="text-lg mb-2 inline-flex items-center gap-2" itemProp="name">
-                  <span className="text-ds-rose-500 group-open:rotate-90 transition-transform">
-                    ▶
-                  </span>
+                <H2
+                  color="black"
+                  className="text-lg mb-2 inline-flex items-center gap-2"
+                  itemProp="name"
+                >
+                  <span className="group-open:rotate-90 transition-transform">▶</span>
                   {question}
                 </H2>
               </summary>
