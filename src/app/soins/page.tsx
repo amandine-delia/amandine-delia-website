@@ -1,4 +1,4 @@
-import { Container } from '@/components/Container'
+import { PageContainer } from '@/components/PageContainer'
 import { H2, P, PageTitle } from '@/components/Text'
 import { PATHS } from '@/constants/path'
 import type { Metadata } from 'next'
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function SoinsPage() {
   return (
-    <Container className="px-4 pt-8 pb-24">
+    <PageContainer>
       <PageTitle>Les Soins en Médecine Traditionnelle Chinoise</PageTitle>
 
       <P className="mb-8 w-full text-center">
@@ -67,6 +67,6 @@ export default function SoinsPage() {
           </Link>
         </div>
       </div>
-    </Container>
+    </PageContainer>
   )
 }

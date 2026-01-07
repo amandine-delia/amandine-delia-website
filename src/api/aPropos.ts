@@ -1,5 +1,6 @@
 export type AProposData = {
   body: string
-  title: string
-  subtitle: string
+  pageTitle: string
+  header: string
+  subheader: string
 }

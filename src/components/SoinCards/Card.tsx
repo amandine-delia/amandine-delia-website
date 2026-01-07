@@ -16,19 +16,7 @@ export const SoinCard = ({
     <Link href={path}>
       <div className="relative w-[275px] shrink-0 rounded-md border border-neutral-200 shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out">
         <div className="flex flex-col md:max-w-[440px] rounded-t-md overflow-hidden">
-          <Image
-            alt={title}
-            // Importing an image will
-            // automatically set the width and height
-            src={image}
-            sizes="100vw"
-            // Make the image display full width
-            // and preserve its aspect ratio
-            style={{
-              width: '100%',
-              height: 'auto',
-            }}
-          />
+          <Image alt={title} src={image} placeholder="blur" priority={index <= 3} />
         </div>
         <div className="p-2">
           <H3 className="text-xl" color="black">

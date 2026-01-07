@@ -1,5 +1,5 @@
 import { Breadcrumb } from '@/components/Breadcrumb'
-import { Container } from '@/components/Container'
+import { PageContainer } from '@/components/PageContainer'
 import { PageTitle } from '@/components/Text'
 import type { Metadata } from 'next'
 import Image from 'next/image'
@@ -19,34 +19,21 @@ export const metadata: Metadata = {
 
 export default function PharmacopeePage() {
   const pageData = getPageData('data/pages/pharma.json')
-  const { data, isError } = parseJsonData<{ body: string }>(pageData)
+  const { data, isError } = parseJsonData<{ body: string; pageTitle: string }>(pageData)
 
   return (
-    <Container className="px-4 pt-8 pb-24">
+    <PageContainer>
       <Breadcrumb step3="Pharmacopée" />
 
-      <PageTitle>Pharmacopée Chinoise</PageTitle>
+      <PageTitle>{data?.pageTitle || 'Pharmacopée Chinoise'}</PageTitle>
 
       <div className="flex flex-col md:rounded-md overflow-hidden mb-8">
-        <Image
-          alt="Pharmacopée Chinoise"
-          // Importing an image will
-          // automatically set the width and height
-          src={pharmacopee}
-          sizes="100vw"
-          // Make the image display full width
-          // and preserve its aspect ratio
-          style={{
-            width: '100%',
-            height: 'auto',
-          }}
-          priority={true}
-        />
+        <Image alt="Pharmacopée Chinoise" src={pharmacopee} priority placeholder="blur" />
       </div>
 
       <div className="mt-4 md:mt-8">
         {data && !isError ? <Markdown>{data?.body}</Markdown> : <ErrorMessage />}
       </div>
-    </Container>
+    </PageContainer>
   )
 }

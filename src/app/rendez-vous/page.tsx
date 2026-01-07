@@ -1,13 +1,12 @@
 import type { Address, Contact } from '@/api/contact'
 import { ContactInfo } from '@/components/ContactInfo'
-import { Container } from '@/components/Container'
+import { PageContainer } from '@/components/PageContainer'
 import { H2, P, PageTitle } from '@/components/Text'
 import { encodeContact, getIframeSrc } from '@/utils/address'
 import { getFilesInFolder, getPageData, parseJsonData, parseJsonFiles } from '@/utils/fetchData'
 
-const CONTACT_MAX_WIDTH = 'max-w-[500px]'
 // This is used for iframe width calculation
-const CONTAINER_X_PADDING = 'px-4'
+const CONTACT_MAX_WIDTH = 'max-w-[500px]'
 
 export default function RendezvousPage() {
   const addressFiles = getFilesInFolder('data/pages/office/address')
@@ -19,7 +18,7 @@ export default function RendezvousPage() {
   const hasAddress = !isAddressError && address && address.length > 0
 
   return (
-    <Container className={`${CONTAINER_X_PADDING} pt-8 pb-24`}>
+    <PageContainer>
       <PageTitle>Prendre rendez-vous</PageTitle>
 
       <div className="mt-4 md:mt-8 flex flex-wrap justify-around gap-y-8">
@@ -66,6 +65,6 @@ export default function RendezvousPage() {
           </div>
         )}
       </div>
-    </Container>
+    </PageContainer>
   )
 }
