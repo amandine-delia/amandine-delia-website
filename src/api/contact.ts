@@ -1,4 +1,4 @@
-export type Address = { name: string; address: string; iframe: string }
+export type Address = { name: string; address: string }
 
 export type Contact = {
   phone?: string

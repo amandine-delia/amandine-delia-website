@@ -1,8 +1,8 @@
 import { FaqData } from '@/api/faq'
 import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
 import { ErrorMessage } from '@/components/ErrorMessage'
 import { Markdown } from '@/components/Markdown'
+import { PageContainer } from '@/components/PageContainer'
 import { H2, P, PageTitle, Strong } from '@/components/Text'
 import { PATHS } from '@/constants/path'
 import { getPageData, parseJsonData } from '@/utils/fetchData'
@@ -19,7 +19,7 @@ export default function FaqPage() {
   const { pageTitle, introduction, qa, footer } = data
 
   return (
-    <Container className="px-4 pt-8 pb-24">
+    <PageContainer>
       <PageTitle>{pageTitle}</PageTitle>
 
       <div className="flex flex-col gap-y-8">
@@ -29,10 +29,12 @@ export default function FaqPage() {
           {qa.map(({ question, answer }, index) => (
             <details key={index} className="group" itemScope itemType="https://schema.org/Question">
               <summary className="cursor-pointer list-none">
-                <H2 className="text-lg mb-2 inline-flex items-center gap-2" itemProp="name">
-                  <span className="text-ds-rose-500 group-open:rotate-90 transition-transform">
-                    ▶
-                  </span>
+                <H2
+                  color="black"
+                  className="text-lg mb-2 inline-flex items-center gap-2"
+                  itemProp="name"
+                >
+                  <span className="group-open:rotate-90 transition-transform">▶</span>
                   {question}
                 </H2>
               </summary>
@@ -59,6 +61,6 @@ export default function FaqPage() {
           </Link>
         </div>
       </div>
-    </Container>
+    </PageContainer>
   )
 }

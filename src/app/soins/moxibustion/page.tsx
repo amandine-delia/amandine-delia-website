@@ -1,5 +1,5 @@
 import { Breadcrumb } from '@/components/Breadcrumb'
-import { Container } from '@/components/Container'
+import { PageContainer } from '@/components/PageContainer'
 import { PageTitle } from '@/components/Text'
 import type { Metadata } from 'next'
 
@@ -18,34 +18,21 @@ export const metadata: Metadata = {
 
 export default function MoxibustionPage() {
   const pageData = getPageData('data/pages/moxibustion.json')
-  const { data, isError } = parseJsonData<{ body: string }>(pageData)
+  const { data, isError } = parseJsonData<{ body: string; pageTitle: string }>(pageData)
 
   return (
-    <Container className="px-4 pt-8 pb-24">
+    <PageContainer>
       <Breadcrumb step3="Moxibustion" />
 
-      <PageTitle>Moxibustion</PageTitle>
+      <PageTitle>{data?.pageTitle || 'Moxibustion'}</PageTitle>
 
       <div className="flex flex-col md:rounded-md overflow-hidden mb-8">
-        <Image
-          alt="moxibustion"
-          // Importing an image will
-          // automatically set the width and height
-          src={moxibustion}
-          sizes="100vw"
-          // Make the image display full width
-          // and preserve its aspect ratio
-          style={{
-            width: '100%',
-            height: 'auto',
-          }}
-          priority={true}
-        />
+        <Image alt="moxibustion" src={moxibustion} priority placeholder="blur" />
       </div>
 
       <div className="mt-4 md:mt-8">
         {data && !isError ? <Markdown>{data?.body}</Markdown> : <ErrorMessage />}
       </div>
-    </Container>
+    </PageContainer>
   )
 }

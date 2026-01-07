@@ -1,13 +1,9 @@
 import type { Address, Contact } from '@/api/contact'
 import { ContactInfo } from '@/components/ContactInfo'
-import { Container } from '@/components/Container'
-import { H2, P, PageTitle } from '@/components/Text'
-import { encodeContact, getIframeSrc } from '@/utils/address'
+import { PageContainer } from '@/components/PageContainer'
+import { P } from '@/components/Text'
+import { encodeContact } from '@/utils/address'
 import { getFilesInFolder, getPageData, parseJsonData, parseJsonFiles } from '@/utils/fetchData'
-
-const CONTACT_MAX_WIDTH = 'max-w-[500px]'
-// This is used for iframe width calculation
-const CONTAINER_X_PADDING = 'px-4'
 
 export default function RendezvousPage() {
   const addressFiles = getFilesInFolder('data/pages/office/address')
@@ -19,53 +15,44 @@ export default function RendezvousPage() {
   const hasAddress = !isAddressError && address && address.length > 0
 
   return (
-    <Container className={`${CONTAINER_X_PADDING} pt-8 pb-24`}>
-      <PageTitle>Prendre rendez-vous</PageTitle>
-
-      <div className="mt-4 md:mt-8 flex flex-wrap justify-around gap-y-8">
-        {/* Contact Bloc */}
+    <PageContainer>
+      <div className="">
         {!isContactError && (
-          <div className="border-2 border-ds-rose-700 rounded-2xl p-4 aspect-square w-full md:max-w-[350px] md:max-h-[350px]">
-            <H2>Contact</H2>
-
-            <div className="flex items-center mt-4">
-              <P className="font-semibold">Amandine D&apos;Elia</P>
+          <>
+            <div className="min-h-[350px] flex flex-col gap-y-3 items-center justify-center">
+              <P className="font-semibold text-2xl!">Amandine D&apos;Elia</P>
+              <ContactInfo
+                phone={encodeContact(contact?.phone)}
+                email={encodeContact(contact?.email)}
+              />
             </div>
 
-            <ContactInfo
-              phone={encodeContact(contact?.phone)}
-              email={encodeContact(contact?.email)}
-            />
-          </div>
+            <div className="flex items-center mb-28">
+              <div className="w-full h-[2px] bg-ds-rose-500" />
+              <P color="rose" className="px-2">
+                Cabinets
+              </P>
+              <div className="w-full h-[2px] bg-ds-rose-500" />
+            </div>
+          </>
         )}
 
-        {/* Cabinets Bloc */}
         {hasAddress && (
-          <div className={`flex flex-col gap-y-16 overflow-hidden ${CONTACT_MAX_WIDTH}`}>
-            {address.map(({ name, address, iframe }, index) => {
-              const iframeSrc = getIframeSrc(iframe)
-
+          <div className="flex flex-col items-center">
+            {address.map(({ name, address }, index) => {
               return (
-                <div key={index} className="flex flex-col">
-                  <H2>{name}</H2>
+                <div key={index} className="flex flex-col mb-8  items-center">
+                  <P color="black" className="font-semibold">
+                    {name}
+                  </P>
 
                   <P>{address}</P>
-
-                  {!!iframeSrc && (
-                    <iframe
-                      src={iframeSrc}
-                      className={`w-[calc(100vw-32px)] ${CONTACT_MAX_WIDTH} aspect-square border-0 mt-4`}
-                      allowFullScreen={false}
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                    ></iframe>
-                  )}
                 </div>
               )
             })}
           </div>
         )}
       </div>
-    </Container>
+    </PageContainer>
   )
 }
