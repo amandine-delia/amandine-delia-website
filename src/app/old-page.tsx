@@ -1,46 +1,20 @@
 import { Button } from '@/components/Button'
-import { H3 } from '@/components/Text'
+import { Container } from '@/components/Container'
+import { SoinCards } from '@/components/SoinCards'
+import { Temoignages } from '@/components/Temoignages'
+import { H2, H3, P } from '@/components/Text'
 import { PATHS } from '@/constants/path'
 import Image from 'next/image'
 import Link from 'next/link'
-import heroImg from '../../public/img/amandine_delia-compressed.jpg'
+import amandine from '../../public/img/amandine_delia.jpg'
+import chinaPainting from '../../public/img/china-painting.jpg'
+import placeholderImg from '../../public/img/placeholder-img.jpg'
 
 export default async function Home() {
   return (
     <>
       {/* HERO SECTION */}
-
-      <section id="hero" className="flex flex-col md:flex-row gap-y-10 p-3 max-w-[1200px] mx-auto">
-        <div className="flex-1">
-          <div className="md:mt-[20%]">
-            <H3 color="black">
-              Un accompagnement bienveillant pour{' '}
-              <span className="bg-ds-rose-200 rounded-2xl px-2">retrouver équilibre</span> et
-              vitalité.
-            </H3>
-            <h1 className="mt-4 text-smd text-gray-600">
-              Practicienne à Marseille en Acupuncture, Phytothérapie, Tuina et conseils en hygiène
-              de vie.
-            </h1>
-
-            <div className="mt-10 flex gap-x-3 gap-y-4 flex-wrap">
-              <Link href={PATHS.RENDEZ_VOUS}>
-                <Button variant="blue">Prendre RDV</Button>
-              </Link>
-
-              <Link href={PATHS.A_PROPOS}>
-                <Button id="amandine-delia-savoir-plus">En savoir plus</Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex-1">
-          <Image alt="Amandine D'Elia" src={heroImg} className="rounded-xl" />
-        </div>
-      </section>
-
-      {/*  <section id="hero" className="pt-5 md:p-3  bg-ds-rose-100">
+      <section id="hero" className="pt-5 md:p-3  bg-ds-rose-100">
         <Container className="flex flex-col md:flex-row">
           <div className="flex flex-col md:max-w-[440px] md:rounded-md overflow-hidden">
             <Image
@@ -204,7 +178,7 @@ export default async function Home() {
             </Link>
           </div>
         </Container>
-      </section> */}
+      </section>
     </>
   )
 }
