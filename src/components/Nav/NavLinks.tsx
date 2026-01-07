@@ -44,7 +44,7 @@ export const NestedNavLinks = ({ title, store, links }: NestedNavLinksProps) => 
           className={`size-5 text-gray-800 transition-transform duration-(--duration-slow) ${isOpen ? 'rotate-180' : ''}`}
         />
       </span>
-      <ul className="nested-menu pl-3" data-enter={isOpen}>
+      <ul className="nested-menu pl-3 flex flex-col gap-4" data-enter={isOpen}>
         {links?.map(link => (
           <NavLink
             key={link.href}

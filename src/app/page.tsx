@@ -1,4 +1,5 @@
 import { Button } from '@/components/Button'
+import { SoinCards } from '@/components/SoinCards'
 import { H3 } from '@/components/Text'
 import { PATHS } from '@/constants/path'
 import Image from 'next/image'
@@ -10,13 +11,18 @@ export default async function Home() {
     <>
       {/* HERO SECTION */}
 
-      <section id="hero" className="flex flex-col md:flex-row gap-y-10 p-3 max-w-[1200px] mx-auto">
+      <section
+        id="hero"
+        className="p-3 flex flex-col md:flex-row gap-y-10 gap-x-4 xl:gap-x-7 max-w-[1200px] mx-auto"
+      >
         <div className="flex-1">
           <div className="md:mt-[20%]">
-            <H3 color="black">
+            <H3 color="black" className="lg:text-4xl/snug!">
               Un accompagnement bienveillant pour{' '}
-              <span className="bg-ds-rose-200 rounded-2xl px-2">retrouver équilibre</span> et
-              vitalité.
+              <span className="bg-ds-rose-200 rounded-2xl px-2 whitespace-nowrap">
+                retrouver équilibre
+              </span>{' '}
+              et vitalité.
             </H3>
             <h1 className="mt-4 text-smd text-gray-600">
               Practicienne à Marseille en Acupuncture, Phytothérapie, Tuina et conseils en hygiène
@@ -25,18 +31,55 @@ export default async function Home() {
 
             <div className="mt-10 flex gap-x-3 gap-y-4 flex-wrap">
               <Link href={PATHS.RENDEZ_VOUS}>
-                <Button variant="blue">Prendre RDV</Button>
+                <Button variant="fullBlack">Prendre RDV</Button>
               </Link>
 
               <Link href={PATHS.A_PROPOS}>
-                <Button id="amandine-delia-savoir-plus">En savoir plus</Button>
+                <Button variant="fullRose" id="amandine-delia-savoir-plus">
+                  En savoir plus
+                </Button>
               </Link>
             </div>
           </div>
         </div>
 
-        <div className="flex-1">
+        <div className="flex-1 mt-8 md:mt-0">
           <Image alt="Amandine D'Elia" src={heroImg} className="rounded-xl" />
+        </div>
+      </section>
+
+      <section className="max-w-[1000px] mx-auto min-h-[400px] md:min-h-[550px] flex items-center">
+        <H3 color="black" className="text-center lg:text-4xl/snug!">
+          Une prise en charge personnalisée pour soulager durablement vos troubles du quotidien.
+        </H3>
+      </section>
+
+      {/* TOUS LES SOINS */}
+      <section id="tous les soins" className="p-3 max-w-[1200px] mx-auto">
+        <H3 color="black" className="text-center w-full">
+          Nos soins
+        </H3>
+        <p className="text-lg text-center w-full mb-8">
+          Découvrez l&apos;ensemble des soins proposés.
+        </p>
+        <SoinCards />
+      </section>
+
+      <section className="p-3 max-w-[1200px] mx-auto mt-20">
+        <H3 color="black" className="md:text-center w-full lg:text-4xl/snug!">
+          La Médecine Traditionnelle Chinoise
+        </H3>
+        <p className="text-lg/relaxed text-justify w-full mt-2 mb-6 max-w-[700px] mx-auto">
+          La Médecine Traditionnelle Chinoise est une pratique millénaire qui considère l’être
+          humain dans sa globalité. Elle ne se limite pas à un symptôme : elle cherche à comprendre
+          l’équilibre entre le corps, l’esprit et les émotions, afin d’accompagner chacun vers plus
+          d’harmonie.
+        </p>
+
+        <div className="w-full flex justify-center">
+          <Link href={PATHS.MEDECINE_CHINOISE}>
+            <Button>En savoir plus</Button>
+          </Link>
         </div>
       </section>
 

@@ -32,15 +32,15 @@ export const SoinCard = ({
           />
         </div>
         <div className="p-2">
-          <H3 className="text-xl">{title}</H3>
+          <H3 className="text-xl" color="black">
+            {title}
+          </H3>
           <p className="inline-block w-fit mt-3">
             {description.length > MAX_DESCRIPTION_LENGTH
               ? description.slice(0, MAX_DESCRIPTION_LENGTH) + '...'
               : description}
           </p>
-          <p className="mt-2 inline-block text-ds-text-rose-100 font-semibold">
-            En savoir plus &rarr;
-          </p>
+          <p className="mt-2 inline-block text-ds-blue-500 font-semibold">En savoir plus &rarr;</p>
         </div>
       </div>
     </Link>

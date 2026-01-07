@@ -17,7 +17,7 @@ export const MobileNav = () => {
 
       <MobileDrawer store={dialog}>
         <nav>
-          <ul className="flex flex-col gap-4 mt-8 text-lg">
+          <ul className="flex flex-col gap-6 mt-8 text-lg">
             <NavLink store={dialog} href="/" label="Accueil" />
             <NavLink store={dialog} href="/acupuncture" label="Acupuncture" />
             <NavLink store={dialog} href="/medecine-chinoise" label="La Médecine Chinoise" />

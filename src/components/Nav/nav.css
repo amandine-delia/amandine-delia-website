@@ -45,7 +45,7 @@
 
     &[data-enter='true'] {
       opacity: 1;
-      max-height: 200px; /* Reduced to match more realistic content height */
+      max-height: 350px; /* Reduced to match more realistic content height */
     }
   }
 }
