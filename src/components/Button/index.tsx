@@ -9,7 +9,7 @@ const DEFAULT_BUTTON_CLASSES =
   'text-lg border rounded-full capitalize px-[16px] py-[4px] font-medium focus:outline-none cursor-pointer transition duration-(--duration-medium)'
 const BLUE_BUTTON_CLASSES = 'border-ds-blue-500 text-ds-blue-500 hover:bg-ds-blue-100'
 const ROSE_BUTTON_CLASSES = 'border-ds-rose-900 text-ds-rose-900 hover:bg-ds-rose-100'
-const FULL_ROSE_BUTTON_CLASSES = 'bg-ds-rose-700 text-white hover:bg-ds-rose-500'
+const FULL_ROSE_BUTTON_CLASSES = 'bg-ds-rose-700 text-white hover:bg-ds-rose-900'
 const FULL_BLACK_BUTTON_CLASSES = 'bg-black text-white hover:bg-gray-800'
 
 const VARIANT_CLASSES: Record<Variant, string> = {

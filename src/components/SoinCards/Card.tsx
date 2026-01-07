@@ -28,7 +28,6 @@ export const SoinCard = ({
               width: '100%',
               height: 'auto',
             }}
-            priority={index < 3}
           />
         </div>
         <div className="p-2">
@@ -40,7 +39,9 @@ export const SoinCard = ({
               ? description.slice(0, MAX_DESCRIPTION_LENGTH) + '...'
               : description}
           </p>
-          <p className="mt-2 inline-block text-ds-blue-500 font-semibold">En savoir plus &rarr;</p>
+          <p className="mt-2 inline-block text-ds-text-rose-100 font-semibold">
+            En savoir plus &rarr;
+          </p>
         </div>
       </div>
     </Link>
