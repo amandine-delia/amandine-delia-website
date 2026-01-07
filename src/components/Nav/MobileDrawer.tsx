@@ -1,6 +1,6 @@
 import type { DialogOptions } from '@ariakit/react'
 import { Dialog } from '@ariakit/react'
-import { XMarkIcon } from '@heroicons/react/24/outline'
+import { Close } from '../Icons'
 
 export const MobileDrawer = ({
   children,
@@ -19,7 +19,9 @@ export const MobileDrawer = ({
     >
       <div className="p-4 h-full">
         <div className="flex justify-end">
-          <XMarkIcon className="size-6 text-gray-800 z-10" onClick={store?.hide} />
+          <div className="p-2 cursor-pointer rounded-full bg-gray-100">
+            <Close className="text-gray-800 z-10" onClick={store?.hide} />
+          </div>
         </div>
         {children}
       </div>

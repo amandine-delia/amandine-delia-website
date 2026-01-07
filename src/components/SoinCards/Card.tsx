@@ -28,11 +28,12 @@ export const SoinCard = ({
               width: '100%',
               height: 'auto',
             }}
-            priority={index < 3}
           />
         </div>
         <div className="p-2">
-          <H3 className="text-xl">{title}</H3>
+          <H3 className="text-xl" color="black">
+            {title}
+          </H3>
           <p className="inline-block w-fit mt-3">
             {description.length > MAX_DESCRIPTION_LENGTH
               ? description.slice(0, MAX_DESCRIPTION_LENGTH) + '...'

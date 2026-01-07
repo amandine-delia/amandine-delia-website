@@ -1,7 +1,7 @@
 import { DialogOptions, Menu, MenuButton, MenuItem, useMenuStore } from '@ariakit/react'
-import { ChevronDownIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import { useState } from 'react'
+import { ChevronDownIcon } from '../Icons'
 
 export type MenuLink = { label: string; href: string }
 type NavLinkProps = MenuLink & { store?: DialogOptions['store']; onClick?: VoidFunction }
@@ -38,13 +38,13 @@ export const NestedNavLinks = ({ title, store, links }: NestedNavLinksProps) => 
 
   return (
     <li>
-      <span className="flex items-center gap-x-1.5" onClick={handleToggle}>
+      <span className="flex items-center gap-x-1.5 mb-1" onClick={handleToggle}>
         <span>{title}</span>
         <ChevronDownIcon
           className={`size-5 text-gray-800 transition-transform duration-(--duration-slow) ${isOpen ? 'rotate-180' : ''}`}
         />
       </span>
-      <ul className="nested-menu pl-3" data-enter={isOpen}>
+      <ul className="nested-menu pl-3 flex flex-col gap-4" data-enter={isOpen}>
         {links?.map(link => (
           <NavLink
             key={link.href}

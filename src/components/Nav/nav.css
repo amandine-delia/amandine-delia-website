@@ -7,7 +7,7 @@
     transform: translateX(-100%);
     width: 100%;
     max-width: 500px;
-    background-color: var(--color-ds-rose-200);
+    background-color: var(--color-white);
     z-index: 999;
     isolation: isolate;
     outline: none;
@@ -38,13 +38,14 @@
     overflow: hidden;
     max-height: 0px;
     opacity: 0;
+    background-color: var(--color-gray-100);
     transition:
       max-height var(--duration-slow) var(--timing-primary),
       opacity var(--duration-slow) var(--timing-primary);
 
     &[data-enter='true'] {
       opacity: 1;
-      max-height: 200px; /* Reduced to match more realistic content height */
+      max-height: 350px; /* Reduced to match more realistic content height */
     }
   }
 }
