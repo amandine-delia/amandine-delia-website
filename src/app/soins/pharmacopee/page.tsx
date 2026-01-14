@@ -7,7 +7,7 @@ import Image from 'next/image'
 import { ErrorMessage } from '@/components/ErrorMessage'
 import { Markdown } from '@/components/Markdown'
 import { getPageData, parseJsonData } from '@/utils/fetchData'
-import pharmacopee from '../../../../public/img/pages/pharmacopee.jpg'
+import pharmacopee from '../../../../public/img/pages/pharmacopee_compressed.webp'
 
 export const metadata: Metadata = {
   title: "Pharmacopée Chinoise - Soins en Médecine Traditionnelle Chinoise | Amandine D'Elia",

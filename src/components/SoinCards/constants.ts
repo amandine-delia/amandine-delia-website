@@ -1,10 +1,10 @@
 import { PATHS } from '@/constants/path'
 import type { StaticImageData } from 'next/image'
-import acupuncture from '../../../public/img/soins/acupuncture.jpg'
-import massageTuiNa from '../../../public/img/soins/massage-tui-na.jpg'
-import moxibustion from '../../../public/img/soins/moxibustion.jpg'
-import pharmacopee from '../../../public/img/soins/pharmacopee.jpg'
-import ventouses from '../../../public/img/soins/ventouses.jpg'
+import acupuncture from '../../../public/img/soins/acupuncture_compressed.webp'
+import massageTuiNa from '../../../public/img/soins/massage-tui-na_compressed.webp'
+import moxibustion from '../../../public/img/soins/moxibustion_compressed.webp'
+import pharmacopee from '../../../public/img/soins/pharmacopee_compressed.webp'
+import ventouses from '../../../public/img/soins/ventouses_compressed.webp'
 
 export type SoinCardProps = {
   title: string

@@ -8,7 +8,7 @@ import { ErrorMessage } from '@/components/ErrorMessage'
 import { Markdown } from '@/components/Markdown'
 import { getPageData, parseJsonData } from '@/utils/fetchData'
 import Image from 'next/image'
-import acupuncture from '../../../public/img/pages/acupuncture.jpg'
+import acupuncture from '../../../public/img/pages/acupuncture_compressed.webp'
 
 export const metadata: Metadata = {
   title: "Acupuncture - Soins en Médecine Traditionnelle Chinoise | Amandine D'Elia",

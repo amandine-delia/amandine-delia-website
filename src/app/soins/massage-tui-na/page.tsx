@@ -7,7 +7,7 @@ import { ErrorMessage } from '@/components/ErrorMessage'
 import { Markdown } from '@/components/Markdown'
 import { getPageData, parseJsonData } from '@/utils/fetchData'
 import Image from 'next/image'
-import massageTuiNa from '../../../../public/img/pages/massage-tui-na.jpg'
+import massageTuiNa from '../../../../public/img/pages/massage-tui-na_compressed.webp'
 
 export const metadata: Metadata = {
   title: "Massage Tui Na - Soins en Médecine Traditionnelle Chinoise | Amandine D'Elia",

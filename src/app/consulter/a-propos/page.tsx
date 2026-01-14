@@ -5,7 +5,7 @@ import { PageContainer } from '@/components/PageContainer'
 import { H2, PageTitle } from '@/components/Text'
 import { getPageData, parseJsonData } from '@/utils/fetchData'
 import Image from 'next/image'
-import aboutImg from '../../../../public/img/pages/a-propos.jpg'
+import aboutImg from '../../../../public/img/pages/a-propos_compressed.webp'
 
 export default function AProposPage() {
   const pageData = getPageData('data/pages/about.json')
