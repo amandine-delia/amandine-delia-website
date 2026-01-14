@@ -39,14 +39,14 @@ export default function RendezvousPage() {
 
         {hasAddress && (
           <div className="flex flex-col items-center">
-            {address.map(({ name, address }, index) => {
+            {address.map(({ name, street, postalCode, city }, index) => {
               return (
                 <div key={index} className="flex flex-col mb-8  items-center">
                   <P color="black" className="font-semibold">
                     {name}
                   </P>
 
-                  <P>{address}</P>
+                  <P>{[street, postalCode, city].filter(Boolean).join(', ')}</P>
                 </div>
               )
             })}

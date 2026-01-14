@@ -1,15 +1,28 @@
 import { PageContainer } from '@/components/PageContainer'
 import { P, PageTitle } from '@/components/Text'
 import { PATHS } from '@/constants/path'
-import type { Metadata } from 'next'
+import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: "Consulter - Informations Pratiques | Amandine D'Elia",
+  title: 'Consulter',
   description:
     'Toutes les informations pour consulter : premier rendez-vous, à propos, tarifs et modalités de paiement, foire aux questions.',
-  keywords:
-    'consultation, rendez-vous, tarifs, informations pratiques, médecine chinoise, acupuncture',
+  keywords: [
+    'consultation',
+    'rendez-vous',
+    'tarifs',
+    'informations pratiques',
+    'médecine chinoise',
+    'acupuncture',
+  ],
+  openGraph: {
+    title: "Consulter | Médecine Traditionnelle Chinoise Marseille Amandine D'Elia",
+    description:
+      'Toutes les informations pour consulter : premier rendez-vous, à propos, tarifs et modalités de paiement, foire aux questions.',
+    url: 'https://delia-acupuncture.fr/consulter',
+    type: 'website',
+  },
 }
 
 export default function ConsulterPage() {

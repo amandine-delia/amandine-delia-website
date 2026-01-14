@@ -3,9 +3,25 @@ import { SoinCards } from '@/components/SoinCards'
 import { Temoignages } from '@/components/Temoignages'
 import { H3, P } from '@/components/Text'
 import { PATHS } from '@/constants/path'
+import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import heroImg from '../../public/img/amandine_delia_compressed.webp'
+
+export const metadata: Metadata = {
+  title: "Médecine Traditionnelle Chinoise Marseille | Amandine D'Elia",
+  description:
+    'Cabinet de médecine chinoise à Marseille : acupuncture, pharmacopée, massages Tui Na. Praticien certifié avec plusieurs cabinets.',
+  keywords: ['médecine chinoise marseille', 'acupuncture marseille', 'MTC marseille'],
+  openGraph: {
+    title: "Médecine Traditionnelle Chinoise Marseille | Amandine D'Elia",
+    description:
+      'Cabinet de médecine chinoise à Marseille : acupuncture, pharmacopée, massages Tui Na. Praticien certifié avec plusieurs cabinets.',
+    url: 'https://delia-acupuncture.fr',
+    locale: 'fr_FR',
+    type: 'website',
+  },
+}
 
 export default async function Home() {
   return (

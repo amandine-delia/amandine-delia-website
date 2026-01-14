@@ -1,20 +1,34 @@
 import { Breadcrumb } from '@/components/Breadcrumb'
 import { PageContainer } from '@/components/PageContainer'
 import { PageTitle } from '@/components/Text'
-import type { Metadata } from 'next'
 
 import { ErrorMessage } from '@/components/ErrorMessage'
 import { Markdown } from '@/components/Markdown'
 import { getPageData, parseJsonData } from '@/utils/fetchData'
+import { Metadata } from 'next'
 import Image from 'next/image'
 import massageTuiNa from '../../../../public/img/pages/massage-tui-na_compressed.webp'
 
 export const metadata: Metadata = {
-  title: "Massage Tui Na - Soins en Médecine Traditionnelle Chinoise | Amandine D'Elia",
+  title: 'Massage Tui Na',
   description:
-    "Le massage Tui Na, technique manuelle de la médecine chinoise pour harmoniser l'énergie, détendre les tensions et rétablir l'équilibre du corps.",
-  keywords:
-    'massage tui na, massage chinois, énergie, méridiens, tensions, relaxation, thérapeutique',
+    'Le Tui Na est un massage thérapeutique issu de la médecine chinoise qui agit sur les méridiens et points d\'acupuncture pour soulager tensions musculaires, douleurs et déséquilibres énergétiques.',
+  keywords: [
+    'massage tui na',
+    'tui na marseille',
+    'massage chinois',
+    'massage thérapeutique',
+    'médecine chinoise',
+    'tensions musculaires',
+    'douleurs',
+  ],
+  openGraph: {
+    title: 'Massage Tui Na | Médecine Traditionnelle Chinoise Marseille Amandine D\'Elia',
+    description:
+      'Le Tui Na est un massage thérapeutique issu de la médecine chinoise qui agit sur les méridiens et points d\'acupuncture pour soulager tensions musculaires, douleurs et déséquilibres énergétiques.',
+    url: 'https://delia-acupuncture.fr/soins/massage-tui-na',
+    type: 'website',
+  },
 }
 
 export default function MassageTuiNaPage() {

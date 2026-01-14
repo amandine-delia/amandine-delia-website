@@ -88,7 +88,9 @@ collections:
     extension: 'json'
     fields:
       - { label: 'Nom du lieu', name: 'name', widget: 'string' }
-      - { label: 'Adresse', name: 'address', widget: 'string' }
+      - { label: 'Adresse', name: 'street', widget: 'string' }
+      - { label: 'Code postale', name: 'postalCode', widget: 'string' }
+      - { label: 'Ville', name: 'city', widget: 'string' }
   - label: 'Coordonnées de contact'
     name: 'contact-info'
     files:

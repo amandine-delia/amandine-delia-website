@@ -1,15 +1,29 @@
 import { PageContainer } from '@/components/PageContainer'
 import { H2, P, PageTitle } from '@/components/Text'
 import { PATHS } from '@/constants/path'
-import type { Metadata } from 'next'
+import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: "Les Soins en Médecine Traditionnelle Chinoise | Amandine D'Elia",
+  title: 'Les Soins',
   description:
     "Découvrez l'ensemble des soins en médecine traditionnelle chinoise : acupuncture, moxibustion, massage Tui Na, pharmacopée et ventouses.",
-  keywords:
-    'médecine traditionnelle chinoise, acupuncture, moxibustion, massage tui na, pharmacopée, ventouses, MTC',
+  keywords: [
+    'médecine traditionnelle chinoise',
+    'acupuncture',
+    'moxibustion',
+    'massage tui na',
+    'pharmacopée',
+    'ventouses',
+    'MTC',
+  ],
+  openGraph: {
+    title: "Les Soins | Médecine Traditionnelle Chinoise Marseille Amandine D'Elia",
+    description:
+      "Découvrez l'ensemble des soins en médecine traditionnelle chinoise : acupuncture, moxibustion, massage Tui Na, pharmacopée et ventouses.",
+    url: 'https://delia-acupuncture.fr/soins',
+    type: 'website',
+  },
 }
 
 export default function SoinsPage() {
