@@ -4,8 +4,29 @@ import { Markdown } from '@/components/Markdown'
 import { PageContainer } from '@/components/PageContainer'
 import { H2, PageTitle } from '@/components/Text'
 import { getPageData, parseJsonData } from '@/utils/fetchData'
+import { Metadata } from 'next'
 import Image from 'next/image'
 import aboutImg from '../../../../public/img/pages/a-propos_compressed.webp'
+
+export const metadata: Metadata = {
+  title: 'À Propos',
+  description:
+    "Découvrez le parcours d'Amandine D'Elia, praticienne en médecine traditionnelle chinoise à Marseille, son approche et son expertise.",
+  keywords: [
+    'amandine delia',
+    'praticien médecine chinoise',
+    'acupuncteur marseille',
+    'parcours professionnel',
+    'formation MTC',
+  ],
+  openGraph: {
+    title: "À Propos | Médecine Traditionnelle Chinoise Marseille Amandine D'Elia",
+    description:
+      "Découvrez le parcours d'Amandine D'Elia, praticienne en médecine traditionnelle chinoise à Marseille, son approche et son expertise.",
+    url: 'https://delia-acupuncture.fr/consulter/a-propos',
+    type: 'website',
+  },
+}
 
 export default function AProposPage() {
   const pageData = getPageData('data/pages/about.json')

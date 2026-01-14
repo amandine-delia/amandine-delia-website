@@ -1,7 +1,7 @@
 import { Breadcrumb } from '@/components/Breadcrumb'
 import { PageContainer } from '@/components/PageContainer'
 import { PageTitle } from '@/components/Text'
-import type { Metadata } from 'next'
+import { Metadata } from 'next'
 import Image from 'next/image'
 
 import { ErrorMessage } from '@/components/ErrorMessage'
@@ -10,11 +10,23 @@ import { getPageData, parseJsonData } from '@/utils/fetchData'
 import pharmacopee from '../../../../public/img/pages/pharmacopee_compressed.webp'
 
 export const metadata: Metadata = {
-  title: "Pharmacopée Chinoise - Soins en Médecine Traditionnelle Chinoise | Amandine D'Elia",
+  title: 'Pharmacopée Chinoise',
   description:
     'La pharmacopée chinoise, utilisation de plantes médicinales selon la tradition millénaire pour traiter les déséquilibres énergétiques.',
-  keywords:
-    'pharmacopée chinoise, plantes médicinales, herbes chinoises, décoctions, médecine chinoise',
+  keywords: [
+    'pharmacopée chinoise',
+    'plantes médicinales',
+    'herbes chinoises',
+    'décoctions',
+    'médecine chinoise',
+  ],
+  openGraph: {
+    title: "Pharmacopée Chinoise | Médecine Traditionnelle Chinoise Marseille Amandine D'Elia",
+    description:
+      'La pharmacopée chinoise, utilisation de plantes médicinales selon la tradition millénaire pour traiter les déséquilibres énergétiques.',
+    url: 'https://delia-acupuncture.fr/soins/pharmacopee',
+    type: 'website',
+  },
 }
 
 export default function PharmacopeePage() {

@@ -1,7 +1,7 @@
 import { Breadcrumb } from '@/components/Breadcrumb'
 import { PageContainer } from '@/components/PageContainer'
 import { PageTitle } from '@/components/Text'
-import type { Metadata } from 'next'
+import { Metadata } from 'next'
 import Image from 'next/image'
 
 import { ErrorMessage } from '@/components/ErrorMessage'
@@ -10,10 +10,24 @@ import { getPageData, parseJsonData } from '@/utils/fetchData'
 import ventouses from '../../../../public/img/pages/ventouses_compressed.webp'
 
 export const metadata: Metadata = {
-  title: "Ventouses - Soins en Médecine Traditionnelle Chinoise | Amandine D'Elia",
+  title: 'Ventouses',
   description:
     'La technique des ventouses, méthode de succion pour stimuler la circulation énergétique et sanguine selon la médecine traditionnelle chinoise.',
-  keywords: 'ventouses, cupping, succion, circulation, médecine chinoise, détoxification',
+  keywords: [
+    'ventouses',
+    'cupping',
+    'succion',
+    'circulation',
+    'médecine chinoise',
+    'détoxification',
+  ],
+  openGraph: {
+    title: "Ventouses | Médecine Traditionnelle Chinoise Marseille Amandine D'Elia",
+    description:
+      'La technique des ventouses, méthode de succion pour stimuler la circulation énergétique et sanguine selon la médecine traditionnelle chinoise.',
+    url: 'https://delia-acupuncture.fr/soins/ventouses',
+    type: 'website',
+  },
 }
 
 export default function VentousesPage() {

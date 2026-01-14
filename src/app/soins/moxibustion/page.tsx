@@ -1,19 +1,34 @@
 import { Breadcrumb } from '@/components/Breadcrumb'
 import { PageContainer } from '@/components/PageContainer'
 import { PageTitle } from '@/components/Text'
-import type { Metadata } from 'next'
 
 import { ErrorMessage } from '@/components/ErrorMessage'
 import { Markdown } from '@/components/Markdown'
 import { getPageData, parseJsonData } from '@/utils/fetchData'
+import { Metadata } from 'next'
 import Image from 'next/image'
 import moxibustion from '../../../../public/img/pages/moxibustion_compressed.webp'
 
 export const metadata: Metadata = {
-  title: "Moxibustion - Soins en Médecine Traditionnelle Chinoise | Amandine D'Elia",
+  title: 'Moxibustion',
   description:
     "La moxibustion, technique de chauffe des points d'acupuncture avec l'armoise pour tonifier l'énergie et traiter les affections chroniques.",
-  keywords: 'moxibustion, armoise, moxa, chaleur, tonification, yang, médecine chinoise',
+  keywords: [
+    'moxibustion',
+    'armoise',
+    'moxa',
+    'chaleur',
+    'tonification',
+    'yang',
+    'médecine chinoise',
+  ],
+  openGraph: {
+    title: "Moxibustion | Médecine Traditionnelle Chinoise Marseille Amandine D'Elia",
+    description:
+      "La moxibustion, technique de chauffe des points d'acupuncture avec l'armoise pour tonifier l'énergie et traiter les affections chroniques.",
+    url: 'https://delia-acupuncture.fr/soins/moxibustion',
+    type: 'website',
+  },
 }
 
 export default function MoxibustionPage() {

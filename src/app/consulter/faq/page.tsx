@@ -6,7 +6,30 @@ import { PageContainer } from '@/components/PageContainer'
 import { H2, P, PageTitle, Strong } from '@/components/Text'
 import { PATHS } from '@/constants/path'
 import { getPageData, parseJsonData } from '@/utils/fetchData'
+import { Metadata } from 'next'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'FAQ',
+  description:
+    "Questions fréquemment posées sur la médecine traditionnelle chinoise, l'acupuncture, les tarifs, les consultations et les remboursements.",
+  keywords: [
+    'faq',
+    'questions',
+    'médecine chinoise',
+    'acupuncture',
+    'remboursement',
+    'mutuelle',
+    'consultation',
+  ],
+  openGraph: {
+    title: "FAQ | Médecine Traditionnelle Chinoise Marseille Amandine D'Elia",
+    description:
+      "Questions fréquemment posées sur la médecine traditionnelle chinoise, l'acupuncture, les tarifs, les consultations et les remboursements.",
+    url: 'https://delia-acupuncture.fr/consulter/faq',
+    type: 'website',
+  },
+}
 
 export default function FaqPage() {
   const pageData = getPageData('data/pages/faq.json')

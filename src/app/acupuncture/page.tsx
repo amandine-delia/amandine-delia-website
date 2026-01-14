@@ -2,21 +2,19 @@ import { Breadcrumb } from '@/components/Breadcrumb'
 import { PageContainer } from '@/components/PageContainer'
 import { PageTitle } from '@/components/Text'
 
-import type { Metadata } from 'next'
-
 import { ErrorMessage } from '@/components/ErrorMessage'
 import { Markdown } from '@/components/Markdown'
 import { getPageData, parseJsonData } from '@/utils/fetchData'
 import Image from 'next/image'
 import acupuncture from '../../../public/img/pages/acupuncture_compressed.webp'
 
-export const metadata: Metadata = {
-  title: "Acupuncture - Soins en Médecine Traditionnelle Chinoise | Amandine D'Elia",
-  description:
-    "L'acupuncture, technique millénaire de stimulation des points énergétiques par de fines aiguilles pour rétablir l'équilibre du corps et de l'esprit.",
-  keywords:
-    'acupuncture, aiguilles, points énergétiques, méridiens, médecine chinoise, douleur, stress',
-}
+// export const metadata: Metadata = {
+//   title: "Acupuncture - Soins en Médecine Traditionnelle Chinoise | Amandine D'Elia",
+//   description:
+//     "L'acupuncture, technique millénaire de stimulation des points énergétiques par de fines aiguilles pour rétablir l'équilibre du corps et de l'esprit.",
+//   keywords:
+//     'acupuncture, aiguilles, points énergétiques, méridiens, médecine chinoise, douleur, stress',
+// }
 
 export default function AcupuncturePage() {
   const pageData = getPageData('data/pages/acupuncture.json')
