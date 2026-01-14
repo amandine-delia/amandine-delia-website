@@ -7,7 +7,7 @@ import { ErrorMessage } from '@/components/ErrorMessage'
 import { Markdown } from '@/components/Markdown'
 import { getPageData, parseJsonData } from '@/utils/fetchData'
 import Image from 'next/image'
-import moxibustion from '../../../../public/img/pages/moxibustion.jpg'
+import moxibustion from '../../../../public/img/pages/moxibustion_compressed.webp'
 
 export const metadata: Metadata = {
   title: "Moxibustion - Soins en Médecine Traditionnelle Chinoise | Amandine D'Elia",

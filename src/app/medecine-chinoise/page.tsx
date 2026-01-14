@@ -5,7 +5,7 @@ import { PageTitle } from '@/components/Text'
 import { getPageData, parseJsonData } from '@/utils/fetchData'
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import mtc from '../../../public/img/pages/mtc.jpg'
+import mtc from '../../../public/img/pages/mtc_compressed.webp'
 
 export const metadata: Metadata = {
   title: "La Médecine Traditionnelle Chinoise | Amandine D'Elia",

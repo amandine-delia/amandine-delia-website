@@ -5,7 +5,7 @@ import { H3, P } from '@/components/Text'
 import { PATHS } from '@/constants/path'
 import Image from 'next/image'
 import Link from 'next/link'
-import heroImg from '../../public/img/amandine_delia-compressed.jpg'
+import heroImg from '../../public/img/amandine_delia_compressed.webp'
 
 export default async function Home() {
   return (

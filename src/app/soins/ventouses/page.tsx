@@ -7,7 +7,7 @@ import Image from 'next/image'
 import { ErrorMessage } from '@/components/ErrorMessage'
 import { Markdown } from '@/components/Markdown'
 import { getPageData, parseJsonData } from '@/utils/fetchData'
-import ventouses from '../../../../public/img/pages/ventouses.jpg'
+import ventouses from '../../../../public/img/pages/ventouses_compressed.webp'
 
 export const metadata: Metadata = {
   title: "Ventouses - Soins en Médecine Traditionnelle Chinoise | Amandine D'Elia",
