@@ -111,17 +111,7 @@ export default async function Home() {
       </section>
 
       {/* TÉMOIGNAGES */}
-      <section id="temoignages" className="bg-ds-blue-200 py-24 px-4 mt-20">
-        <div className="p-3 max-w-[1200px] mx-auto mt-20">
-          <div className="text-center flex flex-col items-center">
-            <H3 color="blue">Témoignages de nos patient·e·s</H3>
-            <p className="text-center mb-8 text-gray-600 max-w-2xl mx-auto">
-              Découvrez les avis de nos patient·e·s.
-            </p>
-          </div>
-          <Temoignages />
-        </div>
-      </section>
+      <Temoignages />
 
       {/* CONSULTATION */}
       <section id="consultation" className="py-24 px-4 text-center">

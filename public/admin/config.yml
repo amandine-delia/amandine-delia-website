@@ -11,6 +11,21 @@ collections:
   - label: 'Pages'
     name: 'pages'
     files:
+      - label: 'Accueil Page'
+        name: 'accueil'
+        file: 'public/data/pages/accueil.json'
+        fields:
+          - {
+              label: 'Temoignages',
+              name: 'temoignages',
+              widget: 'list',
+              allow_add: true,
+              fields:
+                [
+                  { label: 'Nom de la personne', name: 'personName', widget: 'string' },
+                  { label: 'Temoignage', name: 'testimony', widget: 'string' },
+                ],
+            }
       - label: 'Acupuncture Page'
         name: 'acupuncture'
         file: 'public/data/pages/acupuncture.json'
