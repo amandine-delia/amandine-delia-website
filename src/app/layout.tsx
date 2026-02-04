@@ -57,7 +57,7 @@ const getDynamicContact = () => {
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'MedicalBusiness',
+  '@type': 'MedicalClinic',
   name: 'Cabinet de Médecine Traditionnelle Chinoise - Amandine DELIA',
   description:
     'Cabinet de Médecine Traditionnelle Chinoise à Marseille proposant acupuncture, pharmacopée, massage Tui Na, moxibustion et ventouses.',
