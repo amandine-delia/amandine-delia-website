@@ -17,7 +17,7 @@ export const MobileDrawer = ({
       render={<div className="nav-drawer" />}
       store={store}
     >
-      <div className="p-4 h-full">
+      <div className="p-4 h-full border-r border-r-gray-200">
         <div className="flex justify-end">
           <div className="p-2 cursor-pointer rounded-full bg-gray-100">
             <Close className="text-gray-800 z-10" onClick={store?.hide} />

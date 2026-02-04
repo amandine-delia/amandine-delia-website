@@ -1,7 +1,8 @@
 import { Button } from '@/components/Button'
+import { ConsultationCard } from '@/components/ConsultationCard'
 import { SoinCards } from '@/components/SoinCards'
 import { Temoignages } from '@/components/Temoignages'
-import { H3, P } from '@/components/Text'
+import { H3 } from '@/components/Text'
 import { PATHS } from '@/constants/path'
 import { Metadata } from 'next'
 import Image from 'next/image'
@@ -121,34 +122,29 @@ export default async function Home() {
       {/* CONSULTATION */}
       <section id="consultation" className="py-24 px-4 text-center">
         <div className="max-w-[1200px] mx-auto">
-          <H3 customColor="text-black" className=" w-full">
+          <H3 customColor="text-black" className=" w-full mb-8">
             En Savoir plus sur la Consultation
           </H3>
-          <Link className="flex flex-col items-center" href={PATHS.PREMIER_RENDEZ_VOUS}>
-            <H3 color="lightBlue" className="underline text-xl underline-offset-4 mt-6">
-              Comment se déroule la première&nbsp;séance&nbsp;?
-            </H3>
-            <P className="mt-1.5">
-              Une première séance en Médecine Traditionnelle Chinoise est avant tout un temps
-              d’écoute et de découverte.
-            </P>
-          </Link>
 
-          <Link className="flex flex-col items-center" href={PATHS.TARIFS}>
-            <H3 color="lightBlue" className="underline text-xl underline-offset-4 mt-8">
-              Tarifs et modalités de paiement
-            </H3>
-            <P className="mt-1.5">N’hésitez pas à nous consulter notre grille tarifaire.</P>
-          </Link>
+          <div className="flex flex-wrap gap-x-2 gap-y-8 justify-between">
+            <ConsultationCard
+              title="Tarifs et modalités de paiement"
+              description="N’hésitez pas à consulter notre grille tarifaire."
+              link={PATHS.TARIFS}
+            />
 
-          <Link className="flex flex-col items-center" href={PATHS.FAQ}>
-            <H3 color="lightBlue" className="underline text-xl underline-offset-4 mt-8">
-              FAQ
-            </H3>
-            <P className="mt-1.5">
-              Vous n&apos;avez pas trouvé ce que vous cherchiez&nbsp;? Consultez notre FAQ.
-            </P>
-          </Link>
+            <ConsultationCard
+              title="Comment se déroule la première séance ?"
+              description="Une première séance en Médecine Traditionnelle Chinoise est avant tout un temps d’écoute et de découverte."
+              link={PATHS.PREMIER_RENDEZ_VOUS}
+            />
+
+            <ConsultationCard
+              title="FAQ"
+              description="Vous n'avez pas trouvé ce que vous cherchiez ? Consultez notre FAQ."
+              link={PATHS.FAQ}
+            />
+          </div>
 
           <div className="mt-20">
             <Link href={PATHS.RENDEZ_VOUS}>
