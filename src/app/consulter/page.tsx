@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'acupuncture',
   ],
   openGraph: {
-    title: "Consulter | Médecine Traditionnelle Chinoise Marseille Amandine D'Elia",
+    title: 'Consulter | Médecine Traditionnelle Chinoise Marseille Amandine DELIA',
     description:
       'Toutes les informations pour consulter : premier rendez-vous, à propos, tarifs et modalités de paiement, foire aux questions.',
     url: 'https://delia-acupuncture.fr/consulter',
@@ -50,7 +50,7 @@ export default function ConsulterPage() {
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h2 className="text-xl font-semibold mb-3">À propos</h2>
             <p className="text-gray-600 mb-4">
-              Présentation d&apos;Amandine D&apos;Elia et de son parcours professionnel.
+              Présentation d&apos;Amandine DELIA et de son parcours professionnel.
             </p>
             <Link href={PATHS.A_PROPOS} className="text-ds-rose-900">
               En savoir plus →

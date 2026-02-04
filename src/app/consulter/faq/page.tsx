@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     'consultation',
   ],
   openGraph: {
-    title: "FAQ | Médecine Traditionnelle Chinoise Marseille Amandine D'Elia",
+    title: 'FAQ | Médecine Traditionnelle Chinoise Marseille Amandine DELIA',
     description:
       "Questions fréquemment posées sur la médecine traditionnelle chinoise, l'acupuncture, les tarifs, les consultations et les remboursements.",
     url: 'https://delia-acupuncture.fr/consulter/faq',

@@ -2,7 +2,7 @@ import { PATHS } from '@/constants/path'
 import { MenuLink } from './NavLinks'
 
 export const SOINS: MenuLink[] = [
-  { label: 'Acupuncture', href: PATHS.ACUPUNCTURE },
+  { label: 'Acupuncture Chinoise', href: PATHS.ACUPUNCTURE },
   { label: 'Moxibustion', href: PATHS.MOXIBUSTION },
   { label: 'Massage Tui Na', href: PATHS.MASSAGE_TUI_NA },
   { label: 'Pharmacopée', href: PATHS.PHARMACOPEE },

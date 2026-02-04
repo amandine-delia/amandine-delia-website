@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'mutuelle',
   ],
   openGraph: {
-    title: "Tarifs | Médecine Traditionnelle Chinoise Marseille Amandine D'Elia",
+    title: 'Tarifs | Médecine Traditionnelle Chinoise Marseille Amandine DELIA',
     description:
       'Tarifs des consultations en médecine traditionnelle chinoise, modalités de paiement et informations sur les remboursements par les mutuelles.',
     url: 'https://delia-acupuncture.fr/consulter/tarifs',

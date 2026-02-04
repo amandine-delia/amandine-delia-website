@@ -9,12 +9,12 @@ import Link from 'next/link'
 import heroImg from '../../public/img/amandine_delia_compressed.webp'
 
 export const metadata: Metadata = {
-  title: "Médecine Traditionnelle Chinoise Marseille | Amandine D'Elia",
+  title: 'Médecine Traditionnelle Chinoise Marseille | Amandine DELIA',
   description:
     'Cabinet de médecine chinoise à Marseille : acupuncture, pharmacopée, massages Tui Na. Praticien certifié avec plusieurs cabinets.',
   keywords: ['médecine chinoise marseille', 'acupuncture marseille', 'MTC marseille'],
   openGraph: {
-    title: "Médecine Traditionnelle Chinoise Marseille | Amandine D'Elia",
+    title: 'Médecine Traditionnelle Chinoise Marseille | Amandine DELIA',
     description:
       'Cabinet de médecine chinoise à Marseille : acupuncture, pharmacopée, massages Tui Na. Praticien certifié avec plusieurs cabinets.',
     url: 'https://delia-acupuncture.fr',
@@ -42,8 +42,8 @@ export default async function Home() {
               et vitalité.
             </H3>
             <h1 className="mt-4 text-smd text-gray-600">
-              Amandine D&apos;Elia practicienne à Marseille en Acupuncture, Phytothérapie, Tuina et
-              conseils en hygiène de vie.
+              Amandine DELIA praticienne à Marseille en Médecine Traditionnelle Chinoise :
+              Acupuncture, Pharmacopée, massage traditionnel Tuina et conseils préventifs.
             </h1>
 
             <div className="mt-10 flex gap-x-3 gap-y-4 flex-wrap">
@@ -61,7 +61,7 @@ export default async function Home() {
         </div>
 
         <div className="flex-1 mt-8 md:mt-0">
-          <Image alt="Amandine D'Elia" src={heroImg} className="rounded-xl" placeholder="blur" />
+          <Image alt="Amandine DELIA" src={heroImg} className="rounded-xl" placeholder="blur" />
         </div>
       </section>
 

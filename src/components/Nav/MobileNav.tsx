@@ -19,7 +19,7 @@ export const MobileNav = () => {
         <nav>
           <ul className="flex flex-col gap-6 mt-8 text-lg">
             <NavLink store={dialog} href="/" label="Accueil" />
-            <NavLink store={dialog} href="/acupuncture" label="Acupuncture" />
+            <NavLink store={dialog} href="/acupuncture" label="Acupuncture Chinoise" />
             <NavLink store={dialog} href="/medecine-chinoise" label="La Médecine Chinoise" />
             <NestedNavLinks title="Tous les Soins" store={dialog} links={SOINS} />
             <NestedNavLinks title="Consulter" store={dialog} links={CONSULTER} />
@@ -35,7 +35,7 @@ const Header = ({ handleToggle }: { handleToggle: VoidFunction }) => {
   return (
     <div className="p-2 grid grid-cols-[1fr_auto] items-center">
       <Link href={PATHS.HOME} className="no-underline">
-        <span className="text-2xl font-semibold relative">Amandine D&apos;Elia</span>
+        <span className="text-2xl font-semibold relative">Amandine DELIA</span>
       </Link>
 
       <div onClick={handleToggle} className="p-2 cursor-pointer rounded-full bg-gray-100">

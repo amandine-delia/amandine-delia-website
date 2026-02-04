@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     'MTC',
   ],
   openGraph: {
-    title: "Les Soins | Médecine Traditionnelle Chinoise Marseille Amandine D'Elia",
+    title: 'Les Soins | Médecine Traditionnelle Chinoise Marseille Amandine DELIA',
     description:
       "Découvrez l'ensemble des soins en médecine traditionnelle chinoise : acupuncture, moxibustion, massage Tui Na, pharmacopée et ventouses.",
     url: 'https://delia-acupuncture.fr/soins',
@@ -38,7 +38,7 @@ export default function SoinsPage() {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
         <div className="bg-white p-6 rounded-lg shadow-md">
-          <H2 className="text-xl font-semibold mb-3">Acupuncture</H2>
+          <H2 className="text-xl font-semibold mb-3">Acupuncture Chinoise</H2>
           <P className="mb-4">
             Technique de stimulation des points énergétiques par de fines aiguilles.
           </P>
