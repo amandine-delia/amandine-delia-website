@@ -62,7 +62,8 @@ const jsonLd = {
   description:
     'Cabinet de Médecine Traditionnelle Chinoise à Marseille proposant acupuncture, pharmacopée, massage Tui Na, moxibustion et ventouses.',
   url: 'https://acupuncture-traditionnelle-marseille.fr',
-  image: 'https://acupuncture-traditionnelle-marseille.fr/img/amandine_delia_compressed.webp',
+  image:
+    'https://acupuncture-traditionnelle-marseille.fr/img/amandine_delia_cropped_compressed.webp',
   ...getDynamicContact(),
   ...getDynamicAddress(),
   openingHoursSpecification: {

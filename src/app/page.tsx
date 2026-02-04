@@ -6,7 +6,7 @@ import { PATHS } from '@/constants/path'
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import heroImg from '../../public/img/amandine_delia_compressed.webp'
+import heroImg from '../../public/img/amandine_delia_cropped_compressed.webp'
 
 export const metadata: Metadata = {
   title: 'Médecine Traditionnelle Chinoise Marseille | Amandine DELIA',
@@ -27,12 +27,11 @@ export default async function Home() {
   return (
     <>
       {/* HERO SECTION */}
-
       <section
         id="hero"
-        className="p-3 flex flex-col md:flex-row gap-y-10 gap-x-4 xl:gap-x-7 max-w-[1200px] mx-auto md:min-h-screen"
+        className="p-3 flex flex-col md:flex-row gap-y-10 gap-x-4 xl:gap-x-7 max-w-fit mx-auto max-h-fit"
       >
-        <div className="flex-1">
+        <div className="flex-1 max-w-[600px]">
           <div className="md:mt-[20%]">
             <H3 color="black" className="lg:text-4xl/snug!">
               Un accompagnement bienveillant pour{' '}
@@ -47,28 +46,34 @@ export default async function Home() {
             </h1>
 
             <div className="mt-10 flex gap-x-3 gap-y-4 flex-wrap">
-              <Link href={PATHS.A_PROPOS}>
-                <Button variant="fullBlack" id="amandine-delia-savoir-plus">
-                  En savoir plus
-                </Button>
+              <Link href={PATHS.RENDEZ_VOUS}>
+                <Button variant="fullBlack">Prendre RDV</Button>
               </Link>
 
-              <Link href={PATHS.RENDEZ_VOUS}>
-                <Button variant="fullRose">Prendre RDV</Button>
+              <Link href={PATHS.A_PROPOS}>
+                <Button variant="fullRose" id="amandine-delia-savoir-plus">
+                  En savoir plus
+                </Button>
               </Link>
             </div>
           </div>
         </div>
 
-        <div className="flex-1 mt-8 md:mt-0">
-          <Image alt="Amandine DELIA" src={heroImg} className="rounded-xl" placeholder="blur" />
+        <div className="mt-8 md:mt-0 justify flex min-w-fit">
+          <Image
+            alt="Amandine DELIA"
+            src={heroImg}
+            className="rounded-xl"
+            height={600}
+            placeholder="blur"
+          />
         </div>
       </section>
 
       {/* TOUS LES SOINS */}
       <section
         id="tous-les-soins"
-        className="p-3 max-w-[1200px] mx-auto mt-[100px] min-h-screen flex flex-col justify-center items-center"
+        className="p-3 max-w-[1200px] mx-auto mt-20 md:mt-4 min-h-screen flex flex-col justify-center items-center"
       >
         <div>
           <div className="max-w-[900px] mx-auto">
