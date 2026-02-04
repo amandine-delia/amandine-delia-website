@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: 'Médecine Traditionnelle Chinoise Marseille | Amandine DELIA',
     description:
       'Cabinet de médecine chinoise à Marseille : acupuncture, pharmacopée, massages Tui Na. Praticien certifié avec plusieurs cabinets.',
-    url: 'https://delia-acupuncture.fr',
+    url: 'https://acupuncture-traditionnelle-marseille.fr',
     locale: 'fr_FR',
     type: 'website',
   },

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: 'Moxibustion | Médecine Traditionnelle Chinoise Marseille Amandine DELIA',
     description:
       "La moxibustion, technique de chauffe des points d'acupuncture avec l'armoise pour tonifier l'énergie et traiter les affections chroniques.",
-    url: 'https://delia-acupuncture.fr/soins/moxibustion',
+    url: 'https://acupuncture-traditionnelle-marseille.fr/soins/moxibustion',
     type: 'website',
   },
 }

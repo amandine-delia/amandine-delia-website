@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://delia-acupuncture.fr'
+  const baseUrl = 'https://acupuncture-traditionnelle-marseille.fr'
 
   return [
     {

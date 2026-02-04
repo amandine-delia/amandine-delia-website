@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: 'Consulter | Médecine Traditionnelle Chinoise Marseille Amandine DELIA',
     description:
       'Toutes les informations pour consulter : premier rendez-vous, à propos, tarifs et modalités de paiement, foire aux questions.',
-    url: 'https://delia-acupuncture.fr/consulter',
+    url: 'https://acupuncture-traditionnelle-marseille.fr/consulter',
     type: 'website',
   },
 }

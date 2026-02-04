@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: 'FAQ | Médecine Traditionnelle Chinoise Marseille Amandine DELIA',
     description:
       "Questions fréquemment posées sur la médecine traditionnelle chinoise, l'acupuncture, les tarifs, les consultations et les remboursements.",
-    url: 'https://delia-acupuncture.fr/consulter/faq',
+    url: 'https://acupuncture-traditionnelle-marseille.fr/consulter/faq',
     type: 'website',
   },
 }

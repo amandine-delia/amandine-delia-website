@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: 'Les Soins | Médecine Traditionnelle Chinoise Marseille Amandine DELIA',
     description:
       "Découvrez l'ensemble des soins en médecine traditionnelle chinoise : acupuncture, moxibustion, massage Tui Na, pharmacopée et ventouses.",
-    url: 'https://delia-acupuncture.fr/soins',
+    url: 'https://acupuncture-traditionnelle-marseille.fr/soins',
     type: 'website',
   },
 }

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: 'À Propos | Médecine Traditionnelle Chinoise Marseille Amandine DELIA',
     description:
       "Découvrez le parcours d'Amandine DELIA, praticienne en médecine traditionnelle chinoise à Marseille, son approche et son expertise.",
-    url: 'https://delia-acupuncture.fr/consulter/a-propos',
+    url: 'https://acupuncture-traditionnelle-marseille.fr/consulter/a-propos',
     type: 'website',
   },
 }

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: 'Pharmacopée Chinoise | Médecine Traditionnelle Chinoise Marseille Amandine DELIA',
     description:
       'La pharmacopée chinoise, utilisation de plantes médicinales selon la tradition millénaire pour traiter les déséquilibres énergétiques.',
-    url: 'https://delia-acupuncture.fr/soins/pharmacopee',
+    url: 'https://acupuncture-traditionnelle-marseille.fr/soins/pharmacopee',
     type: 'website',
   },
 }

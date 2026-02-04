@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: 'Ventouses | Médecine Traditionnelle Chinoise Marseille Amandine DELIA',
     description:
       'La technique des ventouses, méthode de succion pour stimuler la circulation énergétique et sanguine selon la médecine traditionnelle chinoise.',
-    url: 'https://delia-acupuncture.fr/soins/ventouses',
+    url: 'https://acupuncture-traditionnelle-marseille.fr/soins/ventouses',
     type: 'website',
   },
 }

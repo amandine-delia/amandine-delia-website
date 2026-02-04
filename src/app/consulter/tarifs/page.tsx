@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: 'Tarifs | Médecine Traditionnelle Chinoise Marseille Amandine DELIA',
     description:
       'Tarifs des consultations en médecine traditionnelle chinoise, modalités de paiement et informations sur les remboursements par les mutuelles.',
-    url: 'https://delia-acupuncture.fr/consulter/tarifs',
+    url: 'https://acupuncture-traditionnelle-marseille.fr/consulter/tarifs',
     type: 'website',
   },
 }
