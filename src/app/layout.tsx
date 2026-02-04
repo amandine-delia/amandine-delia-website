@@ -72,7 +72,14 @@ const jsonLd = {
     opens: '09:00',
     closes: '20:00',
   },
-  medicalSpecialty: ['Traditional Chinese Medicine', 'Acupuncture'],
+  medicalSpecialty: [
+    'Acupuncture',
+    'Médecine Traditionnelle Chinoise',
+    'Moxibustion',
+    'Pharmacopée',
+    'Massage Tui Na',
+    'Ventouses',
+  ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Services de Médecine Traditionnelle Chinoise',
