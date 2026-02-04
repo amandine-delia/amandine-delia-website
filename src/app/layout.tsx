@@ -9,17 +9,17 @@ import './theme.css'
 
 export const metadata: Metadata = {
   title: {
-    default: "Médecine Traditionnelle Chinoise Marseille | Amandine D'Elia",
-    template: `%s | Médecine Traditionnelle Chinoise Marseille Amandine D'Elia`,
+    default: 'Médecine Traditionnelle Chinoise Marseille | Amandine DELIA',
+    template: `%s | Médecine Traditionnelle Chinoise Marseille Amandine DELIA`,
   },
   description:
     'Cabinet de médecine chinoise à Marseille : acupuncture, pharmacopée, massages Tui Na. Praticien certifié avec plusieurs cabinets.',
   keywords: ['médecine chinoise marseille', 'acupuncture marseille', 'MTC marseille'],
   openGraph: {
-    title: "Médecine Traditionnelle Chinoise Marseille | Amandine D'Elia",
+    title: 'Médecine Traditionnelle Chinoise Marseille | Amandine DELIA',
     description:
       'Cabinet de médecine chinoise à Marseille : acupuncture, pharmacopée, massages Tui Na. Praticien certifié avec plusieurs cabinets.',
-    url: 'https://delia-acupuncture.fr',
+    url: 'https://acupuncture-traditionnelle-marseille.fr',
     locale: 'fr_FR',
     type: 'website',
   },
@@ -58,11 +58,12 @@ const getDynamicContact = () => {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'MedicalBusiness',
-  name: "Cabinet de Médecine Traditionnelle Chinoise - Amandine D'Elia",
+  name: 'Cabinet de Médecine Traditionnelle Chinoise - Amandine DELIA',
   description:
-    'Cabinet de médecine chinoise à Marseille proposant acupuncture, pharmacopée, massage Tui Na, moxibustion et ventouses.',
-  url: 'https://delia-acupuncture.fr',
-  image: 'https://delia-acupuncture.fr/img/amandine_delia_compressed.webp',
+    'Cabinet de Médecine Traditionnelle Chinoise à Marseille proposant acupuncture, pharmacopée, massage Tui Na, moxibustion et ventouses.',
+  url: 'https://acupuncture-traditionnelle-marseille.fr',
+  image:
+    'https://acupuncture-traditionnelle-marseille.fr/img/amandine_delia_cropped_compressed.webp',
   ...getDynamicContact(),
   ...getDynamicAddress(),
   openingHoursSpecification: {
@@ -123,7 +124,7 @@ const jsonLd = {
   },
   employee: {
     '@type': 'Person',
-    name: "Amandine D'Elia",
+    name: 'Amandine DELIA',
     jobTitle: 'Praticienne en Médecine Traditionnelle Chinoise',
     knowsAbout: [
       'Acupuncture',

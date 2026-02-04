@@ -17,10 +17,10 @@ export const metadata: Metadata = {
     'acupuncture',
   ],
   openGraph: {
-    title: "Premier Rendez-vous | Médecine Traditionnelle Chinoise Marseille Amandine D'Elia",
+    title: 'Premier Rendez-vous | Médecine Traditionnelle Chinoise Marseille Amandine DELIA',
     description:
       'Découvrez comment se déroule une première consultation en médecine traditionnelle chinoise : bilan énergétique, entretien et soins personnalisés.',
-    url: 'https://delia-acupuncture.fr/consulter/premier-rendez-vous',
+    url: 'https://acupuncture-traditionnelle-marseille.fr/consulter/premier-rendez-vous',
     type: 'website',
   },
 }

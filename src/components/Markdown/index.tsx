@@ -10,7 +10,7 @@ type MarkdownProps = Omit<HTMLAttributes<Element>, 'children'> & {
 
 const defaultOptions: MarkdownToJSX.Options = {
   forceWrapper: true,
-  wrapper: 'div',
+  wrapper: ({ className = '', ...props }) => <div className={`text-lg ${className}`} {...props} />,
 }
 
 const MARKDOWN_SECURITY_OVERRIDES = {

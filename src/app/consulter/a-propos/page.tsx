@@ -11,7 +11,7 @@ import aboutImg from '../../../../public/img/pages/a-propos_compressed.webp'
 export const metadata: Metadata = {
   title: 'À Propos',
   description:
-    "Découvrez le parcours d'Amandine D'Elia, praticienne en médecine traditionnelle chinoise à Marseille, son approche et son expertise.",
+    "Découvrez le parcours d'Amandine DELIA, praticienne en médecine traditionnelle chinoise à Marseille, son approche et son expertise.",
   keywords: [
     'amandine delia',
     'praticien médecine chinoise',
@@ -20,10 +20,10 @@ export const metadata: Metadata = {
     'formation MTC',
   ],
   openGraph: {
-    title: "À Propos | Médecine Traditionnelle Chinoise Marseille Amandine D'Elia",
+    title: 'À Propos | Médecine Traditionnelle Chinoise Marseille Amandine DELIA',
     description:
-      "Découvrez le parcours d'Amandine D'Elia, praticienne en médecine traditionnelle chinoise à Marseille, son approche et son expertise.",
-    url: 'https://delia-acupuncture.fr/consulter/a-propos',
+      "Découvrez le parcours d'Amandine DELIA, praticienne en médecine traditionnelle chinoise à Marseille, son approche et son expertise.",
+    url: 'https://acupuncture-traditionnelle-marseille.fr/consulter/a-propos',
     type: 'website',
   },
 }

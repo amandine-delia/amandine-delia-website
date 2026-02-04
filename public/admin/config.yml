@@ -11,42 +11,159 @@ collections:
   - label: 'Pages'
     name: 'pages'
     files:
+      - label: 'Accueil Page'
+        name: 'accueil'
+        file: 'public/data/pages/accueil.json'
+        fields:
+          - {
+              label: 'Temoignages',
+              name: 'temoignages',
+              widget: 'list',
+              allow_add: true,
+              fields:
+                [
+                  { label: 'Nom de la personne', name: 'personName', widget: 'string' },
+                  { label: 'Temoignage', name: 'testimony', widget: 'string' },
+                ],
+            }
       - label: 'Acupuncture Page'
         name: 'acupuncture'
         file: 'public/data/pages/acupuncture.json'
         fields:
           - { label: 'Titre de Page', name: 'pageTitle', widget: 'string' }
-          - { label: 'Contenu de la page', name: 'body', widget: 'markdown', buttons: ['bold', 'italic', 'link', 'heading-one', 'heading-two', 'heading-three', 'quote', 'bulleted-list', 'numbered-list'], modes: ['rich_text'] }
+          - {
+              label: 'Contenu de la page',
+              name: 'body',
+              widget: 'markdown',
+              buttons:
+                [
+                  'bold',
+                  'italic',
+                  'link',
+                  'heading-one',
+                  'heading-two',
+                  'heading-three',
+                  'quote',
+                  'bulleted-list',
+                  'numbered-list',
+                ],
+              modes: ['rich_text'],
+            }
       - label: 'Moxibustion Page'
         name: 'moxibustion'
         file: 'public/data/pages/moxibustion.json'
         fields:
           - { label: 'Titre de Page', name: 'pageTitle', widget: 'string' }
-          - { label: 'Contenu de la page', name: 'body', widget: 'markdown', buttons: ['bold', 'italic', 'link', 'heading-one', 'heading-two', 'heading-three', 'quote', 'bulleted-list', 'numbered-list'], modes: ['rich_text'] }
+          - {
+              label: 'Contenu de la page',
+              name: 'body',
+              widget: 'markdown',
+              buttons:
+                [
+                  'bold',
+                  'italic',
+                  'link',
+                  'heading-one',
+                  'heading-two',
+                  'heading-three',
+                  'quote',
+                  'bulleted-list',
+                  'numbered-list',
+                ],
+              modes: ['rich_text'],
+            }
       - label: 'Tui Na Page'
         name: 'tuina'
         file: 'public/data/pages/tuina.json'
         fields:
           - { label: 'Titre de Page', name: 'pageTitle', widget: 'string' }
-          - { label: 'Contenu de la page', name: 'body', widget: 'markdown', buttons: ['bold', 'italic', 'link', 'heading-one', 'heading-two', 'heading-three', 'quote', 'bulleted-list', 'numbered-list'], modes: ['rich_text'] }
+          - {
+              label: 'Contenu de la page',
+              name: 'body',
+              widget: 'markdown',
+              buttons:
+                [
+                  'bold',
+                  'italic',
+                  'link',
+                  'heading-one',
+                  'heading-two',
+                  'heading-three',
+                  'quote',
+                  'bulleted-list',
+                  'numbered-list',
+                ],
+              modes: ['rich_text'],
+            }
       - label: 'Pharmacopée Page'
         name: 'pharma'
         file: 'public/data/pages/pharma.json'
         fields:
           - { label: 'Titre de Page', name: 'pageTitle', widget: 'string' }
-          - { label: 'Contenu de la page', name: 'body', widget: 'markdown', buttons: ['bold', 'italic', 'link', 'heading-one', 'heading-two', 'heading-three', 'quote', 'bulleted-list', 'numbered-list'], modes: ['rich_text'] }
+          - {
+              label: 'Contenu de la page',
+              name: 'body',
+              widget: 'markdown',
+              buttons:
+                [
+                  'bold',
+                  'italic',
+                  'link',
+                  'heading-one',
+                  'heading-two',
+                  'heading-three',
+                  'quote',
+                  'bulleted-list',
+                  'numbered-list',
+                ],
+              modes: ['rich_text'],
+            }
       - label: 'Ventouses Page'
         name: 'ventouses'
         file: 'public/data/pages/ventouses.json'
         fields:
           - { label: 'Titre de Page', name: 'pageTitle', widget: 'string' }
-          - { label: 'Contenu de la page', name: 'body', widget: 'markdown', buttons: ['bold', 'italic', 'link', 'heading-one', 'heading-two', 'heading-three', 'quote', 'bulleted-list', 'numbered-list'], modes: ['rich_text'] }
+          - {
+              label: 'Contenu de la page',
+              name: 'body',
+              widget: 'markdown',
+              buttons:
+                [
+                  'bold',
+                  'italic',
+                  'link',
+                  'heading-one',
+                  'heading-two',
+                  'heading-three',
+                  'quote',
+                  'bulleted-list',
+                  'numbered-list',
+                ],
+              modes: ['rich_text'],
+            }
       - label: 'Première séance Page'
         name: 'first-session'
         file: 'public/data/pages/first-session.json'
         fields:
           - { label: 'Titre de Page', name: 'pageTitle', widget: 'string' }
-          - { label: 'Contenu de la page', name: 'body', widget: 'markdown', buttons: ['bold', 'italic', 'link', 'heading-one', 'heading-two', 'heading-three', 'quote', 'bulleted-list', 'numbered-list'], modes: ['rich_text'] }
+          - {
+              label: 'Contenu de la page',
+              name: 'body',
+              widget: 'markdown',
+              buttons:
+                [
+                  'bold',
+                  'italic',
+                  'link',
+                  'heading-one',
+                  'heading-two',
+                  'heading-three',
+                  'quote',
+                  'bulleted-list',
+                  'numbered-list',
+                ],
+              modes: ['rich_text'],
+            }
       - label: 'À propos Page'
         name: 'about'
         file: 'public/data/pages/about.json'
@@ -54,33 +171,143 @@ collections:
           - { label: 'Titre de Page', name: 'pageTitle', widget: 'string' }
           - { label: 'En tête', name: 'header', widget: 'string' }
           - { label: 'Sous en tête', name: 'subheader', widget: 'string' }
-          - { label: 'Contenu de la page', name: 'body', widget: 'markdown', buttons: ['bold', 'italic', 'link', 'heading-one', 'heading-two', 'heading-three', 'quote', 'bulleted-list', 'numbered-list'], modes: ['rich_text'] }
+          - {
+              label: 'Contenu de la page',
+              name: 'body',
+              widget: 'markdown',
+              buttons:
+                [
+                  'bold',
+                  'italic',
+                  'link',
+                  'heading-one',
+                  'heading-two',
+                  'heading-three',
+                  'quote',
+                  'bulleted-list',
+                  'numbered-list',
+                ],
+              modes: ['rich_text'],
+            }
       - label: 'Tarifs Page'
         name: 'tarifs'
         file: 'public/data/pages/tarifs.json'
         fields:
           - { label: 'Titre de Page', name: 'pageTitle', widget: 'string' }
-          - { label: 'Contenu de la page', name: 'body', widget: 'markdown', buttons: ['bold', 'italic', 'link', 'heading-one', 'heading-two', 'heading-three', 'quote', 'bulleted-list', 'numbered-list'], modes: ['rich_text'] }
+          - {
+              label: 'Contenu de la page',
+              name: 'body',
+              widget: 'markdown',
+              buttons:
+                [
+                  'bold',
+                  'italic',
+                  'link',
+                  'heading-one',
+                  'heading-two',
+                  'heading-three',
+                  'quote',
+                  'bulleted-list',
+                  'numbered-list',
+                ],
+              modes: ['rich_text'],
+            }
       - label: 'La Médecine Traditionnelle Chinoise Page'
         name: 'med-chinoise'
         file: 'public/data/pages/med-chinoise.json'
         fields:
           - { label: 'Titre de Page', name: 'pageTitle', widget: 'string' }
-          - { label: 'Contenu de la page', name: 'body', widget: 'markdown', buttons: ['bold', 'italic', 'link', 'heading-one', 'heading-two', 'heading-three', 'quote', 'bulleted-list', 'numbered-list'], modes: ['rich_text'] }
+          - {
+              label: 'Contenu de la page',
+              name: 'body',
+              widget: 'markdown',
+              buttons:
+                [
+                  'bold',
+                  'italic',
+                  'link',
+                  'heading-one',
+                  'heading-two',
+                  'heading-three',
+                  'quote',
+                  'bulleted-list',
+                  'numbered-list',
+                ],
+              modes: ['rich_text'],
+            }
       - label: 'FAQ Page'
         name: 'faq'
         file: 'public/data/pages/faq.json'
         fields:
-          - { label: 'Titre de la page', name: 'pageTitle', default: 'Foire aux Questions', widget: 'string' }
+          - {
+              label: 'Titre de la page',
+              name: 'pageTitle',
+              default: 'Foire aux Questions',
+              widget: 'string',
+            }
           - { label: 'Introduction', name: 'introduction', widget: 'string' }
-          - { label: 'Questions & Réponses', name: 'qa', widget: 'list', allow_add: true, fields: [
-              { label: 'Question', name: 'question', widget: 'string' },
-              { label: 'Réponse', name: 'answer', widget: 'markdown', buttons: ['bold', 'italic', 'link', 'heading-one', 'heading-two', 'heading-three', 'quote', 'bulleted-list', 'numbered-list'], modes: ['rich_text'] }
-            ] }
-          - { label: 'Bloc en pied de page', name: 'footer', widget: 'object', collapsed: true, fields: [
-              { label: 'Titre', name: 'title', widget: 'string' },
-              { label: 'Contenu', name: 'content', widget: 'string' }
-            ] }
+          - {
+              label: 'Questions & Réponses',
+              name: 'qa',
+              widget: 'list',
+              allow_add: true,
+              fields:
+                [
+                  { label: 'Question', name: 'question', widget: 'string' },
+                  {
+                    label: 'Réponse',
+                    name: 'answer',
+                    widget: 'markdown',
+                    buttons:
+                      [
+                        'bold',
+                        'italic',
+                        'link',
+                        'heading-one',
+                        'heading-two',
+                        'heading-three',
+                        'quote',
+                        'bulleted-list',
+                        'numbered-list',
+                      ],
+                    modes: ['rich_text'],
+                  },
+                ],
+            }
+          - {
+              label: 'Bloc en pied de page',
+              name: 'footer',
+              widget: 'object',
+              collapsed: true,
+              fields:
+                [
+                  { label: 'Titre', name: 'title', widget: 'string' },
+                  { label: 'Contenu', name: 'content', widget: 'string' },
+                ],
+            }
+      - label: 'Mentions légales Page'
+        name: 'mentions-legales'
+        file: 'public/data/pages/mentions-legales.json'
+        fields:
+          - { label: 'Titre de Page', name: 'pageTitle', widget: 'string' }
+          - {
+              label: 'Contenu de la page',
+              name: 'body',
+              widget: 'markdown',
+              buttons:
+                [
+                  'bold',
+                  'italic',
+                  'link',
+                  'heading-one',
+                  'heading-two',
+                  'heading-three',
+                  'quote',
+                  'bulleted-list',
+                  'numbered-list',
+                ],
+              modes: ['rich_text'],
+            }
   - label: 'Adresses des Cabinets'
     name: 'address'
     folder: 'public/data/pages/office/address'
@@ -98,5 +325,11 @@ collections:
         name: 'contact'
         file: 'public/data/pages/office/contact/contact.json'
         fields:
-          - { label: 'Théléphone', name: 'phone', widget: 'string', required: false, hint: '**SANS ESPACES**' }
+          - {
+              label: 'Théléphone',
+              name: 'phone',
+              widget: 'string',
+              required: false,
+              hint: '**SANS ESPACES**',
+            }
           - { label: 'Email', name: 'email', widget: 'string', required: false }

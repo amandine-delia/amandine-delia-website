@@ -21,10 +21,10 @@ export const metadata: Metadata = {
     'médecine chinoise',
   ],
   openGraph: {
-    title: "Pharmacopée Chinoise | Médecine Traditionnelle Chinoise Marseille Amandine D'Elia",
+    title: 'Pharmacopée Chinoise | Médecine Traditionnelle Chinoise Marseille Amandine DELIA',
     description:
       'La pharmacopée chinoise, utilisation de plantes médicinales selon la tradition millénaire pour traiter les déséquilibres énergétiques.',
-    url: 'https://delia-acupuncture.fr/soins/pharmacopee',
+    url: 'https://acupuncture-traditionnelle-marseille.fr/soins/pharmacopee',
     type: 'website',
   },
 }

@@ -13,44 +13,45 @@ export default function RendezvousPage() {
   const { data: contact, isError: isContactError } = parseJsonData<Contact>(contactFile)
 
   const hasAddress = !isAddressError && address && address.length > 0
+  const hasMultipleAddress = hasAddress && address.length > 1
 
   return (
     <PageContainer>
       <div className="">
         {!isContactError && (
-          <>
-            <div className="min-h-[350px] flex flex-col gap-y-3 items-center justify-center">
-              <P className="font-semibold text-2xl!">Amandine D&apos;Elia</P>
-              <ContactInfo
-                phone={encodeContact(contact?.phone)}
-                email={encodeContact(contact?.email)}
-              />
-            </div>
-
-            <div className="flex items-center mb-28">
-              <div className="w-full h-[2px] bg-ds-rose-500" />
-              <P color="rose" className="px-2">
-                Cabinets
-              </P>
-              <div className="w-full h-[2px] bg-ds-rose-500" />
-            </div>
-          </>
+          <div className="min-h-[350px] flex flex-col gap-y-3 items-center justify-center">
+            <P className="font-semibold text-2xl!">Amandine DELIA</P>
+            <ContactInfo
+              phone={encodeContact(contact?.phone)}
+              email={encodeContact(contact?.email)}
+            />
+          </div>
         )}
 
         {hasAddress && (
-          <div className="flex flex-col items-center">
-            {address.map(({ name, street, postalCode, city }, index) => {
-              return (
-                <div key={index} className="flex flex-col mb-8  items-center">
-                  <P color="black" className="font-semibold">
-                    {name}
-                  </P>
+          <>
+            <div className="flex items-center mb-28">
+              <div className="w-full h-[2px] bg-ds-rose-500" />
+              <P color="rose" className="px-2">
+                {hasMultipleAddress ? 'Cabinets' : 'Cabinet'}
+              </P>
+              <div className="w-full h-[2px] bg-ds-rose-500" />
+            </div>
 
-                  <P>{[street, postalCode, city].filter(Boolean).join(', ')}</P>
-                </div>
-              )
-            })}
-          </div>
+            <div className="flex flex-col items-center">
+              {address.map(({ name, street, postalCode, city }, index) => {
+                return (
+                  <div key={index} className="flex flex-col mb-8  items-center">
+                    <P color="black" className="font-semibold">
+                      {name}
+                    </P>
+
+                    <P>{[street, postalCode, city].filter(Boolean).join(', ')}</P>
+                  </div>
+                )
+              })}
+            </div>
+          </>
         )}
       </div>
     </PageContainer>

@@ -19,14 +19,14 @@ const Header = () => {
       <div className="flex items-center justify-center gap-x-2">
         <Image src="/img/pierre.png" alt="logo" width={30} height={30} />
         <Link href={PATHS.HOME} className="no-underline">
-          <span className="text-2xl font-bold text-center">Amandine D&apos;Elia</span>
+          <span className="text-2xl font-bold text-center">Amandine DELIA</span>
         </Link>
       </div>
 
       <nav>
         <ul className="flex flex-wrap gap-x-8 text-lg mx-auto w-fit">
           <NavLink href={PATHS.HOME} label="Accueil" />
-          <NavLink href={PATHS.ACUPUNCTURE} label="Acupuncture" />
+          <NavLink href={PATHS.ACUPUNCTURE} label="Acupuncture Chinoise" />
           <NavLink href={PATHS.MEDECINE_CHINOISE} label="La Médecine Chinoise" />
           <DesktopNestedNavLinks title="Tous les Soins" links={SOINS} />
           <DesktopNestedNavLinks title="Consulter" links={CONSULTER} />

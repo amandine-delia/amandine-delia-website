@@ -15,7 +15,7 @@ export type SoinCardProps = {
 
 export const SOIN_CARDS: SoinCardProps[] = [
   {
-    title: 'Acupuncture',
+    title: 'Acupuncture Chinoise',
     image: acupuncture,
     description:
       'L’acupuncture est l’une des pratiques les plus connues de la Médecine Traditionnelle Chinoise. Elle repose sur l’idée que l’énergie vitale, appelée Qi, circule dans le corps à travers des canaux appelés méridiens.',
