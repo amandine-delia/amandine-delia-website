@@ -78,11 +78,14 @@ export const P = ({
 export const Strong = ({
   children,
   className = '',
-  customColor = 'black',
+  color = 'black',
+  customColor,
   ...props
 }: TextProps) => {
+  const textColor = customColor ? customColor : COLORS[color]
+
   return (
-    <strong className={`font-bold ${customColor} ${className}`} {...props}>
+    <strong className={`font-bold ${textColor} ${className}`} {...props}>
       {children}
     </strong>
   )
