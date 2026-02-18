@@ -33,7 +33,7 @@ export const MobileNav = () => {
 
 const Header = ({ handleToggle }: { handleToggle: VoidFunction }) => {
   return (
-    <div className="p-2 grid grid-cols-[1fr_auto] items-center">
+    <div className="p-3 grid grid-cols-[1fr_auto] items-center">
       <Link href={PATHS.HOME} className="no-underline">
         <span className="text-2xl font-semibold relative">Amandine DELIA</span>
       </Link>
