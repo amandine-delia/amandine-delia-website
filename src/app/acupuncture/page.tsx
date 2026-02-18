@@ -39,7 +39,7 @@ export default function AcupuncturePage() {
 
   return (
     <PageContainer>
-      <Breadcrumb step3="Acupuncture Chinoise" />
+      <Breadcrumb step3="Acupuncture Chinoise" step2="soins" />
       <PageTitle>{pageTitle}</PageTitle>
 
       <div className="flex flex-col md:rounded-md overflow-hidden mb-8">

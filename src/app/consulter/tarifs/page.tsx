@@ -1,3 +1,4 @@
+import { Breadcrumb } from '@/components/Breadcrumb'
 import { ErrorMessage } from '@/components/ErrorMessage'
 import { Markdown } from '@/components/Markdown'
 import { PageContainer } from '@/components/PageContainer'
@@ -33,6 +34,8 @@ export default function TarifsPage() {
 
   return (
     <PageContainer>
+      <Breadcrumb step3="Tarifs" step2="consulter" />
+
       <PageTitle>{data?.pageTitle || 'Tarifs et modalités de paiement'}</PageTitle>
       <div className="mt-4 md:mt-8">
         {data && !isError ? <Markdown>{data?.body}</Markdown> : <ErrorMessage />}

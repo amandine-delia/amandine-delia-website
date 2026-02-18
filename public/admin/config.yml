@@ -314,10 +314,11 @@ collections:
     create: true
     extension: 'json'
     fields:
-      - { label: 'Nom du lieu', name: 'name', widget: 'string' }
+      - { label: 'Nom du lieu', name: 'name', widget: 'string', required: false }
       - { label: 'Adresse', name: 'street', widget: 'string' }
       - { label: 'Code postale', name: 'postalCode', widget: 'string' }
       - { label: 'Ville', name: 'city', widget: 'string' }
+      - { label: 'Informations sur le lieu', name: 'more_info', widget: 'string', required: false }
   - label: 'Coordonnées de contact'
     name: 'contact-info'
     files:
@@ -333,3 +334,9 @@ collections:
               hint: '**SANS ESPACES**',
             }
           - { label: 'Email', name: 'email', widget: 'string', required: false }
+          - {
+              label: 'Information complémentaire',
+              name: 'additional_info',
+              widget: 'string',
+              required: false,
+            }

@@ -37,7 +37,7 @@ export default function MoxibustionPage() {
 
   return (
     <PageContainer>
-      <Breadcrumb step3="Moxibustion" />
+      <Breadcrumb step3="Moxibustion" step2="soins" />
 
       <PageTitle>{data?.pageTitle || 'Moxibustion'}</PageTitle>
 

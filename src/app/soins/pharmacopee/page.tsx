@@ -35,7 +35,7 @@ export default function PharmacopeePage() {
 
   return (
     <PageContainer>
-      <Breadcrumb step3="Pharmacopée" />
+      <Breadcrumb step3="Pharmacopée" step2="soins" />
 
       <PageTitle>{data?.pageTitle || 'Pharmacopée Chinoise'}</PageTitle>
 

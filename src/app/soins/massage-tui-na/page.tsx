@@ -37,7 +37,7 @@ export default function MassageTuiNaPage() {
 
   return (
     <PageContainer>
-      <Breadcrumb step3="Massage Tui Na" />
+      <Breadcrumb step3="Massage Tui Na" step2="soins" />
 
       <PageTitle>{data?.pageTitle || 'Massage Tui Na'}</PageTitle>
 

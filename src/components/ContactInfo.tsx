@@ -3,7 +3,7 @@ import { Contact } from '@/api/contact'
 import { useDecodeContact } from '@/utils/useDecodeContact'
 import { A, P } from './Text'
 
-export const ContactInfo = ({ phone, email }: Contact) => {
+export const ContactInfo = ({ phone, email, additional_info }: Contact) => {
   const { phoneClient, emailClient, phoneHref, emailHref } = useDecodeContact({ phone, email })
 
   return (
@@ -23,6 +23,12 @@ export const ContactInfo = ({ phone, email }: Contact) => {
           <A customColor="black" hasUnderline={false} href={emailHref}>
             {emailClient}
           </A>
+        </div>
+      )}
+
+      {additional_info && (
+        <div className="mt-2">
+          <P className="text-center italic">{additional_info}</P>
         </div>
       )}
     </>

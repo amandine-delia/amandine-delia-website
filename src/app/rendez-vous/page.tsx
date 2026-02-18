@@ -24,6 +24,7 @@ export default function RendezvousPage() {
             <ContactInfo
               phone={encodeContact(contact?.phone)}
               email={encodeContact(contact?.email)}
+              additional_info={contact?.additional_info}
             />
           </div>
         )}
@@ -39,14 +40,19 @@ export default function RendezvousPage() {
             </div>
 
             <div className="flex flex-col items-center">
-              {address.map(({ name, street, postalCode, city }, index) => {
+              {address.map(({ name, street, postalCode, city, more_info }, index) => {
                 return (
                   <div key={index} className="flex flex-col mb-8  items-center">
-                    <P color="black" className="font-semibold">
-                      {name}
-                    </P>
+                    {!!name && (
+                      <P color="black" className="font-semibold">
+                        {name}
+                      </P>
+                    )}
 
-                    <P>{[street, postalCode, city].filter(Boolean).join(', ')}</P>
+                    <P className="font-semibold">
+                      {[street, postalCode, city].filter(Boolean).join(', ')}
+                    </P>
+                    {!!more_info && <P className="text-center italic">{more_info}</P>}
                   </div>
                 )
               })}

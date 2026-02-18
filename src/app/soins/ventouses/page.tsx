@@ -36,7 +36,7 @@ export default function VentousesPage() {
 
   return (
     <PageContainer>
-      <Breadcrumb step3="Ventouses" />
+      <Breadcrumb step3="Ventouses" step2="soins" />
 
       <PageTitle>{data?.pageTitle || 'Ventouses'}</PageTitle>
 
