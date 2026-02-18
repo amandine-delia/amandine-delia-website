@@ -1,4 +1,5 @@
 import { FaqData } from '@/api/faq'
+import { Breadcrumb } from '@/components/Breadcrumb'
 import { Button } from '@/components/Button'
 import { ErrorMessage } from '@/components/ErrorMessage'
 import { Markdown } from '@/components/Markdown'
@@ -28,6 +29,7 @@ export const metadata: Metadata = {
       "Questions fréquemment posées sur la médecine traditionnelle chinoise, l'acupuncture, les tarifs, les consultations et les remboursements.",
     url: 'https://acupuncture-traditionnelle-marseille.fr/consulter/faq',
     type: 'website',
+    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.jpg',
   },
 }
 
@@ -43,6 +45,8 @@ export default function FaqPage() {
 
   return (
     <PageContainer>
+      <Breadcrumb step3="FAQ" step2="consulter" />
+
       <PageTitle>{pageTitle}</PageTitle>
 
       <div className="flex flex-col gap-y-8">

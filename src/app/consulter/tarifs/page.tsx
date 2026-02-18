@@ -1,3 +1,4 @@
+import { Breadcrumb } from '@/components/Breadcrumb'
 import { ErrorMessage } from '@/components/ErrorMessage'
 import { Markdown } from '@/components/Markdown'
 import { PageContainer } from '@/components/PageContainer'
@@ -24,6 +25,7 @@ export const metadata: Metadata = {
       'Tarifs des consultations en médecine traditionnelle chinoise, modalités de paiement et informations sur les remboursements par les mutuelles.',
     url: 'https://acupuncture-traditionnelle-marseille.fr/consulter/tarifs',
     type: 'website',
+    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.jpg',
   },
 }
 
@@ -33,6 +35,8 @@ export default function TarifsPage() {
 
   return (
     <PageContainer>
+      <Breadcrumb step3="Tarifs" step2="consulter" />
+
       <PageTitle>{data?.pageTitle || 'Tarifs et modalités de paiement'}</PageTitle>
       <div className="mt-4 md:mt-8">
         {data && !isError ? <Markdown>{data?.body}</Markdown> : <ErrorMessage />}

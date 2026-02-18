@@ -26,6 +26,7 @@ export const metadata: Metadata = {
       'La pharmacopée chinoise, utilisation de plantes médicinales selon la tradition millénaire pour traiter les déséquilibres énergétiques.',
     url: 'https://acupuncture-traditionnelle-marseille.fr/soins/pharmacopee',
     type: 'website',
+    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.jpg',
   },
 }
 
@@ -35,7 +36,7 @@ export default function PharmacopeePage() {
 
   return (
     <PageContainer>
-      <Breadcrumb step3="Pharmacopée" />
+      <Breadcrumb step3="Pharmacopée" step2="soins" />
 
       <PageTitle>{data?.pageTitle || 'Pharmacopée Chinoise'}</PageTitle>
 

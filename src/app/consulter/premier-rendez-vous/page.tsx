@@ -1,3 +1,4 @@
+import { Breadcrumb } from '@/components/Breadcrumb'
 import { ErrorMessage } from '@/components/ErrorMessage'
 import { Markdown } from '@/components/Markdown'
 import { PageContainer } from '@/components/PageContainer'
@@ -22,6 +23,7 @@ export const metadata: Metadata = {
       'Découvrez comment se déroule une première consultation en médecine traditionnelle chinoise : bilan énergétique, entretien et soins personnalisés.',
     url: 'https://acupuncture-traditionnelle-marseille.fr/consulter/premier-rendez-vous',
     type: 'website',
+    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.jpg',
   },
 }
 
@@ -31,6 +33,7 @@ export default function PremierRendezVousPage() {
 
   return (
     <PageContainer>
+      <Breadcrumb step3="Premier Rendez-vous" step2="consulter" />
       <PageTitle>
         {data?.pageTitle || 'Première séance de Médecine Traditionnelle Chinoise'}
       </PageTitle>

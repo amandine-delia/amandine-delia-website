@@ -28,6 +28,7 @@ export const metadata: Metadata = {
       "L'acupuncture, technique millénaire de stimulation des points énergétiques par de fines aiguilles pour rétablir l'équilibre du corps et de l'esprit.",
     url: 'https://acupuncture-traditionnelle-marseille.fr/acupuncture',
     type: 'website',
+    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.jpg',
   },
 }
 
@@ -39,7 +40,7 @@ export default function AcupuncturePage() {
 
   return (
     <PageContainer>
-      <Breadcrumb step3="Acupuncture Chinoise" />
+      <Breadcrumb step3="Acupuncture Chinoise" step2="soins" />
       <PageTitle>{pageTitle}</PageTitle>
 
       <div className="flex flex-col md:rounded-md overflow-hidden mb-8">
