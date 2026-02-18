@@ -23,6 +23,7 @@ export const metadata: Metadata = {
       "Découvrez l'ensemble des soins en médecine traditionnelle chinoise : acupuncture, moxibustion, massage Tui Na, pharmacopée et ventouses.",
     url: 'https://acupuncture-traditionnelle-marseille.fr/soins',
     type: 'website',
+    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.jpg',
   },
 }
 

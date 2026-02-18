@@ -27,6 +27,7 @@ export const metadata: Metadata = {
       'La technique des ventouses, méthode de succion pour stimuler la circulation énergétique et sanguine selon la médecine traditionnelle chinoise.',
     url: 'https://acupuncture-traditionnelle-marseille.fr/soins/ventouses',
     type: 'website',
+    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.jpg',
   },
 }
 

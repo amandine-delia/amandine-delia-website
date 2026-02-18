@@ -25,6 +25,7 @@ export const metadata: Metadata = {
       'Tarifs des consultations en médecine traditionnelle chinoise, modalités de paiement et informations sur les remboursements par les mutuelles.',
     url: 'https://acupuncture-traditionnelle-marseille.fr/consulter/tarifs',
     type: 'website',
+    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.jpg',
   },
 }
 

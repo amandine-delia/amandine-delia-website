@@ -29,6 +29,7 @@ export const metadata: Metadata = {
       "Questions fréquemment posées sur la médecine traditionnelle chinoise, l'acupuncture, les tarifs, les consultations et les remboursements.",
     url: 'https://acupuncture-traditionnelle-marseille.fr/consulter/faq',
     type: 'website',
+    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.jpg',
   },
 }
 

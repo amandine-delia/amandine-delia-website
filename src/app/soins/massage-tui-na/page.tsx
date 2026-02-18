@@ -28,6 +28,7 @@ export const metadata: Metadata = {
       "Le Tui Na est un massage thérapeutique issu de la médecine chinoise qui agit sur les méridiens et points d'acupuncture pour soulager tensions musculaires, douleurs et déséquilibres énergétiques.",
     url: 'https://acupuncture-traditionnelle-marseille.fr/soins/massage-tui-na',
     type: 'website',
+    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.jpg',
   },
 }
 

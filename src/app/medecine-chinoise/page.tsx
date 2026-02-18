@@ -25,6 +25,7 @@ export const metadata: Metadata = {
       'Découvrez les principes fondamentaux de la médecine traditionnelle chinoise : théories du Yin-Yang, des 5 éléments et des méridiens énergétiques.',
     url: 'https://acupuncture-traditionnelle-marseille.fr/medecine-chinoise',
     type: 'website',
+    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.jpg',
   },
 }
 

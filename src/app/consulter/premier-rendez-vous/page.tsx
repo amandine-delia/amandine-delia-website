@@ -23,6 +23,7 @@ export const metadata: Metadata = {
       'Découvrez comment se déroule une première consultation en médecine traditionnelle chinoise : bilan énergétique, entretien et soins personnalisés.',
     url: 'https://acupuncture-traditionnelle-marseille.fr/consulter/premier-rendez-vous',
     type: 'website',
+    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.jpg',
   },
 }
 
