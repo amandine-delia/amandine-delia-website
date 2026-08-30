@@ -1,0 +1,34 @@
+# Amandine DELIA — Médecine Traditionnelle Chinoise Marseille
+
+> Cabinet de médecine chinoise à Marseille : acupuncture, pharmacopée, massages Tui Na, moxibustion et ventouses, avec Amandine DELIA, praticienne certifiée.
+
+Ce site présente les soins proposés, le déroulement des consultations, les tarifs, et permet la prise de rendez-vous en ligne.
+
+## Soins
+
+- [Acupuncture Chinoise](https://acupuncture-traditionnelle-marseille.fr/acupuncture): Technique millénaire de stimulation des points énergétiques par de fines aiguilles pour rétablir l'équilibre du corps et de l'esprit.
+- [Les Soins](https://acupuncture-traditionnelle-marseille.fr/soins): Vue d'ensemble des soins en médecine traditionnelle chinoise : acupuncture, moxibustion, massage Tui Na, pharmacopée et ventouses.
+- [Massage Tui Na](https://acupuncture-traditionnelle-marseille.fr/soins/massage-tui-na): Massage thérapeutique issu de la médecine chinoise qui agit sur les méridiens et points d'acupuncture pour soulager tensions musculaires, douleurs et déséquilibres énergétiques.
+- [Moxibustion](https://acupuncture-traditionnelle-marseille.fr/soins/moxibustion): Technique de chauffe des points d'acupuncture avec l'armoise pour tonifier l'énergie et traiter les affections chroniques.
+- [Pharmacopée Chinoise](https://acupuncture-traditionnelle-marseille.fr/soins/pharmacopee): Utilisation de plantes médicinales selon la tradition millénaire pour traiter les déséquilibres énergétiques.
+- [Ventouses](https://acupuncture-traditionnelle-marseille.fr/soins/ventouses): Méthode de succion pour stimuler la circulation énergétique et sanguine selon la médecine traditionnelle chinoise.
+
+## Médecine Chinoise
+
+- [La Médecine Traditionnelle Chinoise](https://acupuncture-traditionnelle-marseille.fr/medecine-chinoise): Principes fondamentaux de la médecine traditionnelle chinoise : théories du Yin-Yang, des 5 éléments et des méridiens énergétiques.
+
+## Consulter
+
+- [Consulter](https://acupuncture-traditionnelle-marseille.fr/consulter): Informations pour consulter : premier rendez-vous, à propos, tarifs et modalités de paiement, foire aux questions.
+- [À Propos](https://acupuncture-traditionnelle-marseille.fr/consulter/a-propos): Parcours d'Amandine DELIA, praticienne en médecine traditionnelle chinoise à Marseille, son approche et son expertise.
+- [Premier Rendez-vous](https://acupuncture-traditionnelle-marseille.fr/consulter/premier-rendez-vous): Déroulement d'une première consultation : bilan énergétique, entretien et soins personnalisés.
+- [Tarifs](https://acupuncture-traditionnelle-marseille.fr/consulter/tarifs): Tarifs des consultations, modalités de paiement et informations sur les remboursements par les mutuelles.
+- [FAQ](https://acupuncture-traditionnelle-marseille.fr/consulter/faq): Questions fréquemment posées sur la médecine traditionnelle chinoise, l'acupuncture, les tarifs, les consultations et les remboursements.
+
+## Rendez-vous
+
+- [Prendre Rendez-vous](https://acupuncture-traditionnelle-marseille.fr/rendez-vous): Prise de rendez-vous en ligne pour les consultations avec Amandine DELIA.
+
+## Optional
+
+- [Mentions Légales](https://acupuncture-traditionnelle-marseille.fr/mentions-legales): Mentions légales du site.
