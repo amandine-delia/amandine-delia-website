@@ -8,7 +8,8 @@ import { H2, PageTitle } from '@/components/Text'
 import { getPageData, parseJsonData } from '@/utils/fetchData'
 import { Metadata } from 'next'
 import Image from 'next/image'
-import aboutImg from '../../../../public/img/pages/a-propos_compressed.webp'
+
+import aboutImg from '../../../../public/img/pages/a-propos.webp'
 
 export const metadata: Metadata = {
   title: 'À Propos',
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
       "Découvrez le parcours d'Amandine DELIA, praticienne en médecine traditionnelle chinoise à Marseille, son approche et son expertise.",
     url: 'https://acupuncture-traditionnelle-marseille.fr/consulter/a-propos',
     type: 'website',
-    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.jpg',
+    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.webp',
   },
 }
 
@@ -44,7 +45,7 @@ export default function AProposPage() {
 
         <PageTitle>{pageTitle}</PageTitle>
 
-        <div className="max-w-[700px] mx-auto">
+        <div className="max-w-[700px] mx-auto md:rounded-md overflow-hidden">
           <Image alt="Amadine d'Elia" src={aboutImg} priority placeholder="blur" />
         </div>
 

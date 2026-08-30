@@ -7,7 +7,8 @@ import { PATHS } from '@/constants/path'
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import heroImg from '../../public/img/amandine_delia_cropped2_compressed.webp'
+
+import heroImg from '../../public/img/hero_compressed.webp'
 
 export const metadata: Metadata = {
   title: 'Médecine Traditionnelle Chinoise Marseille | Amandine DELIA',
@@ -21,14 +22,14 @@ export const metadata: Metadata = {
     url: 'https://acupuncture-traditionnelle-marseille.fr',
     locale: 'fr_FR',
     type: 'website',
-    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.jpg',
+    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.webp',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Médecine Traditionnelle Chinoise Marseille | Amandine DELIA',
     description:
       'Cabinet de médecine chinoise à Marseille : acupuncture, pharmacopée, massages Tui Na. Praticien certifié avec plusieurs cabinets.',
-    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.jpg',
+    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.webp',
   },
 }
 
@@ -41,7 +42,7 @@ export default async function Home() {
         className="p-3 md:mt-8 flex flex-col md:flex-row gap-y-10 gap-x-4 xl:gap-x-7 mx-auto max-h-fit w-fit max-w-[100vw]"
       >
         <div className="flex-1 max-w-[600px] md:min-w-[310px]">
-          <div className="md:mt-[15%]">
+          <div>
             <H3 color="black" className="lg:text-4xl/snug!">
               Un accompagnement bienveillant pour{' '}
               <span className="bg-ds-rose-200 rounded-2xl px-2 whitespace-nowrap">

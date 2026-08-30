@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'Toutes les informations pour consulter : premier rendez-vous, à propos, tarifs et modalités de paiement, foire aux questions.',
     url: 'https://acupuncture-traditionnelle-marseille.fr/consulter',
     type: 'website',
-    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.jpg',
+    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.webp',
   },
 }
 

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
       'Prenez rendez-vous pour vos consultations en médecine traditionnelle chinoise avec Amandine DELIA.',
     url: 'https://acupuncture-traditionnelle-marseille.fr/rendez-vous',
     type: 'website',
-    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.jpg',
+    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.webp',
   },
 }
 
