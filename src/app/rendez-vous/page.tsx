@@ -1,6 +1,7 @@
 import type { Address, Contact } from '@/api/contact'
 import { ContactInfo } from '@/components/ContactInfo'
 import { PageContainer } from '@/components/PageContainer'
+import { RdvOnline } from '@/components/RdvOnline'
 import { P } from '@/components/Text'
 import { encodeContact } from '@/utils/address'
 import { getFilesInFolder, getPageData, parseJsonData, parseJsonFiles } from '@/utils/fetchData'
@@ -41,10 +42,15 @@ export default function RendezvousPage() {
 
   return (
     <PageContainer>
-      <div className="">
+      <div className="flex flex-col items-center">
+        <div className="flex flex-col gap-y-7 items-center">
+          <P className="font-semibold text-2xl!">Amandine DELIA</P>
+          <RdvOnline />
+        </div>
+
+        {/* Contact Info */}
         {!isContactError && (
-          <div className="min-h-[350px] flex flex-col gap-y-3 items-center justify-center">
-            <P className="font-semibold text-2xl!">Amandine DELIA</P>
+          <div className="mt-7 flex flex-col gap-y-2 items-center justify-center">
             <ContactInfo
               phone={encodeContact(contact?.phone)}
               email={encodeContact(contact?.email)}
@@ -55,7 +61,8 @@ export default function RendezvousPage() {
 
         {hasAddress && (
           <>
-            <div className="flex items-center mb-28">
+            {/* Separator */}
+            <div className="flex w-full items-center my-16">
               <div className="w-full h-[2px] bg-ds-rose-500" />
               <P color="rose" className="px-2">
                 {hasMultipleAddress ? 'Cabinets' : 'Cabinet'}
@@ -63,6 +70,7 @@ export default function RendezvousPage() {
               <div className="w-full h-[2px] bg-ds-rose-500" />
             </div>
 
+            {/* Address */}
             <div className="flex flex-col items-center">
               {address.map(({ name, street, postalCode, city, more_info }, index) => {
                 return (
