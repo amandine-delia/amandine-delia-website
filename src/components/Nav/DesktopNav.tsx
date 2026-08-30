@@ -2,6 +2,7 @@
 import { PATHS } from '@/constants/path'
 import Image from 'next/image'
 import Link from 'next/link'
+import { FULL_ROSE_BUTTON_CLASSES } from '../Button'
 import { DesktopNestedNavLinks, NavLink } from './NavLinks'
 import { CONSULTER, SOINS } from './constants'
 
@@ -24,13 +25,17 @@ const Header = () => {
       </div>
 
       <nav>
-        <ul className="flex flex-wrap gap-x-8 text-lg mx-auto w-fit">
+        <ul className="flex items-center flex-wrap gap-x-8 text-lg mx-auto w-fit">
           <NavLink href={PATHS.HOME} label="Accueil" />
           <NavLink href={PATHS.ACUPUNCTURE} label="Acupuncture Chinoise" />
           <NavLink href={PATHS.MEDECINE_CHINOISE} label="La Médecine Chinoise" />
           <DesktopNestedNavLinks title="Tous les Soins" links={SOINS} />
           <DesktopNestedNavLinks title="Consulter" links={CONSULTER} />
-          <NavLink href={PATHS.RENDEZ_VOUS} label="Prendre Rendez-vous" />
+          <NavLink
+            className={`${FULL_ROSE_BUTTON_CLASSES} py-1 px-2 rounded-full transition duration-(--duration-medium)`}
+            href={PATHS.RENDEZ_VOUS}
+            label="Prendre Rendez-vous"
+          />
         </ul>
       </nav>
     </header>

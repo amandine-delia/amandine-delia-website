@@ -6,6 +6,7 @@ import Image from 'next/image'
 
 import { ErrorMessage } from '@/components/ErrorMessage'
 import { Markdown } from '@/components/Markdown'
+import { RdvCta } from '@/components/RdvCta'
 import { getPageData, parseJsonData } from '@/utils/fetchData'
 import ventouses from '../../../../public/img/pages/ventouses_compressed.webp'
 
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
       'La technique des ventouses, méthode de succion pour stimuler la circulation énergétique et sanguine selon la médecine traditionnelle chinoise.',
     url: 'https://acupuncture-traditionnelle-marseille.fr/soins/ventouses',
     type: 'website',
-    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.jpg',
+    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.webp',
   },
 }
 
@@ -36,18 +37,22 @@ export default function VentousesPage() {
   const { data, isError } = parseJsonData<{ body: string; pageTitle: string }>(pageData)
 
   return (
-    <PageContainer>
-      <Breadcrumb step3="Ventouses" step2="soins" />
+    <>
+      <PageContainer>
+        <Breadcrumb step3="Ventouses" step2="soins" />
 
-      <PageTitle>{data?.pageTitle || 'Ventouses'}</PageTitle>
+        <PageTitle>{data?.pageTitle || 'Ventouses'}</PageTitle>
 
-      <div className="flex flex-col md:rounded-md overflow-hidden mb-8">
-        <Image alt="ventouses" src={ventouses} priority placeholder="blur" />
-      </div>
+        <div className="flex flex-col md:rounded-md overflow-hidden mb-8">
+          <Image alt="ventouses" src={ventouses} priority placeholder="blur" />
+        </div>
 
-      <div className="mt-4 md:mt-8">
-        {data && !isError ? <Markdown>{data?.body}</Markdown> : <ErrorMessage />}
-      </div>
-    </PageContainer>
+        <div className="mt-4 md:mt-8">
+          {data && !isError ? <Markdown>{data?.body}</Markdown> : <ErrorMessage />}
+        </div>
+      </PageContainer>
+
+      <RdvCta />
+    </>
   )
 }

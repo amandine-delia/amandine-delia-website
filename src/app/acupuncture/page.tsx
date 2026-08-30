@@ -4,6 +4,7 @@ import { PageTitle } from '@/components/Text'
 
 import { ErrorMessage } from '@/components/ErrorMessage'
 import { Markdown } from '@/components/Markdown'
+import { RdvCta } from '@/components/RdvCta'
 import { getPageData, parseJsonData } from '@/utils/fetchData'
 import { Metadata } from 'next'
 import Image from 'next/image'
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
       "L'acupuncture, technique millénaire de stimulation des points énergétiques par de fines aiguilles pour rétablir l'équilibre du corps et de l'esprit.",
     url: 'https://acupuncture-traditionnelle-marseille.fr/acupuncture',
     type: 'website',
-    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.jpg',
+    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.webp',
   },
 }
 
@@ -39,17 +40,21 @@ export default function AcupuncturePage() {
   const pageTitle = data?.pageTitle || 'Acupuncture Chinoise'
 
   return (
-    <PageContainer>
-      <Breadcrumb step3="Acupuncture Chinoise" step2="soins" />
-      <PageTitle>{pageTitle}</PageTitle>
+    <>
+      <PageContainer>
+        <Breadcrumb step3="Acupuncture Chinoise" step2="soins" />
+        <PageTitle>{pageTitle}</PageTitle>
 
-      <div className="flex flex-col md:rounded-md overflow-hidden mb-8">
-        <Image alt="acupuncture" src={acupuncture} priority placeholder="blur" />
-      </div>
+        <div className="flex flex-col md:rounded-md overflow-hidden mb-8">
+          <Image alt="acupuncture" src={acupuncture} priority placeholder="blur" />
+        </div>
 
-      <div className="mt-4 md:mt-8">
-        {data && !isError ? <Markdown>{data?.body}</Markdown> : <ErrorMessage />}
-      </div>
-    </PageContainer>
+        <div className="mt-4 md:mt-8">
+          {data && !isError ? <Markdown>{data?.body}</Markdown> : <ErrorMessage />}
+        </div>
+      </PageContainer>
+
+      <RdvCta />
+    </>
   )
 }

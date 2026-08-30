@@ -1,6 +1,7 @@
 import { ErrorMessage } from '@/components/ErrorMessage'
 import { Markdown } from '@/components/Markdown'
 import { PageContainer } from '@/components/PageContainer'
+import { RdvCta } from '@/components/RdvCta'
 import { PageTitle } from '@/components/Text'
 import { getPageData, parseJsonData } from '@/utils/fetchData'
 import { Metadata } from 'next'
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
       'Découvrez les principes fondamentaux de la médecine traditionnelle chinoise : théories du Yin-Yang, des 5 éléments et des méridiens énergétiques.',
     url: 'https://acupuncture-traditionnelle-marseille.fr/medecine-chinoise',
     type: 'website',
-    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.jpg',
+    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.webp',
   },
 }
 
@@ -34,15 +35,19 @@ export default function MedecineChinoisePage() {
   const { data, isError } = parseJsonData<{ body: string; pageTitle: string }>(pageData)
 
   return (
-    <PageContainer>
-      <PageTitle>{data?.pageTitle || 'La Médecine Traditionnelle Chinoise'}</PageTitle>
-      <div className="flex flex-col md:rounded-md overflow-hidden mb-8">
-        <Image alt="médecine traditionnelle chinoise" src={mtc} priority placeholder="blur" />
-      </div>
+    <>
+      <PageContainer>
+        <PageTitle>{data?.pageTitle || 'La Médecine Traditionnelle Chinoise'}</PageTitle>
+        <div className="flex flex-col md:rounded-md overflow-hidden mb-8">
+          <Image alt="médecine traditionnelle chinoise" src={mtc} priority placeholder="blur" />
+        </div>
 
-      <div className="mt-4 md:mt-8">
-        {data && !isError ? <Markdown>{data?.body}</Markdown> : <ErrorMessage />}
-      </div>
-    </PageContainer>
+        <div className="mt-4 md:mt-8">
+          {data && !isError ? <Markdown>{data?.body}</Markdown> : <ErrorMessage />}
+        </div>
+      </PageContainer>
+
+      <RdvCta />
+    </>
   )
 }

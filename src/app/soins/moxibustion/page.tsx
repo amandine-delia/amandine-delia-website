@@ -4,6 +4,7 @@ import { PageTitle } from '@/components/Text'
 
 import { ErrorMessage } from '@/components/ErrorMessage'
 import { Markdown } from '@/components/Markdown'
+import { RdvCta } from '@/components/RdvCta'
 import { getPageData, parseJsonData } from '@/utils/fetchData'
 import { Metadata } from 'next'
 import Image from 'next/image'
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
       "La moxibustion, technique de chauffe des points d'acupuncture avec l'armoise pour tonifier l'énergie et traiter les affections chroniques.",
     url: 'https://acupuncture-traditionnelle-marseille.fr/soins/moxibustion',
     type: 'website',
-    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.jpg',
+    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.webp',
   },
 }
 
@@ -37,18 +38,22 @@ export default function MoxibustionPage() {
   const { data, isError } = parseJsonData<{ body: string; pageTitle: string }>(pageData)
 
   return (
-    <PageContainer>
-      <Breadcrumb step3="Moxibustion" step2="soins" />
+    <>
+      <PageContainer>
+        <Breadcrumb step3="Moxibustion" step2="soins" />
 
-      <PageTitle>{data?.pageTitle || 'Moxibustion'}</PageTitle>
+        <PageTitle>{data?.pageTitle || 'Moxibustion'}</PageTitle>
 
-      <div className="flex flex-col md:rounded-md overflow-hidden mb-8">
-        <Image alt="moxibustion" src={moxibustion} priority placeholder="blur" />
-      </div>
+        <div className="flex flex-col md:rounded-md overflow-hidden mb-8">
+          <Image alt="moxibustion" src={moxibustion} priority placeholder="blur" />
+        </div>
 
-      <div className="mt-4 md:mt-8">
-        {data && !isError ? <Markdown>{data?.body}</Markdown> : <ErrorMessage />}
-      </div>
-    </PageContainer>
+        <div className="mt-4 md:mt-8">
+          {data && !isError ? <Markdown>{data?.body}</Markdown> : <ErrorMessage />}
+        </div>
+      </PageContainer>
+
+      <RdvCta />
+    </>
   )
 }

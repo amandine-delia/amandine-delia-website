@@ -2,6 +2,7 @@ import { Breadcrumb } from '@/components/Breadcrumb'
 import { ErrorMessage } from '@/components/ErrorMessage'
 import { Markdown } from '@/components/Markdown'
 import { PageContainer } from '@/components/PageContainer'
+import { RdvCta } from '@/components/RdvCta'
 import { PageTitle } from '@/components/Text'
 import { getPageData, parseJsonData } from '@/utils/fetchData'
 import { Metadata } from 'next'
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
       'Tarifs des consultations en médecine traditionnelle chinoise, modalités de paiement et informations sur les remboursements par les mutuelles.',
     url: 'https://acupuncture-traditionnelle-marseille.fr/consulter/tarifs',
     type: 'website',
-    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.jpg',
+    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.webp',
   },
 }
 
@@ -34,13 +35,17 @@ export default function TarifsPage() {
   const { data, isError } = parseJsonData<{ body: string; pageTitle: string }>(pageData)
 
   return (
-    <PageContainer>
-      <Breadcrumb step3="Tarifs" step2="consulter" />
+    <>
+      <PageContainer>
+        <Breadcrumb step3="Tarifs" step2="consulter" />
 
-      <PageTitle>{data?.pageTitle || 'Tarifs et modalités de paiement'}</PageTitle>
-      <div className="mt-4 md:mt-8">
-        {data && !isError ? <Markdown>{data?.body}</Markdown> : <ErrorMessage />}
-      </div>
-    </PageContainer>
+        <PageTitle>{data?.pageTitle || 'Tarifs et modalités de paiement'}</PageTitle>
+        <div className="mt-4 md:mt-8">
+          {data && !isError ? <Markdown>{data?.body}</Markdown> : <ErrorMessage />}
+        </div>
+      </PageContainer>
+
+      <RdvCta />
+    </>
   )
 }

@@ -2,6 +2,7 @@ import { Breadcrumb } from '@/components/Breadcrumb'
 import { ErrorMessage } from '@/components/ErrorMessage'
 import { Markdown } from '@/components/Markdown'
 import { PageContainer } from '@/components/PageContainer'
+import { RdvCta } from '@/components/RdvCta'
 import { PageTitle } from '@/components/Text'
 import { getPageData, parseJsonData } from '@/utils/fetchData'
 import { Metadata } from 'next'
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
       'Découvrez comment se déroule une première consultation en médecine traditionnelle chinoise : bilan énergétique, entretien et soins personnalisés.',
     url: 'https://acupuncture-traditionnelle-marseille.fr/consulter/premier-rendez-vous',
     type: 'website',
-    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.jpg',
+    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.webp',
   },
 }
 
@@ -32,14 +33,18 @@ export default function PremierRendezVousPage() {
   const { data, isError } = parseJsonData<{ body: string; pageTitle: string }>(pageData)
 
   return (
-    <PageContainer>
-      <Breadcrumb step3="Premier Rendez-vous" step2="consulter" />
-      <PageTitle>
-        {data?.pageTitle || 'Première séance de Médecine Traditionnelle Chinoise'}
-      </PageTitle>
-      <div className="mt-4 md:mt-8">
-        {data && !isError ? <Markdown>{data?.body}</Markdown> : <ErrorMessage />}
-      </div>
-    </PageContainer>
+    <>
+      <PageContainer>
+        <Breadcrumb step3="Premier Rendez-vous" step2="consulter" />
+        <PageTitle>
+          {data?.pageTitle || 'Première séance de Médecine Traditionnelle Chinoise'}
+        </PageTitle>
+        <div className="mt-4 md:mt-8">
+          {data && !isError ? <Markdown>{data?.body}</Markdown> : <ErrorMessage />}
+        </div>
+      </PageContainer>
+
+      <RdvCta />
+    </>
   )
 }

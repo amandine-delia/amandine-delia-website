@@ -8,6 +8,7 @@ import { PropsWithChildren } from 'react'
 import './theme.css'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://acupuncture-traditionnelle-marseille.fr'),
   title: {
     default: 'Médecine Traditionnelle Chinoise Marseille | Amandine DELIA',
     template: `%s | Médecine Traditionnelle Chinoise Marseille Amandine DELIA`,
@@ -22,14 +23,14 @@ export const metadata: Metadata = {
     url: 'https://acupuncture-traditionnelle-marseille.fr',
     locale: 'fr_FR',
     type: 'website',
-    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.jpg',
+    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.webp',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Médecine Traditionnelle Chinoise Marseille | Amandine DELIA',
     description:
       'Cabinet de médecine chinoise à Marseille : acupuncture, pharmacopée, massages Tui Na. Praticien certifié avec plusieurs cabinets.',
-    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.jpg',
+    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.webp',
   },
 }
 

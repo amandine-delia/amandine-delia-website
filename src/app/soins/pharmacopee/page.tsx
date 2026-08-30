@@ -6,6 +6,7 @@ import Image from 'next/image'
 
 import { ErrorMessage } from '@/components/ErrorMessage'
 import { Markdown } from '@/components/Markdown'
+import { RdvCta } from '@/components/RdvCta'
 import { getPageData, parseJsonData } from '@/utils/fetchData'
 import pharmacopee from '../../../../public/img/pages/pharmacopee_compressed.webp'
 
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
       'La pharmacopée chinoise, utilisation de plantes médicinales selon la tradition millénaire pour traiter les déséquilibres énergétiques.',
     url: 'https://acupuncture-traditionnelle-marseille.fr/soins/pharmacopee',
     type: 'website',
-    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.jpg',
+    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.webp',
   },
 }
 
@@ -35,18 +36,22 @@ export default function PharmacopeePage() {
   const { data, isError } = parseJsonData<{ body: string; pageTitle: string }>(pageData)
 
   return (
-    <PageContainer>
-      <Breadcrumb step3="Pharmacopée" step2="soins" />
+    <>
+      <PageContainer>
+        <Breadcrumb step3="Pharmacopée" step2="soins" />
 
-      <PageTitle>{data?.pageTitle || 'Pharmacopée Chinoise'}</PageTitle>
+        <PageTitle>{data?.pageTitle || 'Pharmacopée Chinoise'}</PageTitle>
 
-      <div className="flex flex-col md:rounded-md overflow-hidden mb-8">
-        <Image alt="Pharmacopée Chinoise" src={pharmacopee} priority placeholder="blur" />
-      </div>
+        <div className="flex flex-col md:rounded-md overflow-hidden mb-8">
+          <Image alt="Pharmacopée Chinoise" src={pharmacopee} priority placeholder="blur" />
+        </div>
 
-      <div className="mt-4 md:mt-8">
-        {data && !isError ? <Markdown>{data?.body}</Markdown> : <ErrorMessage />}
-      </div>
-    </PageContainer>
+        <div className="mt-4 md:mt-8">
+          {data && !isError ? <Markdown>{data?.body}</Markdown> : <ErrorMessage />}
+        </div>
+      </PageContainer>
+
+      <RdvCta />
+    </>
   )
 }

@@ -4,6 +4,7 @@ import { PageTitle } from '@/components/Text'
 
 import { ErrorMessage } from '@/components/ErrorMessage'
 import { Markdown } from '@/components/Markdown'
+import { RdvCta } from '@/components/RdvCta'
 import { getPageData, parseJsonData } from '@/utils/fetchData'
 import { Metadata } from 'next'
 import Image from 'next/image'
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
       "Le Tui Na est un massage thérapeutique issu de la médecine chinoise qui agit sur les méridiens et points d'acupuncture pour soulager tensions musculaires, douleurs et déséquilibres énergétiques.",
     url: 'https://acupuncture-traditionnelle-marseille.fr/soins/massage-tui-na',
     type: 'website',
-    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.jpg',
+    images: 'https://acupuncture-traditionnelle-marseille.fr/img/seo_amandine_delia.webp',
   },
 }
 
@@ -37,18 +38,22 @@ export default function MassageTuiNaPage() {
   const { data, isError } = parseJsonData<{ body: string; pageTitle: string }>(pageData)
 
   return (
-    <PageContainer>
-      <Breadcrumb step3="Massage Tui Na" step2="soins" />
+    <>
+      <PageContainer>
+        <Breadcrumb step3="Massage Tui Na" step2="soins" />
 
-      <PageTitle>{data?.pageTitle || 'Massage Tui Na'}</PageTitle>
+        <PageTitle>{data?.pageTitle || 'Massage Tui Na'}</PageTitle>
 
-      <div className="flex flex-col md:rounded-md overflow-hidden mb-8">
-        <Image alt="massage Tui Na" src={massageTuiNa} priority placeholder="blur" />
-      </div>
+        <div className="flex flex-col md:rounded-md overflow-hidden mb-8">
+          <Image alt="massage Tui Na" src={massageTuiNa} priority placeholder="blur" />
+        </div>
 
-      <div className="mt-4 md:mt-8">
-        {data && !isError ? <Markdown>{data?.body}</Markdown> : <ErrorMessage />}
-      </div>
-    </PageContainer>
+        <div className="mt-4 md:mt-8">
+          {data && !isError ? <Markdown>{data?.body}</Markdown> : <ErrorMessage />}
+        </div>
+      </PageContainer>
+
+      <RdvCta />
+    </>
   )
 }

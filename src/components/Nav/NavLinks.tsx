@@ -3,12 +3,12 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { ChevronDownIcon } from '../Icons'
 
-export type MenuLink = { label: string; href: string }
+export type MenuLink = { label: string; href: string; className?: string }
 type NavLinkProps = MenuLink & { store?: DialogOptions['store']; onClick?: VoidFunction }
 
-export const NavLink = ({ label, store, href, onClick }: NavLinkProps) => {
+export const NavLink = ({ label, store, href, onClick, className }: NavLinkProps) => {
   return (
-    <li>
+    <li className={className}>
       <Link
         href={href}
         onClick={() => {
