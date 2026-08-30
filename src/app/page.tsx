@@ -56,11 +56,11 @@ export default async function Home() {
 
             <div className="mt-10 flex gap-x-3 gap-y-4 flex-wrap">
               <Link href={PATHS.RENDEZ_VOUS}>
-                <Button variant="fullBlack">Prendre RDV</Button>
+                <Button variant="fullRose">Prendre RDV</Button>
               </Link>
 
               <Link href={PATHS.A_PROPOS}>
-                <Button variant="fullRose" id="amandine-delia-savoir-plus">
+                <Button variant="black" id="amandine-delia-savoir-plus">
                   En savoir plus
                 </Button>
               </Link>

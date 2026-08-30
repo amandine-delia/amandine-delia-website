@@ -2,6 +2,7 @@
 import { PATHS } from '@/constants/path'
 import { useDialogStore } from '@ariakit/react'
 import Link from 'next/link'
+import { FULL_ROSE_BUTTON_CLASSES } from '../Button'
 import { MenuBar } from '../Icons'
 import { CONSULTER, SOINS } from './constants'
 import { MobileDrawer } from './MobileDrawer'
@@ -23,7 +24,12 @@ export const MobileNav = () => {
             <NavLink store={dialog} href="/medecine-chinoise" label="La Médecine Chinoise" />
             <NestedNavLinks title="Tous les Soins" store={dialog} links={SOINS} />
             <NestedNavLinks title="Consulter" store={dialog} links={CONSULTER} />
-            <NavLink store={dialog} href="/rendez-vous" label="Prendre Rendez-vous" />
+            <NavLink
+              className={`${FULL_ROSE_BUTTON_CLASSES} py-1 px-2 text-center rounded-full transition duration-(--duration-medium)`}
+              store={dialog}
+              href="/rendez-vous"
+              label="Prendre Rendez-vous"
+            />
           </ul>
         </nav>
       </MobileDrawer>

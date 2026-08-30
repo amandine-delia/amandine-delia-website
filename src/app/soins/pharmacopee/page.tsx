@@ -6,6 +6,7 @@ import Image from 'next/image'
 
 import { ErrorMessage } from '@/components/ErrorMessage'
 import { Markdown } from '@/components/Markdown'
+import { RdvCta } from '@/components/RdvCta'
 import { getPageData, parseJsonData } from '@/utils/fetchData'
 import pharmacopee from '../../../../public/img/pages/pharmacopee_compressed.webp'
 
@@ -35,18 +36,22 @@ export default function PharmacopeePage() {
   const { data, isError } = parseJsonData<{ body: string; pageTitle: string }>(pageData)
 
   return (
-    <PageContainer>
-      <Breadcrumb step3="Pharmacopée" step2="soins" />
+    <>
+      <PageContainer>
+        <Breadcrumb step3="Pharmacopée" step2="soins" />
 
-      <PageTitle>{data?.pageTitle || 'Pharmacopée Chinoise'}</PageTitle>
+        <PageTitle>{data?.pageTitle || 'Pharmacopée Chinoise'}</PageTitle>
 
-      <div className="flex flex-col md:rounded-md overflow-hidden mb-8">
-        <Image alt="Pharmacopée Chinoise" src={pharmacopee} priority placeholder="blur" />
-      </div>
+        <div className="flex flex-col md:rounded-md overflow-hidden mb-8">
+          <Image alt="Pharmacopée Chinoise" src={pharmacopee} priority placeholder="blur" />
+        </div>
 
-      <div className="mt-4 md:mt-8">
-        {data && !isError ? <Markdown>{data?.body}</Markdown> : <ErrorMessage />}
-      </div>
-    </PageContainer>
+        <div className="mt-4 md:mt-8">
+          {data && !isError ? <Markdown>{data?.body}</Markdown> : <ErrorMessage />}
+        </div>
+      </PageContainer>
+
+      <RdvCta />
+    </>
   )
 }
